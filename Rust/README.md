@@ -75,7 +75,7 @@
 - Rust 设计模式
     - [Rust Design Patterns](https://rust-unofficial.github.io/patterns/) - [中文版](http://chuxiuhong.com/chuxiuhong-rust-patterns-zh/patterns/index.html) - [Github](https://github.com/chuxiuhong/chuxiuhong-rust-patterns-zh)
 
-- Rust 中的异步编程
+- Rust 的异步编程
     - [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/) - [中文版](https://huangjj27.github.io/async-book/index.html)
 
 - Rust 原子和锁
