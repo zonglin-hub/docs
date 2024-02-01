@@ -189,11 +189,8 @@
 
 - Rust 性能手册
     - [Rust 性能手册]
-    - 其他
-        - [优化 Rust 程序编译体积]
 
 [Rust 性能手册]: https://nnethercote.github.io/perf-book/title-page.html
-[优化 Rust 程序编译体积]: https://www.aloxaf.com/2018/09/reduce_rust_size/
 
 - Rust Magazine
     - [Rust 博客]
