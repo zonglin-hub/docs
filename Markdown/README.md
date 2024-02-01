@@ -6,3 +6,4 @@
 - [Markdown 官方教程](https://markdown.com.cn/)
 - [Markdown 语法・简明版](https://keatonlao.gitee.io/a-study-note-for-markdown/syntax/)
 - [MarkDown 绘制流程图、时序图、甘特图](https://www.cnblogs.com/luyj00436/p/15091506.html)
+- [序列图 | Mermaid 中文网](https://mermaid.nodejs.cn/syntax/sequenceDiagram.html)
