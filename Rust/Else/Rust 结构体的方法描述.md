@@ -1,12 +1,16 @@
 # Rust 结构体的方法描述
 
-原文地址：<https://rustwiki.org/zh-CN/rust-by-example/fn/methods.html>
+- 原文地址：<https://rustwiki.org/zh-CN/rust-by-example/fn/methods.html>
 
-`Rust` 的 方法（method）是依附于对象的函数。这些方法通过关键字 `self` 来访问对象中的数据和其他。方法在 `impl` 代码块中定义。
+---
+
+`Rust` 的 方法（method）是依附于对象的函数。这些方法通过关键字 `self` 来访问对象中的数据和其他。
+方法在 `impl` 代码块中定义。
 
 ## 静态方法（static method）
 
-静态方法不需要实例来调用，把结构体看作 `Class`，静态方法则可以直接在 `Class` 上调用。得益于此特性，静态方法一般用作构造器（constructor），返回自己的实例。
+静态方法不需要实例来调用，把结构体看作 `Class`，静态方法则可以直接在 `Class` 上调用。
+得益于此特性，静态方法一般用作构造器（constructor），返回自己的实例。
 
 ## 实例方法（instance method）
 

@@ -407,8 +407,10 @@
 [stdlib/PhantomData]: https://doc.rust-lang.org/std/marker/struct.PhantomData.html
 [Rust by Example]: http://rustwiki.org/rust-by-example/scope/move.html
 
-[^1]: 理由是：实际上这个 Coherence 这个词在其相关 [RFC 2451] 中上下文语境中的意思是，让编译器推理特质更加流畅更加连贯，不要出错。所以“连贯性”更符合这个词在 Rust 中的本意。
-[^2]: phantom 相关的专有名词：phantom bug 幻影指令phantom power 幻象电源参见：[Haskell]、[Haskell/Phantom_type]、[Rust/Phantom]、[stdlib/PhantomData]
+[^1]: 理由是：实际上这个 Coherence 这个词在其相关 [RFC 2451] 中上下文语境中的意思是，让编译器推理特质更加流畅更加连贯，不要出错。
+所以“连贯性”更符合这个词在 Rust 中的本意。
+[^2]: phantom 相关的专有名词：phantom bug 幻影指令phantom power
+幻象电源参见：[Haskell]、[Haskell/Phantom_type]、[Rust/Phantom]、[stdlib/PhantomData]
 [^3]: where 子句，where 从句，where 分句。在数据库的官方手册中多翻译成 “子句”，英语语法中翻译成“从句”
 [^4]: bound 有 “约束，限制，限定” 之意
 [^5]: Tom's Obvious, Minimal Language 缩写，一种配置语言
