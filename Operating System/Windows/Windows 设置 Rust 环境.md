@@ -76,7 +76,7 @@ registry = "https://code.aliyun.com/rustcc/crates.io-index.git"
 
 **升级 Rust 「stable _稳定版_」**
 
-可以执行 <code>rustup update</code> 来升级 Rust 「Stable Release _稳定版本_」
+可以执行 <code>rustup update stable</code> 来升级 Rust 「Stable Release _稳定版本_」
 
 **安装 Rust 「Nightly Build _夜间构建_」**
 
