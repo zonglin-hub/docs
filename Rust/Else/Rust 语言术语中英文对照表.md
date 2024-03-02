@@ -166,6 +166,7 @@
 | hygienic macro system                     | 卫生宏系统                           |
 | **I**                                     |                                      |
 | ICE                                       | 编译内部错误 [^17]                   |
+| inorder                                   | 中序                                |
 | immutable                                 | 不可变的                             |
 | implement                                 | 实现                                 |
 | implementor                               | 实现者                               |
@@ -199,6 +200,7 @@
 | **L**                                     |                                      |
 | LHS                                       | 左操作数 [^18]                       |
 | lender                                    | 借出者                               |
+| len                                       | 长度 `length` 简写                    |
 | library                                   | 库                                   |
 | lifetime                                  | 生存时间，寿命，生命周期             |
 | lifetime elision                          | 生命周期省略                         |
@@ -240,6 +242,7 @@
 | multiple bounds                           | 多重约束                             |
 | mutiple patterns                          | 多重模式                             |
 | **N**                                     |                                      |
+| next                                      | 下一个                               |
 | nest                                      | 嵌套                                 |
 | Nightly Rust                              | Rust 开发版 [^12]                    |
 | NLL                                       | 非词法生命周期 [^20]                 |
@@ -260,6 +263,7 @@
 | ownership                                 | 所有权                               |
 | **P**                                     |                                      |
 | package manager                           | 包管理器，软件包管理器               |
+| preorder                                  | 前序                                 |
 | panic                                     | `不译` [^11]                         |
 | parameter                                 | 参量，参数，形参，形式参量（数）[^7] |
 | parametric polymorphism                   | 参数多态                             |
