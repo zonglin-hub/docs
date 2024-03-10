@@ -1,4 +1,4 @@
-# 文档库
+# 文档库 🌲
 
 用于提供公共文档收集
 
@@ -13,7 +13,7 @@
 - [Linux命令搜索引擎](https://wangchujiang.com/linux-command/)
 - [Debian 参考手册](https://www.debian.org/doc/manuals/debian-reference/)
 
-色彩
+色彩 :)
 
-- [zhongguose － 传统颜色](zhongguose.com)
-- [新鲜背景颜色](https://webgradients.com)
+- [zhongguose － 传统颜色](zhongguose.com) ❤️
+- [新鲜背景颜色](https://webgradients.com) 🔫
