@@ -27,6 +27,11 @@ $ENV:RUSTUP_DIST_SERVER='https://mirrors.ustc.edu.cn/rust-static'
 $ENV:RUSTUP_UPDATE_ROOT='https://mirrors.ustc.edu.cn/rust-static/rustup'
 ```
 
+```bash
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+```
+
 ## 配置 cargo 国内源
 
 字节跳动提供的公益镜像 [RsProxy](https://rsproxy.cn/#getStarted) [^1]
