@@ -1,16 +1,3 @@
-# Windows 的 Hyper-V 中安装 Ubuntu
-
-参考文档
-
-- [Win11 家庭版/专业版开启Hyper-V](https://zhuanlan.zhihu.com/p/577980646)
-
-- [如何在 Windows 11 的 Hyper-V 中安装 Ubuntu 22.04 (新手指南)](https://elementalgrady.com/posts/windows-11-hyper-v-ubuntu-2204/)
-
-- [Hyper-V虚拟机无法启动提示Start Pxe over IPv4解决方法](https://www.bilibili.com/read/cv23659021/)
-
-安装 Hyper-V
-
-```powershell
 @REM 将当前目录更改为脚本所在的目录。
 @REM `%~dp0`是一个批处理文件参数，它扩展为批处理文件所在的完全限定路径。
 pushd "%~dp0"
@@ -34,4 +21,3 @@ del hyper-v.txt
 @REM `/LimitAccess`限制对Hyper-V虚拟机的访问，
 @REM `/ALL`表示启用所有子功能。
 Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
-```
