@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 
 ping -c 1 www.baidu.com &>/dev/null
@@ -10,4 +9,3 @@ else
 fi
 
 echo "------ 网络状态：$ping_tong   "
-```

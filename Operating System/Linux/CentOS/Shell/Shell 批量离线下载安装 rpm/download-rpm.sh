@@ -1,5 +1,10 @@
-```sh
 #!/bin/bash
+
+do=`pwd`
+
+SETNAME=(
+    vim gcc pam zlib net-tools glibc
+)
 
 download() {
     for((i=0;i<${#SETNAME[*]};i++)); do
@@ -11,12 +16,12 @@ download() {
 
 case "$1" in
 download)
-    download
-    ;;
+        download
+        ;;
 *)
     echo "download" >&2
     exit 1
-    
+    ;;
+
 esac
 exit 0
-```

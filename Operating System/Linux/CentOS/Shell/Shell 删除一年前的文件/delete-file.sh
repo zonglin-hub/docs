@@ -1,4 +1,3 @@
-```sh
 #!/bin/bash
 
 mkdir -p /root/liuzonglin
@@ -31,4 +30,3 @@ for ((i = 1; i <= IN_ALL; i++)); do
     done
 
 done
-```

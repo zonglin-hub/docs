@@ -1,8 +1,20 @@
-```sh
 #!/bin/bash
 
 # MongoDB 数据导入导出统一 json 格式工具
 # 适用于 CentOS7 环境
+# 
+# # 参考命令
+# 
+# ```bash
+# 导出mongodb数据库
+# /usr/local/las/program/mongodb/bin/mongodump -d admin -u root -p "密码" -o /root/sd 
+# 导入mongodb数据库
+# /usr/local/las/program/mongodb/bin/mongorestore -d admin /root/sd/admin -u root -p "密码" --drop
+# 导出mongodb单个集合
+# /usr/local/las/program/mongodb/bin/mongoexport -d admin -c role -o /root/role.json -u root -p "密码"
+# 导入mongodb单个集合
+# /usr/local/las/program/mongodb/bin/mongoimport -u root -p "密码" -d admin  -c role --type=json --file /root/role.json 
+# ```
 # 使用说明：
 # - 导入数据：/bin/bash mongodb_.sh export_collection
 # - 导出数据：/bin/bash mongodb_.sh import_collection
@@ -56,21 +68,3 @@ import_collection)
 
 esac
 exit 0
-```
-
-参考命令
-
-
-```sh
-# 导出mongodb数据库
-/usr/local/las/program/mongodb/bin/mongodump -d admin -u root -p "密码" -o /root/sd 
-
-# 导入mongodb数据库
-/usr/local/las/program/mongodb/bin/mongorestore -d admin /root/sd/admin -u root -p "密码" --drop
-
-# 导出mongodb单个集合
-/usr/local/las/program/mongodb/bin/mongoexport -d admin -c role -o /root/role.json -u root -p "密码"
-
-# 导入mongodb单个集合
-/usr/local/las/program/mongodb/bin/mongoimport -u root -p "密码" -d admin  -c role --type=json --file /root/role.json 
-```

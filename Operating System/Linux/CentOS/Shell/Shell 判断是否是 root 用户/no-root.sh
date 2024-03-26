@@ -1,4 +1,3 @@
-```sh
 #!/bin/bash
 
 # 检查是否是root用户
@@ -8,4 +7,3 @@ if [ $(id -u) != "0" ] then
     # 退出脚本
     exit 1
 fi
-```

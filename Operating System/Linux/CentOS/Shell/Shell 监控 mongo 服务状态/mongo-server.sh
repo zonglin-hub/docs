@@ -1,4 +1,3 @@
-```sh
 #!/bin/bash
 
 port=`netstat -nlpt | grep "\b27017\b" | wc -l`
@@ -12,4 +11,3 @@ for((;;)) do  # 死循环
         exit   # 退出脚本
     fi
 done
-```

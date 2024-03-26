@@ -1,5 +1,5 @@
-```sh
 #!/bin/bash
+
 # 基于 debian 编写
 
 PATH_=/root/disk.log
@@ -42,4 +42,3 @@ echo "磁盘使用总量：$DISI"
 
 DF=$(printf "%.f" $(echo "scale=4; $DISI/$DISK*100" | bc))
 echo $DF%
-```

@@ -1,9 +1,9 @@
-```sh
-#!/bin/bash
+# !/bin/bash
 
 # 基于 CentOS 7.5 编写
 
 # 内存、cpu占用情况
+
 echo "######################### 内存 #########################"
 
 RESULT=$?
@@ -43,4 +43,3 @@ else
 
     echo "$MEM_STATUS(""总内存大小: "$MEM_SUM7,"剩余内存大小: "$MEM_SURPLUS7,"内存使用率: "$PERCENT7")"
 fi
-```

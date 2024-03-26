@@ -161,6 +161,10 @@ for ((i = 1; i > 0 && i < 7; i++)); do
     echo $i
 done
 
+# Shell 定义变量传递参数
+echo -e "输入IP地址(格式:192.168.100.1):\c"
+read ip
+echo $ip
 ```
 
 ## 参考文档
