@@ -1,0 +1,4 @@
+root: D:\program\nvm
+path: D:\program\nodejs
+node_mirror: https://npm.taobao.org/mirrors/node/
+npm_mirror: https://npm.taobao.org/mirrors/npm/

@@ -1,0 +1,79 @@
+# Rust 语言配置
+[[language]]
+# 语言名称
+name = "rust"
+
+# 是否保存文件是自动格式化
+auto-format = true
+
+# 像 source.js 的字符串，它标识了语言。
+# 目前我们尽量把 scope name 匹配常用的 TextMate 语法和 Linguist 库；
+# 通常是 source.<name> 或 text.<name> 形式（以防标记语言）
+scope = "source.rust"
+
+# 针对语言名称进行测试的正则模式，用来确定这个语言是否应该使用 language injection
+injection-regex = "rust"
+
+# 语言的文件类型，比如 ["yml", "yaml"]；支持拓展名和完整的文件名
+file-types = ["rs"]
+
+# 一组用于搜索标记文件，以找到工作空间的根目录比如 Cargo.lock、 yarn.lock
+roots = ["Cargo.toml", "Cargo.lock"]
+
+# 用于注释的标记
+comment-token = "//"
+
+# 所运行的语言服务器
+language-servers = ["rust-analyzer"]
+
+#  使用什么样的缩进；子键有 tab-width 和 unit
+indent = { tab-width = 4, unit = "    " }
+
+# 允许自动将对插入括号、括号等。可以是简单的布尔值，也可以是单个字符对的特定映射。
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+# If this doesn't work, you might be on a older release version which handles this differently.
+# Try using [language.config.check] instead of [language-server.rust-analyzer.config.check]
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[grammar]]
+name = "rust"
+source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "3a56481f8d13b6874a28752502a58520b9139dc7" }
+
+[[language]]
+name = "toml"
+scope = "source.toml"
+injection-regex = "toml"
+file-types = ["toml", "poetry.lock", "Cargo.lock"]
+roots = []
+comment-token = "#"
+language-servers = ["taplo"]
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "toml"
+source = { git = "https://github.com/ikatyang/tree-sitter-toml", rev = "7cff70bbcbbc62001b465603ca1ea88edd668704" }
+
+# 下这是复制粘贴来的。
+# [[language]]
+# name = "python"
+# scope = "source.python"
+# injection-regex = "python"
+# file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct"]
+# shebangs = ["python"]
+# roots = ["setup.py", "setup.cfg", "pyproject.toml"]
+# comment-token = "#"
+# language-server = { command = "pyright-langserver", args = ["--stdio"] }
+# indent = { tab-width = 4, unit = "    " }
+# will get "Async jobs timed out" errors if this empty config is not added
+# config = {}
+
+# [language-server.pyright-langserver.config.check]
+# command = "clippy"

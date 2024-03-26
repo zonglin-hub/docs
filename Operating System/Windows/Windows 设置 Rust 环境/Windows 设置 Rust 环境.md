@@ -39,8 +39,8 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 找到当前用户目录下 `.cargo` 文件夹，建立 `config` 文件：
 
 ```bash
-touch ~/.cargo/config
-vim ~/.cargo/config
+touch ~/.cargo/config.toml
+vim ~/.cargo/config.toml
 ```
 
 并输入下面内容：
