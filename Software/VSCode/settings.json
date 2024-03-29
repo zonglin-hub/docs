@@ -1,0 +1,32 @@
+// User and Workspace Settings https://code.visualstudio.com/docs/getstarted/settings
+{
+    "editor.codeActionsOnSave": {},
+    "editor.indentSize": "tabSize",
+    // 在 VSCode 中启用连字字体需要用到两个选项 "editor.fontFamily", "editor.fontLigatures"
+    "editor.fontFamily": "Fira Code Light, Consolas, Microsoft YaHei",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true, // 自动保存
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDelete": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "files.autoSave": "afterDelay",
+    "workbench.editor.showTabs": "single",
+    "editor.minimap.enabled": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "window.commandCenter": false,
+    // markdownlint 配置：https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/Rules.md
+    "markdownlint.config": {
+        "MD007": {
+            "indent": 4 // 缩进空格
+        },
+        "MD010": {
+            "spaces_per_tab": 4 // 每个硬制表符的空格数
+        },
+        "MD033": false, // 允许内联 HTML
+        "MD036": false // 使用强调代替标题
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint" // markdownlint 为默认格式化
+    },
+    "workbench.iconTheme": "material-icon-theme"
+}
