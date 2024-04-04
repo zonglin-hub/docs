@@ -8,3 +8,4 @@
 自定义壁纸：<kbd>Ctrl + Alt + /</kbd>
 复制：<kbd>Ctrl + Shift + C</kbd>
 粘贴：<kbd>Ctrl + Shift + V</kbd>
+关闭窗口：<kbd>Ctrl + D</kbd>
