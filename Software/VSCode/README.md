@@ -4,6 +4,17 @@
 
 [LeetCode 测试代码片段](./rust.json)
 
+## Visual Studio Code 安装中文插件后，重启不生效问题解决
+
+一、问题描述：
+
+安装插件后，重启IDE，中文并没有如期出现
+
+二、解决：
+
+在 Visual Studio Code 中，按住 ctr + shift + p，在出现的输入框中，输入Configure Display Language，在弹出的语言中，选中 zh-cn，软件提示重启。
+点击重启按钮后，中文生效了。
+
 ## 扩展
 
 ### 公共插件
