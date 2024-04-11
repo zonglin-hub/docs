@@ -1,0 +1,37 @@
+ls
+hx .
+touch languages.toml
+mv languages.toml helix\
+hx helix\languages.toml
+open helix\languages.toml --raw
+cargo fmt
+touch src\leet_code\_1979_find_gcd.rs
+ipconfig
+git init
+git  add .
+git status
+git commit -a 
+git commit -m "移除表格"
+git push -u origin main
+git log
+rm wezterm-config\
+ping www.baidu.com
+ping 192.168.1.1 -t
+clear
+rustup show 
+cargo install --locked yazi-fm
+yazi
+cd
+cd ..
+pwd
+cd D:\github\leet_code\
+fd
+cargo 
+cargo clean
+code .
+clear
+fd
+ps
+ps -h
+rm bat-v0.24.0-x86_64-pc-windows-gnu.zip
+rm -rf bat-v0.24.0-x86_64-pc-windows-gnu\
