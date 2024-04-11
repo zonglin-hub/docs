@@ -12,8 +12,8 @@
 
 二、解决：
 
-在 Visual Studio Code 中，按住 ctr + shift + p，在出现的输入框中，输入Configure Display Language，在弹出的语言中，选中 zh-cn，软件提示重启。
-点击重启按钮后，中文生效了。
+在 Visual Studio Code 中，按住 <kbd>Ctrl + Shift + PP</kbd>，在出现的输入框中，
+输入 `Configure Display Language`，在弹出的语言中，选中 `zh-cn`，软件提示重启。点击重启按钮后，中文生效了。
 
 ## 扩展
 
