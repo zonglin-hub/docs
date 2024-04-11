@@ -139,12 +139,24 @@ let light_theme = {
 }
 
 # 自定义别名
+# mcfly = Ctrl + R 
+# https://github.com/Peltoche/lsd
 alias ls = lsd
+# https://github.com/sharkdp/fd
 alias find = fd
+# https://github.com/sharkdp/bat
 alias cat = bat
+# https://github.com/BurntSushi/ripgrep
 alias grep = rg
-
-
+# https://github.com/dalance/procs
+alias ps = procs
+# https://github.com/ClementTsang/bottom
+alias top = btm
+# https://github.com/chmln/sd
+alias sed = sd
+# https://github.com/bootandy/dust
+alias du = dust
+  
 # External completer example
 # let carapace_completer = {|spans|
 #     carapace $spans.0 nushell ...$spans | from json
