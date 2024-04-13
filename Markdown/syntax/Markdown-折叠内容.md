@@ -4,7 +4,7 @@ HTML `<details>` 标签指定了用户可以根据需要打开和关闭的额外
 
 语法：
 
-```
+```markdown
 <details> <summary>Title</summary>
 contents ...
 </details>
@@ -20,7 +20,7 @@ contents ...
 
 在博客园的 Markdown 中，`<details>` 标签前面不能为空，要有字符或者空格：
 
-```
+```markdown
  <details> <summary>View Code</summary>
 code ...
 </details>
@@ -28,7 +28,7 @@ code ...
 
 有的 Markdown 中，可能 `<summary>` 标签与正文间要空一行。比如：
 
-```
+```markdown
 <details> <summary>View Code</summary>
 
 code ...

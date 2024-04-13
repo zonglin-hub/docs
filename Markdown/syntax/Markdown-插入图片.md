@@ -61,10 +61,10 @@ MarkDown 中显示图片的语法是 `![图片描述](图片地址)` 。但是�
 <img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_2_1488499316/550" height="330" width="190" >
 <img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_3_1488499316/550" height="330" width="190" >
 
- </div>
+</div>
 ```
 
-#### 其他属性
+## 其他属性
 
 根据 MarkDown 编辑器解析语法的方式不同，有些编辑器还支持别的属性
 

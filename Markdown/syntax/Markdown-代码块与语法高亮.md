@@ -9,7 +9,7 @@
 
 在一般的段落文字中，可以使用反引号 \` 来标记或插入代码区段。
 
-```
+```text
 C语言里的函数 `scanf()` 怎么使用？
 ```
 
@@ -24,13 +24,6 @@ C语言里的函数 `scanf()` 怎么使用？<br>
 
 比如高亮 `python3` 代码块：
 
-    ```python
-    #!/usr/bin/env python3
-    print("Hello, World!");
-    ```
-
-显示为：
-
 ```python
 #!/usr/bin/env python3
 print("Hello, World!");
@@ -38,15 +31,16 @@ print("Hello, World!");
 
 ## 缩进式插入多行代码
 
-> **注意**：<br>
-> 缩进式插入前方必须有空行；<br>
-> 缩进 4 个空格或是 1 个制表符；<br>
-> 一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。
+**注意**：<br>
+
+- 缩进式插入前方必须有空行；<br>
+- 缩进 4 个空格或是 1 个制表符；<br>
+- 一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。
 
 代码：
 
-```
-此处有空行
+```markdown
+
     #include  <stdio.h>`
     int main(void)`
     {
@@ -65,10 +59,6 @@ print("Hello, World!");
 ## 代码区块中的内容
 
 代码区块中，一般的 Markdown 语法不会被转换，像是 * 便只是星号，这表示你可以很容易地以 Markdown 语法撰写 Markdown 语法相关的文件。
-
-    ```markdown
-    Markdown 语法展示
-    ```
 
 比如下面展示 Markdown 常用语法：
 

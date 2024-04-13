@@ -17,12 +17,12 @@ Markdown 本身不支持修改字体、字号与颜色等，还好 Markdown 支�
 
 font 是一对常规标签，font 标签内设置 `color="对应颜色值"` 即可设置对象内字体的颜色：
 
-```php+HTML
+```markdown
 <font color="red"> 我是红色字体 </font> 或者 <font color="#FF0000"> 我也是红色字体 </font> 
 ```
 
 <font color="red">我是红色字体</font> 或者
-<font color="#FF0000">我也是红色字体</font> 
+<font color="#FF0000">我也是红色字体</font>
 
 另外，还可以这样设置字体颜色：
 
@@ -36,18 +36,17 @@ $\color{green}{绿色} $
 
 对于标准的 Markdown 文本，默认左对齐，是不支持居中对齐的。我们采用 HTML 语法格式：
 
-```
+```markdown
 <center>文字居中</center>
 ```
 
 <center>文字居中</center>
-
 
 ## 添加背景色
 
 Markdown 本身不支持背景色设置，需要借助 table、tr、td 等表格标签的 bgcolor 属性来实现背景色的功能。举例如下：
 
-```
+```markdown
 <table><tr><td bgcolor=#FF4500>
     这里的背景色是：OrangeRed，十六进制颜色值：#FF4500，rgb(255, 69, 0)
 </td></tr></table>
@@ -58,4 +57,3 @@ Markdown 本身不支持背景色设置，需要借助 table、tr、td 等表格
 <table><tr><td bgcolor=#FF4500>
     这里的背景色是：OrangeRed，十六进制颜色值：#FF4500，rgb(255, 69, 0)
 </td></tr></table>
-

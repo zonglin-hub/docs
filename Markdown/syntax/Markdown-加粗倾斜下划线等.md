@@ -14,7 +14,7 @@
 
 强调也可以直接插在文字中间：
 
-```
+```markdown
 un**frigging**believable
 ```
 
@@ -93,7 +93,7 @@ Markdown 无法表现中文的着重号 `．`，实在是没有办法的办法�
 
 如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：
 
-```
+```markdown
 \*this text is surrounded by literal asterisks\*
 ```
 
@@ -158,7 +158,7 @@ to re-render an MDN page.
 国<rp>（</rp><rt>guó</rt><rp>）</rp>
 </ruby>
 
-#### ruby 语法说明
+### ruby 语法说明
 
 - `<ruby>` — 用它将需要注释或注音标的文字内容包围住。
 - `<rt>` — 这里面放置音标或注释，这个标记要跟在需要注释的文本后边。`rt` 里的文字，对于横向显示的文章，它会显示在上方。对于竖向显示的文字，它会显示到右边。
@@ -170,7 +170,7 @@ to re-render an MDN page.
 我爱你中国<rt>wǒàinǐzhōngguó</rt>
 </ruby>
 
-```
+```markdown
 <ruby>
 我爱你中国<rt>wǒàinǐzhōngguó</rt>
 </ruby>
