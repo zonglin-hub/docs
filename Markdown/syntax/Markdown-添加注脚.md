@@ -26,6 +26,8 @@ Note: `footnote` 可以是任意英文字符；脚注的内容可以放在文章
 [^T]:Typora 官网 <https://typora.io/>
 ```
 
+效果展示：
+
 使用 Markdown[^1] 可以效率的书写文档，直接转换成 HTML[^2]，你可以使用 Typora[^T] 软件。
 
 [^1]:Markdown 是一种纯文本标记语言。

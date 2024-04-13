@@ -21,16 +21,7 @@ font 是一对常规标签，font 标签内设置 `color="对应颜色值"` 即�
 <font color="red"> 我是红色字体 </font> 或者 <font color="#FF0000"> 我也是红色字体 </font> 
 ```
 
-<font color="red">我是红色字体</font> 或者
-<font color="#FF0000">我也是红色字体</font>
-
-另外，还可以这样设置字体颜色：
-
-```markdown
-$\color{green}{绿色} $
-```
-
-$\color{green}{绿色} $
+<font color="red"> 我是红色字体 </font> 或者 <font color="#FF0000"> 我也是红色字体 </font>
 
 ## 文字居中
 

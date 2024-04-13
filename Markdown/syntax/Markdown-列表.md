@@ -69,34 +69,34 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 无序列表：
 
 ```markdown
-- Every man is his own worst enemy. Wisdom in the mind is better than money in the hand. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
+- Every man is his own worst enemy. Wisdom in the mind is better than money in the hand. 
     
     From small beginnings comes great things.(列表项目中的段落)
 
-- Saying and doing are two different things. Actions speak louder than words. Saying and doing are two different things. Actions speak louder than words. 
+- Saying and doing are two different things. Actions speak louder than words. 
 ```
 
-- Every man is his own worst enemy. Wisdom in the mind is better than money in the hand. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
+- Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
   
     From small beginnings comes great things. (列表项目中的段落)
 
-- Saying and doing are two different things. Actions speak louder than words. Saying and doing are two different things. Actions speak louder than words.
+- Saying and doing are two different things. Actions speak louder than words.
 
 有序列表：
 
 ```markdown
-1. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
+1. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand. 
     
     From small beginnings comes great things. (列表项目中的段落)
 
-2. Saying and doing are two different things. Actions speak louder than words. Saying and doing are two different things. Actions speak louder than words. 
+2. Saying and doing are two different things. Actions speak louder than words. 
 ```
 
-1. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
+1. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
 
     From small beginnings comes great things. (列表项目中的段落)
 
-2. Saying and doing are two different things. Actions speak louder than words. Saying and doing are two different things. Actions speak louder than words.
+2. Saying and doing are two different things. Actions speak louder than words.
 
 ## 列表项目内引用
 

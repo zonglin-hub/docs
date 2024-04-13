@@ -48,15 +48,6 @@ Markdown 支持两种标题的语法。
 <h6>这是 H6</h6>
 ```
 
-<details><summary>效果：</summary>
-<h1>这是 H1</h1>
-<h2>这是 H2</h2>
-<h3>这是 H3</h3>
-<h4>这是 H4</h4>
-<h5>这是 H5</h5>
-<h6>这是 H6</h6>
-</details>
-
 利用 `=`（最高阶标题）和 `-`（第二阶标题），例如：
 
 ```markdown
@@ -66,15 +57,5 @@ This is an H1
 This is an H2
 -------------
 ```
-
-<details><summary>效果：</summary>
-
-This is an H1
-=============
-
-This is an H2
--------------
-
-</details>
 
 任何数量的 `=` 和 `-` 都可以有效果。

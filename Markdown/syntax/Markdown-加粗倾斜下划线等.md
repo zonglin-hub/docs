@@ -5,20 +5,15 @@
 ```markdown
 **粗体**
 
+强调也可以直接插在文字中间
+un**frigging**believable
+
 ***加粗斜体***
 
 *斜体*或_斜体_
 
 ~~删除线~~
 ```
-
-强调也可以直接插在文字中间：
-
-```markdown
-un**frigging**believable
-```
-
-un**frigging**believable
 
 如果 * 和 _ 与强调文字之间有空格的话，它们就只会被当成普通的符号。比如：
 
@@ -132,7 +127,9 @@ to re-render an MDN page.
 
 <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
 
-> 参见 [**kbd** The Keyboard Input element - HTML_ Hypertext Markup Language](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/kbd)。
+> 参见 [kbd The Keyboard Input element - HTML_ Hypertext Markup Language]
+
+[kbd The Keyboard Input element - HTML_ Hypertext Markup Language]: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/kbd
 
 ## 添加注音
 
@@ -148,7 +145,7 @@ to re-render an MDN page.
 </ruby>
 ```
 
-输出：
+<details><summary>效果：</summary>
 
 <ruby>
 我<rp>（</rp><rt>wǒ</rt><rp>）</rp>
@@ -158,6 +155,8 @@ to re-render an MDN page.
 国<rp>（</rp><rt>guó</rt><rp>）</rp>
 </ruby>
 
+</details>
+
 ### ruby 语法说明
 
 - `<ruby>` — 用它将需要注释或注音标的文字内容包围住。
@@ -166,16 +165,25 @@ to re-render an MDN page.
 
 偷懒的写法：
 
-<ruby>
-我爱你中国<rt>wǒàinǐzhōngguó</rt>
-</ruby>
-
 ```markdown
 <ruby>
 我爱你中国<rt>wǒàinǐzhōngguó</rt>
 </ruby>
 ```
 
-其中带音标的字母可通过输入法中的特殊字符输入。也可查看 [符号大全-特殊符号](http://www.fhdq.net/) 中的汉语拼音部分。
+<details><summary>效果：</summary>
 
-> 参见 [HTML 拼音/音标注释标记 ruby 和它的子元素 rt/rp](https://blog.csdn.net/chs_jdmdr/article/details/51622360)
+<ruby>
+我爱你中国<rt>wǒàinǐzhōngguó</rt>
+</ruby>
+
+</details>
+
+其中带音标的字母可通过输入法中的特殊字符输入。
+也可查看 [符号大全-特殊符号] 中的汉语拼音部分。
+
+[符号大全-特殊符号]: http://www.fhdq.net/
+
+> 参见 [HTML 拼音/音标注释标记]
+
+[HTML 拼音/音标注释标记]: https://blog.csdn.net/chs_jdmdr/article/details/51622360

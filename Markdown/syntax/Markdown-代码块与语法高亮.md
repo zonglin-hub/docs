@@ -48,13 +48,15 @@ print("Hello, World!");
     }
 ```
 
-显示效果：
+<details><summary>显示效果：</summary>
 
-    #include  <stdio.h>`
+    #include  <stdio.h>
     int main(void)`
     {
         printf("Hello world\n");
     }
+
+</details>
 
 ## 代码区块中的内容
 
