@@ -1,0 +1,25 @@
+# Git 强制覆盖本地文件
+
+git pull 强制覆盖本地的代码方式，下面是正确的方法：
+
+```sh
+git fetch --all
+```
+
+然后，你有两个选择：
+
+```sh
+git reset --hard origin/main
+```
+
+或者如果你在其他分支上：
+
+```sh
+git reset --hard origin/<branch_name>
+```
+
+说明：
+
+`git fetch` 从远程下载最新的，而不尝试合并或 `rebase` 任何东西。
+
+然后 `git reset` 将主分支重置为您刚刚获取的内容。 `--hard` 选项更改工作树中的所有文件以匹配`origin/main`中的文件。
