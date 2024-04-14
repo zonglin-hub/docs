@@ -33,3 +33,33 @@ Note: 请注意，创建符号链接可能需要管理员权限。
 如果当前用户没有足够的权限，请在命令提示符或 `PowerShell` 中以管理员身份运行。
 此外，`.symlink` 扩展名并不是 Windows 系统创建符号链接时默认使用的扩展名。
 通常情况下，符号链接的名称和扩展名应该与目标文件保持一致，以便于识别和管理。
+
+Examples
+
+```nu
+❯ mklink -h
+命令语法不正确。
+创建符号链接。
+
+MKLINK [[/D] | [/H] | [/J]] Link Target
+
+        /D      创建目录符号链接。默认为文件
+                符号链接。
+        /H      创建硬链接而非符号链接。
+        /J      创建目录联接。
+        Link    指定新的符号链接名称。
+        Target  指定新链接引用的路径
+                (相对或绝对)。
+
+docs\Rust\async on  main [?]
+❯ mklink Link `..\Blog\Rust 异步工作原理.md`
+为 Link <<===>> ..\Blog\Rust 异步工作原理.md 创建的符号链接
+docs\Rust\async on  main [?]
+❯ ls -al
+d---- ? ?   0 B  Mon Apr 15 00:07:23 2024  .
+d---- ? ? 4.0 KB Thu Apr 11 23:31:31 2024  ..
+la--- ? ?   0 B  Mon Apr 15 00:07:23 2024  Link ⇒ ..\Blog\Rust 异步工作原理.md
+.a--- ? ? 726 B  Sun Apr 14 09:30:33 2024  README.md
+la--- ? ?   0 B  Mon Apr 15 00:05:41 2024  Rust_异步工作原理.md ⇒ Rust 异步工作原理.md
+.a--- ? ?  14 KB Thu Apr 11 14:17:00 2024  '异步 - 简介.md'
+```
