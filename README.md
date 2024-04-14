@@ -8,3 +8,8 @@
 - [Shell](./Shell/README.md)
 - [Software](./Software/README.md)
 - [Else](./Else/README.md)
+
+Markdown {文件/文件夹}命名规范
+
+- operating_system <=> 文件夹
+- Pinning_in_Rust.md <=> 文件
