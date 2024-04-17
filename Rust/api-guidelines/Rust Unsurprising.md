@@ -7,9 +7,18 @@
 - 核心思想
     - 贴近用户已经知道的东西（不必重学概念）
 
-- 让接口可测试
+## 目录
+
+- [Unsurprising（不意外）](#unsurprising不意外)
+    - [目录](#目录)
     - [命名实践](#命名实践)
     - [实现常用的 Traits](#实现常用的-traits)
+        - [建议实现 `Debug Trait`](#建议实现-debug-trait)
+        - [建议实现 `Send` 和 `Sync（unpin）`](#建议实现-send-和-syncunpin)
+        - [建议实现 `Clone` 和 `Default`](#建议实现-clone-和-default)
+        - [建议实现 `PartialEq, PartialOrd, Hash, Eq, Ord`](#建议实现-partialeq-partialord-hash-eq-ord)
+        - [建议实现 `serde` 下的 `Serialize、Deserialize`](#建议实现-serde-下的-serializedeserialize)
+        - [为什么没建议实现 `Copy`](#为什么没建议实现-copy)
     - [人体工程学（Ergonomic）Traits](#人体工程学ergonomictraits)
     - [包装类型（Wrapper Type）](#包装类型wrapper-type)
 
