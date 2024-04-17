@@ -1,0 +1,4 @@
+- [Linux命令大全](https://www.linuxcool.com)
+- [The Linux Kernel documentation — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/)
+- [Linux命令搜索引擎](https://wangchujiang.com/linux-command/)
+- [Debian 参考手册](https://www.debian.org/doc/manuals/debian-reference/)
