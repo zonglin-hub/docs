@@ -36,3 +36,13 @@ HTML 符号也都可以用到 Markdown 中。比如：
 | ↓    | down arrow            | `&darr;`  | `&#8595;` |
 | ↔    | left right arrow      | `&harr;`  | `&#8596;` |
 | ↵    | carriage return arrow | `&crarr;` | `&#8629;` |
+
+:warning: 警告
+
+> [!NOTE]
+> 注解内容
+
+- Examples:
+    - :white_check_mark:
+    - :white_check_mark:  
+    - :x:
