@@ -166,16 +166,12 @@ to re-render an MDN page.
 偷懒的写法：
 
 ```markdown
-<ruby>
-我爱你中国<rt>wǒàinǐzhōngguó</rt>
-</ruby>
+<ruby>我爱你中国<rt>wǒàinǐzhōngguó</rt></ruby>
 ```
 
 <details><summary>效果：</summary>
 
-<ruby>
-我爱你中国<rt>wǒàinǐzhōngguó</rt>
-</ruby>
+<ruby>我爱你中国<rt>wǒàinǐzhōngguó</rt></ruby>
 
 </details>
 
