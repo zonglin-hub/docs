@@ -6,22 +6,44 @@ TOC 是 Table of Contents 的简写。
 
 ## 目录
 
+```markdown
+- [Markdown 目录](#markdown-目录)
+    - [目录](#目录)
+    - [Span 标签](#span-标签)
+```
+
+<details> <summary>效果展示：</summary>
+
 - [Markdown 目录](#markdown-目录)
     - [目录](#目录)
     - [Span 标签](#span-标签)
 
+</details>
+
 ## Span 标签
 
-**yum** [[Options](#jump1)] [COMMAND](#jump2)
+```markdown
+yum [[Options](#jump1)] [COMMAND](#jump2)
 
 <span id="jump1"><strong>List of Commands: </strong></span>
 
-```sh
-check          检查 RPM 数据库问题
-```
+    check
 
 <span id="jump2"><strong>Options: </strong></span>
 
-```sh
--q, --quiet           静默执行
+    -q, --quiet
 ```
+
+<details> <summary>效果展示：</summary>
+
+yum [[Options](#jump1)] [COMMAND](#jump2)
+
+<span id="jump1"><strong>List of Commands: </strong></span>
+
+    check
+
+<span id="jump2"><strong>Options: </strong></span>
+
+    -q, --quiet
+
+</details>
