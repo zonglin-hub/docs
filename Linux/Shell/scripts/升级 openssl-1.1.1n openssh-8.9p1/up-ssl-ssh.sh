@@ -1,6 +1,6 @@
 # !/bin/bash
 
-# 基于CentOS 7.5 编写
+# 基于 CentOS 7.5 编写
 
 # 功能实现升级openssl-1.1.1n openssh-8.9p1
 

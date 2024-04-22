@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 基于 debian 编写
+# 基于 Ubuntu 编写
 
 PATH_=/root/disk.log
 DiskTU=0
