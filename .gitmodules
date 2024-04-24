@@ -1,0 +1,3 @@
+[submodule "Windows/Config/wezterm-config"]
+	path = Windows/Config/wezterm-config
+	url = https://github.com/zonglin-hub/wezterm-config.git
