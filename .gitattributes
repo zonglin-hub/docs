@@ -1,4 +1,19 @@
+# 此设置指示 Linguist 不要将匹配的文件或目录识别为供应商代码。
+# 默认情况下，Linguist 会忽略一些常见的供应商目录，如 node_modules、vendor 等。
+# 如果你有一个不应该被忽略的目录，可以通过此设置将其包含在语言统计中。
 * linguist-vendored=false
+
+# 此设置指示 Linguist 不要将匹配的文件识别为生成的代码。
+# 默认情况下，Linguist 会忽略一些生成的文件，如编译后的目标文件、minified 的 JavaScript 等。
+# 如果你有一些不应该被忽略的生成文件，可以通过此设置将其包含在语言统计中。
 * linguist-generated=false
+
+# 此设置指示 Linguist 不要将匹配的文件识别为文档。
+# 默认情况下，Linguist 可能会将某些文件（如 README 文件）识别为文档。
+# 如果你有一些不应该被识别为文档的文件，可以通过此设置将其包含在语言统计中。
 * linguist-documentation=false
+
+# 此设置指示 Linguist 应该检测和处理匹配的文件。
+# 当设置为 true 时，Linguist 会根据文件内容和扩展名来识别它们所使用的编程语言。
+# 如果设置为 false，Linguist 会忽略这些文件，不将它们计入语言统计。
 * linguist-detectable=true
