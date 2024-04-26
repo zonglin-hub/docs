@@ -14,7 +14,6 @@ export LANG=en_US
 xdg-user-dirs-gtk-update
 ```
 
-
 > [!NOTE]
 > 此时会弹出界面，选择带有 “update” 字样的选项或者是 “更新名称” 跳出对话框询问是否将目录转化为英文路径，选择后提示成功！
 
@@ -32,7 +31,5 @@ export LANG=zh_CN.utf-8
 xdg-user-dirs-gtk-update
 ```
 
-
 > [!NOTE]
 > 此时会再次弹出对话框询问，选择 oldupdate 或者保留旧名称，跳出对话框询问是否将目录转化为中文路径，选择后提示成功！
-
