@@ -32,3 +32,21 @@ GitHub 在 2021 年 8 月 13 日的时候修改了认证方式，不能使用账
 用户名就写你 GitHub 上的名字就好了，密码就填我们步骤一最后生成的密匙，然后就完成了。
 
 [tokens (classic)]: https://github.com/settings/tokens
+
+每次 git pull 或者 git push 的时候，都要提示你输入账号和密码，很麻烦。
+于是在网上找到了解决办法。这j里记录下来，以便以后解决此类问题。
+
+首先进入你的git 工作目录下。
+在终端执行一下命令：`git config --global credential.helper store`
+然后再重新执行一次git pull,这次它还是提示你输入账号和密码：
+
+示例：
+
+```shell
+git pull
+Username for 'https://isource-sh.dajiahao.com': s00558157
+Password for 'https://stxgs123@isource-sh.dajiahao.com':*******
+```
+
+这次之后，它就会记录下账号和密码。以后再 pull 或者 push 的时候，
+再也不用输入账户和密码了，节省时间，提高效率！！
