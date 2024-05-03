@@ -1,4 +1,4 @@
-# Markdown 注脚
+# Markdown 脚注
 
 ## 语法
 
