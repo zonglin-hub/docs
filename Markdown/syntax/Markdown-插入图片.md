@@ -37,6 +37,20 @@ MarkDown 中显示图片的语法是 `![图片描述](图片地址)` 。但是�
 <img src="http://pic15.photophoto.cn/20100615/0006019058815826_b.jpg"  height="330" width="495">
 ```
 
+## 图片剧中
+
+```markdown
+<div align="center">
+  <picture>
+    <img alt="systemd 的架构"
+         src="./img/learning-to-love-systemd/085112xl9ukqlulkugszo5.png"
+         width="80%">
+  </picture>
+
+  图 1：systemd 的架构，作者 Shmuel Csaba Otto Traian (CC BY-SA 3.0)
+</div>
+```
+
 ## 其他属性
 
 根据 MarkDown 编辑器解析语法的方式不同，有些编辑器还支持别的属性
