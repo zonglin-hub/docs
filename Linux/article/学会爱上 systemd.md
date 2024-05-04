@@ -132,13 +132,19 @@ Linux 内核的创建者 Linus Torvalds 对 systemd 似乎不感兴趣。在 201
 它也不提供数据流的视角，数据流是如此复杂，因此在本系列文章的背景下没用。
 
 <div align="center">
-  <picture>
-    <img alt="systemd 的架构"
-         src="./img/learning-to-love-systemd/085112xl9ukqlulkugszo5.png"
-         width="80%">
-  </picture>
+
+  systemd Utilities: systemctl, journalctl, notify, analyze, cgls, cgtop, loginctl, nspawn
+
+  systemd Daemons: systemd, journald, networkd, logind, user session
+
+  systemd Core: manager, systemd, unit (service, timer, mount, target), login (multiseat, inhibit), namespace, log
+
+  systemd Libraries: dbus-1, libpam, libcap, libcryptsetup, tcpwrapper, libaudit, libnotify
+
+  Linux Kernel: cgroups, autofs, kdbus
 
   图 1：systemd 的架构，作者 Shmuel Csaba Otto Traian (CC BY-SA 3.0)
+
 </div>
 
 如果要完整地讲解 systemd 就需要一本书。你不需要了解图 1 中的 systemd 组件是如何组合在一起的细节。
