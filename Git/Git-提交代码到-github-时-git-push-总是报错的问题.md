@@ -1,4 +1,4 @@
-# 使用 git 提交代码到 GitHub 时 git push 总是报错的问题
+# Git 提交代码到 GitHub 时 git push 总是报错的问题
 
 GitHub 在 2021 年 8 月 13 日的时候修改了认证方式，不能使用账户登录的方式去 push 代码等等操作，
 而是使用生成仓库的个人密钥去 push 代码等操作。所以如果使用的是 gitee 的话，通过账户密码登录的方式是可以正常提交的，
@@ -43,7 +43,7 @@ GitHub 在 2021 年 8 月 13 日的时候修改了认证方式，不能使用账
 示例：
 
 ```shell
-git pull
+❯ git pull
 Username for 'https://isource-sh.dajiahao.com': s00558157
 Password for 'https://stxgs123@isource-sh.dajiahao.com':*******
 ```
