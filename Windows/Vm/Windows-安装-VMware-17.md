@@ -1,4 +1,4 @@
-# Windows 下 VMware 17 下载地址以及密钥（亲测可用）
+# Windows 安装 VMware 17
 
 密钥：
 
