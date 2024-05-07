@@ -1,6 +1,6 @@
-[submodule "Windows/Config/wezterm-config"]
-	path = Windows/Config/wezterm-config
+[submodule "Config/wezterm-config"]
+	path = Config/wezterm-config
 	url = https://github.com/zonglin-hub/wezterm-config.git
-[submodule "Windows/Config/nushell-config"]
-	path = Windows/Config/nushell-config
+[submodule "Config/nushell-config"]
+	path = Config/nushell-config
 	url = https://github.com/zonglin-hub/nushell-config.git
