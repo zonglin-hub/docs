@@ -11,22 +11,27 @@
     "debug.allowBreakpointsEverywhere": true,
     "files.autoSave": "afterDelay",
     "workbench.editor.showTabs": "single",
-    "editor.minimap.enabled": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
-    "window.commandCenter": false,
     // markdownlint 配置：https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/Rules.md
     "markdownlint.config": {
         "MD007": {
-            "indent": 4 // 缩进空格
+            "indent": 4, // 缩进空格
         },
         "MD010": {
             "spaces_per_tab": 4 // 每个硬制表符的空格数
         },
+        // 允许 多个 #
+        "MD025": false,
         "MD033": false, // 允许内联 HTML
-        "MD036": false // 使用强调代替标题
+        "MD036": false, // 使用强调代替标题
+        "MD041": false,
     },
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint" // markdownlint 为默认格式化
     },
-    "workbench.iconTheme": "material-icon-theme"
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontSize": 15,
+    "workbench.iconTheme": "material-icon-theme",
+    // Markdown All in One Markdown 配置缩进
+    "markdown.extension.list.indentationSize": 4,
 }
