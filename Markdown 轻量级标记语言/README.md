@@ -3,8 +3,6 @@
 Markdown 是一种轻量级标记语言，它以纯文本形式编写文档，并最终以 HTML 格式发布。
 也可以理解为将以 Markdown 语法编写的语言转换成 HTML 内容的工具。
 
-Markdown的全称是“Markdown 轻量级标记语言”（Markdown Lightweight Markup Language）。它是一种使用纯文本格式进行编写，并能轻松转换成结构化HTML代码的语言。Markdown的目标是易读易写，让作者能够以最小的输入代价，生成格式化的文档。
-
 ## 目录
 
 - [Markdown](#markdown)
