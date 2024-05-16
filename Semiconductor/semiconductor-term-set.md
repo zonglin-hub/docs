@@ -1,3 +1,5 @@
+英语国际音标表 <https://mengxiang.net/tool/phonetic/>
+
 __文档格式说明：__
 
 ```text
@@ -16,20 +18,20 @@ __文档格式说明：__
 - A
     - Air `英 [eə(r)]`
         - 空气；
-        - Air shower
-            - 风淋室；进 cln room 之前必须通道，可减少 particle
+    - Air shower
+        - 风淋室；进 cln room 之前必须通道，可减少 particle
     - Alarm `英 [əˈlɑːm]`
         - 警报；系统检查到设备的运行状态有异常
     - Alignment `英 [əˈlaɪnmənt]`
         - 调整，标准；使得现工艺和前工艺的 pattern 相一致的方
     - AMHS 全称 Automatic Material Handling System
         - 自动物料搬运系统
-        - Auto1 全称 Equipment Automation
-            - Job Prep [IUI] + EAP（Job Ln + Job Out）* 机台自动化
-        - Auto2 全称 Transportation Automation
-            - Job Prep [IUI] + MSC（ Move to Load Port） + EAP（Job Ln + Job Out）+ MCS (Where to Go) * 搬运自动化 + 机台自动化
-        - Auto3 全称 Full Auto
-            - Job Prep [IUI] + MSC（ Move to Load Port） + EAP（Job Ln + Job Out）+ MCS (Where to Go) * 派工自动化 + 搬运自动化 + 机台自动化
+    - Auto1 全称 Equipment Automation
+        - Job Prep [IUI] + EAP（Job Ln + Job Out）* 机台自动化
+    - Auto2 全称 Transportation Automation
+        - Job Prep [IUI] + MSC（ Move to Load Port） + EAP（Job Ln + Job Out）+ MCS (Where to Go) * 搬运自动化 + 机台自动化
+    - Auto3 全称 Full Auto
+        - Job Prep [IUI] + MSC（ Move to Load Port） + EAP（Job Ln + Job Out）+ MCS (Where to Go) * 派工自动化 + 搬运自动化 + 机台自动化
     - Area `英 [ˈeəriə]`
         - 工作区域，与 Module 同样指代某个部门
 - B
@@ -37,8 +39,8 @@ __文档格式说明：__
         - 复机，备用设备
     - Batch
         - 一批产品；一般在生产中 run 货的方式之一
-        - Batch size
-            - 决定一 batch(批) 能装多少 LOT
+    - Batch size
+        - 决定一 batch(批) 能装多少 LOT
     - Bath
         - 水池；cleaning 设备中盛有液体的，用来浸泡 wafer 的装
     - Bay
@@ -62,14 +64,12 @@ __文档格式说明：__
         - 检查，核对
     - Chemical `英 [ˈkemɪk(ə)l]`
         - 化学药品；多用于 wafer 制造的材料
-        - CMP 全称 Chemical Mechanical Polishing
-            - 化学研磨工艺；使 wafer 表面平整的工艺
-        - CVD 全称 Chemical Vapor Deposition
-            - 化学气相沉积；将气体化学反应形成的粒子以外部能量赋予的水蒸气形态喷洒蒸镀的方法
-    - Chrome
+    - CMP 全称 Chemical Mechanical Polishing
+        - 化学研磨工艺；使 wafer 表面平整的工艺
+    - CVD 全称 Chemical Vapor Deposition
+        - 化学气相沉积；将气体化学反应形成的粒子以外部能量赋予的水蒸气形态喷洒蒸镀的方法
+    - Chrome `英 [krəʊm]`
         - 铬
-    - COG 全称 Chrome On Glass
-        - 一种光罩类型
     - CIM 全称 Computer Integrated Manufacturing System
         - 自动化系统
     - Coating
@@ -88,11 +88,15 @@ __文档格式说明：__
         - 无尘室；抑制 particle 产生，利用 Filter 去除产生的
     - Case
         - 实例
+    - Cart/Trolley
+        - 推车；FAB 内进行 FOUP 搬运的工具
+    - Change `英 [tʃeɪndʒ]`
+        - 变更
 - D
     - Defect `英 [ˈdiːfekt]`
         - 缺陷；包括所有种类的污染物和结构缺陷
-        - Killer defect
-        - Non killer
+    - Killer defect
+    - Non killer
     - Develop
         - 涂胶、曝光、显影
     - Delay
@@ -109,13 +113,12 @@ __文档格式说明：__
         - 纯超水，去离子水
     - Dummy
         - 挡片，用于设备填充或热机
-        - Dummy Season
-            - 使用 dummy wafer 进行暖机的操作
-        - Dummy wafer
-            - 挡片；多用于 Fill，season
+    - Dummy Season
+        - 使用 dummy wafer 进行暖机的操作
+    - Dummy wafer
+        - 挡片；多用于 Fill，season
     - Down
         - 宕机状态；设备发生故障，不能正常工作的状态
-
     - Downgrade
         - 降级，将产品从高级降低等级。
     - Description
@@ -135,35 +138,34 @@ __文档格式说明：__
         - 设备，机器
     - ETCH `英 [etʃ]`
         - 刻蚀，用于圆形的刻蚀，其中有干法刻蚀和湿法刻蚀。
-            - Dry ETCH Equipment
-                - 干式蚀刻设备
+    - Dry ETCH Equipment
+        - 干式蚀刻设备
     - Expose
         - 曝光；指光刻机工艺中的第二阶段，涂胶/曝光/显影
 - F
     - FAB 全称 Fabrication
         - 工厂；wafer 进行工艺的生态车间
-        - FMB 全称 FAB Monitor Board
-            - 以 layout 形式展示设备在 FAB 内的位置以及状态等信息
+    - FMB 全称 FAB Monitor Board
+        - 以 layout 形式展示设备在 FAB 内的位置以及状态等信息
     - Fill
         - 填补
     - Fail
         - 失败；制造过程中出现了问题
     - Flow
         - 流动；指产品往下进行工艺
-
-    - FOSB 全称 Film On Substrate Bonding
-        - wafer 来料时用的放置 wafer 的盒子
     - FFU 全称 Fan Filter Unit
         - 风机过滤单位，由 fan 和 filter 组成的 unit
+    - FOSB 全称 Film On Substrate Bonding
+        - wafer 来料时用的放置 wafer 的盒子；出库入库使用 FOSB
     - FOUP 全称 Front Opening Unified Pod
-        - 半导体制造工艺为了运输装 wafer 而使用的物品，保护 wafer 防杂质
-        - FOUP Change
-            - 更换 FOUP 的操作
-        - FOUP ID
-            - 每个 FOUP 唯一的编码
-    - Furnace
+        - 半导体制造工艺为了运输装 wafer 而使用的物品，保护 wafer 防杂质；工艺加工使用 FOUP
+    - ​FOUP Change
+        - 更换 FOUP 的操作
+    - FOUP ID
+        - 每个 FOUP 唯一的编码
+    - Furnace `英 [ˈfɜːnɪs]`
         - 炉管，进行热氧化加工的炉子
-    - Frame
+    - Frame `英 [freɪm]`
         - 铝框
 - G
     - Gas
@@ -192,49 +194,57 @@ __文档格式说明：__
     - Keyin
         - 更衣室，指进入 FAB 前的安检，更换无尘服的区域
 - L
-    - Layout
+    - Layout `英 [ˈleɪaʊt]`
         - 布局，布局图；或指将设计的电路转换成工艺/制造形态的作业或变换的 data；设计到工艺转换为 data 的过程
-    - LITHO 全称 Lithography
+    - LITHO 全称 Lithography `英 [lɪˈθɒɡrəfi]`
         - 指光刻；指的是光刻技术，意思等同于 photo
-    - Loading
+    - Loading `英 [ˈləʊdɪŋ]`
         - 把 FOUP 放上 load port 的动作
-        - Load Port
-            - 设备前端用于放置 FOUP 的地方，指设备的上货口和下货口；
-            - 维持 FOUP 在密封状态下，并可开关的装置
-    - Lot
+    - Load Port
+        - 设备前端用于放置 FOUP 的地方，指设备的上货口和下货口；
+        - 维持 FOUP 在密封状态下，并可开关的装置
+    - Lot `英 [lɒt]`
         - 批次；一批 wafer；以 sample 为目的，在某一条件下
-        - Lot Prepare
-            - 下 Job，对 Lot 进行做要进行工艺前的准备
-        - Lot Flow
-            - lot 进行 process 的流程
-        - Lot ID
-            - 一批 wafer 的身份信息
-    - Line
+    - Lot Prepare
+        - 下 Job，对 Lot 进行做要进行工艺前的准备
+    - Lot Flow
+        - lot 进行 process 的流程
+    - Lot ID
+        - 一批 wafer 的身份信息
+    - Line `英 [laɪn]`
         - 线路；
-    - Leader
+    - Leader `英 [ˈliːdə(r)]`
         - 领导
-    - layer
+    - layer `英 [ˈleɪə(r)]`
         - 分层
+    - Laser `英 [ˈleɪzə(r)]`
+        - 激光
 - M
     - Macro inspection
         - 宏观检测；一种测量方式，一般检测 wafer 表面的划痕，污染物等。
     - Manual
         - 手动；指手动模式
-    - Mask/Photomask
+    - Mask/Photomask `英 [mɑːsk]`
         - 光罩，光掩膜板；photo 工艺中，通过 mask 使在 wafer 上形成想要
-    - Merge
+    - Reticle `英 [ˈretɪk(ə)l]`
+        - <u>与同 mask 意思相同</u>；
+    - OMOG 全称 Opaque MoSi On Glass
+        - 光照类型
+    - COG 全称 Chrome On Glass
+    - PSM 全称 Phase Shift Mask
+    - Merge `英 [mɜːdʒ]`
         - 将两个 lot 合并成为一个 lot 的操作
     - MES 全称 Manufacturing Execution System
         - 制造执行系统
-    - MFG
+    - MFG 全称 Manufacturing `英 [ˌmænjuˈfæktʃərɪŋ]`
         - 生产部，制造部
-    - Monitor
+    - Monitor `英 [ˈmɒnɪtə(r)]`
         - 监控；一般指监控 wafer，指检测设备的性能，工艺状态的 wafer
-    - Metal
+    - Metal `英 [ˈmet(ə)l]`
         - 金属；指八大工艺中的 metal 工艺
-    - Monitoring
+    - Monitoring `英 [ˈmɒnɪtərɪŋ]`
         - 收集并管理半导体设备中产生的温度，压力等和制造工艺
-    - Move
+    - Move `英 [muːv]`
         - 指单位时间内，在制品的移动量（进行工艺量）
 - N
     - Non-M 全称 Non Metal
@@ -264,8 +274,7 @@ __文档格式说明：__
         - 输出
     - OFF
         - 设备长期不使用或刚搬入时的停机状态
-    - OMOG 全称 Opaque MoSi On Glass
-        - 一种光罩类型
+
 - P
     - Particle
         - 颗粒；微粒子或杂志
@@ -275,115 +284,113 @@ __文档格式说明：__
         - 保护膜
     - PH 全称 photo `英 [ˈfəʊtəʊ]`
         - 指光刻；photo 工艺；利用光罩在基板上形成图案
-        - PR 全称 photo Resist
-            - 光刻胶；photo 工艺中需要用到的重要材料
+    - PR 全称 photo Resist
+        - 光刻胶；photo 工艺中需要用到的重要材料
     - PM 全称 Preventive Maintenance
         - 保养状态；设备保养，为保持设备的最佳状态，对设备进行维护保养
-        - PMS
-            - 设备维护保养系统，生产常用系统之一，在该系统可查看所有设备的 PM 情况
+    - PMS
+        - 设备维护保养系统，生产常用系统之一，在该系统可查看所有设备的 PM 情况
     - Priority
         - 优先级；lot 的优先顺序
     - Process `英 [ˈprəʊses]`
         - 工艺
-        - PPID 全称 Process Program
-            - 工艺程序识别码；即 recipe(菜单) ID
-        - PrP 全称 Process Plan
-            - 工艺流程计划
-    - Purge
+    - PPID 全称 Process Program
+        - 工艺程序识别码；即 recipe(菜单) ID
+    - PrP 全称 Process Plan
+        - 工艺流程计划
+    - Purge `英 [pɜːdʒ]`
         - 清除；吹气，一般指使用<ruby>惰<rt>duò</rt></ruby>性气体对 「Chamber Furnace 腔室，炉管」，进行吹气进而去除微粒的操作
     - PVD 全称 Physical Vapor Deposition
         - 物理气相沉积，属于「Thin Film 薄膜」部门的工艺
-    - PSM 全称 Phase Shift Mask
-        - 一种光罩类型
+    - Pin
+        - FOUP 底部的插孔，比较是否是对应的工艺的 FOUP
 - Q
     - Qual 全称 qualification
         - 在半导体制造最后阶段测试信赖度的工作
     - Q-time 全称 Queue Time
         - 排队等待时间；Lot 在起始站点到结束站点之间的等待时间，Q-time 一般分为 Max Q-time 和 Min Q-time
-        - Min Q-time 全称 Min Queue Time
-            - 最小时间间隔，指在设定时间范围以内不允许进入下一工艺，例：某些 Depo 完成后的 CMP Step
-        - Max Q-time 全称 Max Queue time
-            - 最大时间间隔，指在设定时间范围内必须要进站下一工艺，若超时会引发产品不良等后果，例：ArF 完成后的 ETCH Step
+    - Min Q-time 全称 Min Queue Time
+        - 最小时间间隔，指在设定时间范围以内不允许进入下一工艺，例：某些 Depo 完成后的 CMP Step
+    - Max Q-time 全称 Max Queue time
+        - 最大时间间隔，指在设定时间范围内必须要进站下一工艺，若超时会引发产品不良等后果，例：ArF 完成后的 ETCH Step
 - R
     - Recipe `英 [ˈresəpi]`
-        - 菜单；设备进行生产工艺中所需的参数及条件的合集
-        - RMS 全称 Recipe Management System
-            - Recipe 管理系统，Auto 阶段后设备会从该系统中自动选择匹配的 Recipe
-    - Recycle
+        - 菜单；工艺参数菜单；设备进行生产工艺中所需的参数及条件的合集
+    - RMS 全称 Recipe Management System
+        - Recipe 管理系统，Auto 阶段后设备会从该系统中自动选择匹配的 Recipe
+    - Recycle `英 [ˌriːˈsaɪkl]`
         - 回收利用；一般指 NPW 进行 Particle(颗粒) 测试后进行 recycle 降级后用作其他测试
-    - Reject
+    - Reject `英 [rɪˈdʒekt]`
         - 报废；wafer 有不可修复且严重影响品质的 defect 时，需将 wafer reject
-    - Reticle
-        - 光罩，光掩膜板 <u>与同 mask 相同意思</u>；photo 工艺中，通过 reticle 使 wafer 上形成想要的图案
-    - Rework
+    - Rework `英 [ˌriːˈwɜːk]`
         - 返工；当 wafer 产生可修复的 defect 时，可重新作业
     - RF ID
         - 同 FOUP ID，在 FOUP 前方的标签
     - Run
         - 运行状态；设备处于正常进行工艺的状态
-        - Running Ratio
-            - 衡量 FAB 内 Run 货效率的参数之一
-        - Run Down
-            - 停机；run 货过程中出现异常需停机解决问题
-        - Run sheet
-            - 运行记录；run 货的运行记录文件
+    - Running Ratio
+        - 衡量 FAB 内 Run 货效率的参数之一
+    - Run Down
+        - 停机；run 货过程中出现异常需停机解决问题
+    - Run sheet
+        - 运行记录；run 货的运行记录文件
     - Raw data
         - 基数数据
-    - Release
+    - Release `英 [rɪˈliːs]`
         - 解除 Hold 的情况
-    - RPT 全称 Report
+    - RPT 全称 Report `英 [rɪˈpɔːt]`
         - 报表系统，以图表的方式展示生产数据的系统
     - RTD 全称 Real Time Dispatch
         - 实时派工系统，根据自定义的派工规则，系统实现自动派货 lot
 - S
-    - Safety
+    - Safety `英 [ˈseɪfti]`
         - 安全
-    - Sensor
+    - Sensor `英 [ˈsensə(r)]`
         - 传感器；通过接收信号作出反应的器件
-    - Sample/Pi Run
+    - Sample/Pi Run `英 [ˈsɑːmp(ə)l]`
         - 取样；试样；用于测试 process 或 lot 是否合规
-    - Scanner
+    - Scanner `英 [ˈskænə(r)]`
         - 扫描；photo 工艺中曝光环节包含了 Alignment 和
-    - Scratch
+    - Scratch `英 [skrætʃ]`
         - 划痕；wafer 表面 defect 的一种
-    - Scrubber
+    - Scrubber `英 [ˈskrʌbə(r)]`
         - 过滤装置；Gas，Chemical 往外排放前需进行的操作
-    - Season
+    - Season `英 [ˈsiːz(ə)n]`
         - 暖机；run 货前使用 NPW 进行预热步骤
     - Set-up
         - 建立
-    - Shelf
+    - Shelf `英 [ʃelf]`
         - 货架；装 FOUP 的架子
-    - Shift
+    - Shift `英 [ʃɪft]`
         - 班组
-    - Shower
+    - Shower `英 [ˈʃaʊə(r)]`
         - 淋浴
-    - Single
+    - Single `英 [ˈsɪŋɡ(ə)l]`
         - 单独；某些设备只能对 wafer 一张一张的进行加工
-    - Slot
+    - Slot `英 [slɒt]`
         - 槽；FOUP 中分离 wafer 的槽
     - SOP 全称 Standard Operating Procedure
         - 标准作业流程
-    - Sorter
+    - Sorter `英 [ˈsɔːtə(r)]`
         - 传片机；用于转移 FOUP 内 wafer 设备
-    - Spec 全称 specification
+    - Spec 全称 specification `英 [ˌspesɪfɪˈkeɪʃ(ə)n]`
         - 规格；每个工艺为了保证品质时需设定的卡控方式
-    - Split
+    - Split `英 [splɪt]`
         - 分离；将母 lot 分出一个或多个子Lot 过程
     - STB 全称 Side Track
         - 在 FAB 天花板上暂存 FOUP 的空间
-    - Step
+    - Step `英 [step]`
         - 步骤，工程步骤；wafer 加工工艺由几百个 step 组成
-    - STK 全称 Stocker
+    - STK 全称 Stocker `英 [ˈstɒkə(r)]`
         - 在地面上暂存 FOUP 的装置
-    - Stress
+    - Stress `英 [stres]`
         - 压力；CMP 研磨需要控制对 wafer 的压力
-    - Skip
+    - Skip `英 [skɪp]`
         - 工艺的状态；受 lot 优先级或 product 的影响，某些工艺处于直接跳过的状态
-    - Stage
+    - Stage `英 [steɪdʒ]`
         - 阶段
 - T
-    - Target
+    - Target `英 [ˈtɑːɡɪt]`
         - 目标时间，总时间
     - TAT 全称 Turn Around Time
         - 生产一个 lot 所需的时间
@@ -395,49 +402,49 @@ __文档格式说明：__
         - 薄膜工艺；主要进行 CVD、CVD、CMP 工艺
     - Track `英 [træk]`
         - 光刻工艺进行涂胶，显影的设备
-        - Track-in
-            - 批次进站的动作
-        - Track-out
-            - 批次出站的动作
+    - Track-in
+        - 批次进站的动作
+    - Track-out
+        - 批次出站的动作
     - Time
         - 时间
 - U
-    - Unit
+    - Unit `英 [ˈjuːnɪt]`
         - 单元；设备的组成部分
-    - Unloading
+    - Unloading `英 [ˌʌnˈləʊdɪŋ]`
         - 卸货；wafer 在设备加工完成后所需进行送出设备的
 - W
     - Wafer `英 [ˈweɪfə(r)]`
         - 晶圆；作为基底在其表面加工
-        - Bare wafer
-            - 裸片；一般用于 particle 测试
-        - Wafer ID
-            - 晶圆编码；区分 wafer 的编码
-        - WAT 全称 Wafer Acceptance Test
-            - 晶圆接受性测试，所有工艺完成后进行的良率测试
-        - WFS 全称 wafer start
-            - 投片，批次在 Fab 内上线
-        - ​WPH 全称 wafer per hour
-            - 每小时处理 wafer 的数量，衡量设备的生产效率
-        - Test Wafer
-            - 测试晶圆；指 NPW 中用于测试的 wafer
+    - Bare wafer
+        - 裸片；一般用于 particle 测试
+    - Wafer ID
+        - 晶圆编码；区分 wafer 的编码
+    - WAT 全称 Wafer Acceptance Test
+        - 晶圆接受性测试，所有工艺完成后进行的良率测试
+    - WFS 全称 wafer start
+        - 投片，批次在 Fab 内上线
+    - ​WPH 全称 wafer per hour
+        - 每小时处理 wafer 的数量，衡量设备的生产效率
+    - Test Wafer
+        - 测试晶圆；指 NPW 中用于测试的 wafer
     - WIP 全称 Work In Process
         - 在制品；在 Fab 内，所有 wafer 统称
-        - Work
-            - 工作
-        - WIP Turn
-            - 周转率，衡量生产进度的指标之一
-    - Wait
+    - Work `英 [wɜːk]`
+        - 工作
+    - WIP Turn
+        - 周转率，衡量生产进度的指标之一
+    - Wait `英 [weɪt]`
         - lot 处于等待加工的状态
-    - Warpage
+    - Warpage `英 [ˈwɔːpeɪdʒ]`
         - 翘曲量，监控 wafer 平坦度的数值指标
     - WET 全称 Wet Etching
         - 湿法刻蚀，主要指清洗工艺
 - Y
     - YLD/YE 全称 Yield `英 [jiːld]`
         - 良率；合格品占总投入的比率
-        - YE Brief Introduction
-            - 良率简介
+    - YE Brief Introduction
+        - 良率简介
 - Z
     - Zone `英 [zəʊn]`
         - 区域
