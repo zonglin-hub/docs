@@ -19,6 +19,7 @@
 - [Medical](./Medical/README.md)
 - [mirrors](./mirrors/README.md)
 - [Rust 程序设计语言](./Rust%20程序设计语言/README.md)
+- [Semiconductor 手册](./Semiconductor%20手册/README.md)
 - [Software](./Software/README.md)
 - [TOML](./TOML/README.md)
 - [Windows 操作系统](./Windows%20操作系统/README.md)
