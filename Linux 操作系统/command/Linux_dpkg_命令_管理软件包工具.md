@@ -1,6 +1,13 @@
-# dpkg
+# Linux dpkg 命令 管理软件包工具
 
 **dpkg 命令** 是 Debian/Ubuntu Linux 系统上安装、创建和管理软件包
+
+目录
+
+- [Linux dpkg 命令 管理软件包工具](#linux-dpkg-命令-管理软件包工具)
+  - [常用选项](#常用选项)
+  - [示例](#示例)
+  - [dpkg 帮助文档](#dpkg-帮助文档)
 
 ## 常用选项
 
