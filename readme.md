@@ -23,3 +23,6 @@
 - [Software](./Software/README.md)
 - [TOML](./TOML/README.md)
 - [Windows 操作系统](./Windows%20操作系统/README.md)
+
+> [!TIP]
+> 文件或文件名命名规范采用[蛇形命名](/Else/蛇形命名.md)
