@@ -1,5 +1,7 @@
 # Git
 
+分布式版本控制系统
+
 <strong>Git 全局设置：</strong>
 
 ```sh

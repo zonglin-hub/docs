@@ -1,5 +1,7 @@
 # Github
 
+Github 基于 git 的代码托管和研发协作平台
+
 - [Pro Git book]
 - [Git Client]
 - [Github 网站]
