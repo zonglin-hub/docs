@@ -1,6 +1,3 @@
 # 查看完整内容和更多细节，请访问: https://github.com/github-linguist/linguist/blob/master/docs/overrides.md
 
-* linguist-vendored=false
-* linguist-generated=false
-* linguist-documentation=false
-* linguist-detectable=true
+*.md linguist-detectable
