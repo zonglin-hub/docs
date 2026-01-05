@@ -1,2 +1,4 @@
 .vscode
 *.pdf
+# 禁用mdbook生产内容
+book
