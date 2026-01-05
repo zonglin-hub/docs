@@ -1,4 +1,3 @@
-# Markdown 加粗倾斜下划线等
 
 ## 加粗倾斜删除
 
@@ -145,7 +144,9 @@ to re-render an MDN page.
 </ruby>
 ```
 
-<details><summary>效果：</summary>
+# Markdown 链接
+
+效果展示：
 
 <ruby>
 我<rp>（</rp><rt>wǒ</rt><rp>）</rp>
@@ -155,8 +156,7 @@ to re-render an MDN page.
 国<rp>（</rp><rt>guó</rt><rp>）</rp>
 </ruby>
 
-</details>
-
+---
 ### ruby 语法说明
 
 - `<ruby>` — 用它将需要注释或注音标的文字内容包围住。
@@ -169,11 +169,11 @@ to re-render an MDN page.
 <ruby>我爱你中国<rt>wǒàinǐzhōngguó</rt></ruby>
 ```
 
-<details><summary>效果：</summary>
+效果展示：
 
 <ruby>我爱你中国<rt>wǒàinǐzhōngguó</rt></ruby>
 
-</details>
+
 
 其中带音标的字母可通过输入法中的特殊字符输入。
 也可查看 [符号大全-特殊符号] 中的汉语拼音部分。

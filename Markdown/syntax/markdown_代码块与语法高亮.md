@@ -1,4 +1,3 @@
-# Markdown 代码块与语法高亮
 
 插入程序代码的方式有两种：使用反引号 \`（~ 键）、使用缩进（Tab）。
 
@@ -48,15 +47,13 @@ print("Hello, World!");
     }
 ```
 
-<details><summary>显示效果：</summary>
+效果展示：
 
     #include  <stdio.h>
     int main(void)`
     {
         printf("Hello world\n");
     }
-
-</details>
 
 ## 代码区块中的内容
 

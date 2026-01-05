@@ -21,12 +21,9 @@ font 是一对常规标签，font 标签内设置 `color="对应颜色值"` 即�
 <font color="red"> 我是红色字体 </font> 或者 <font color="#FF0000"> 我也是红色字体 </font> 
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 <font color="red"> 我是红色字体 </font> 或者 <font color="#FF0000"> 我也是红色字体 </font>
-
-</details>
-
 
 ## 文字居中
 
@@ -36,11 +33,9 @@ font 是一对常规标签，font 标签内设置 `color="对应颜色值"` 即�
 <center>文字居中</center>
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 <center>文字居中</center>
-
-</details>
 
 ## 添加背景色
 
@@ -54,12 +49,10 @@ Markdown 本身不支持背景色设置，需要借助 table、tr、td 等表格
 </table>
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 <table>
     <tr>
         <td bgcolor=#FF4500> 这里的背景色是：OrangeRed，十六进制颜色值：#FF4500，rgb(255, 69, 0) </td>
     </tr>
 </table>
-
-</details>

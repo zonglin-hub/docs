@@ -10,12 +10,10 @@
 - [x] completed
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 - [ ] a task list item
     - [x] completed
     - [ ] incomplete
 - [ ] list syntax required
 - [x] completed
-
-</details>

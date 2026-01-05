@@ -1,4 +1,3 @@
-# Markdown 链接
 
 Markdown 支持两种形式的链接语法： **行内链接** 和 **参考链接**。
 
@@ -11,11 +10,9 @@ Markdown 支持两种形式的链接语法： **行内链接** 和 **参考链�
 This is an [example link](http://example.com/ "With a Title"). 
 ```
 
-<details> <summary>显示效果：</summary>
+显示效果：
 
 This is an [example link](http://example.com/ "With a Title").
-
-</details>
 
 ## 参考形式
 
@@ -32,7 +29,7 @@ This is an [example link](http://example.com/ "With a Title").
 [3]: https://www.eudic.net/v4/en/app/eudic "《欧路词典》英语翻译软件"
 ```
 
-<details> <summary>显示效果：</summary>
+显示效果：
 
 早饭后，我打开 [每日英语听力][1] 学习英语。遇到不懂的英语单词，我借助 [欧路在线词典][2]
 查看释义并加入生词本，方便使用 [客户端][3] 随时记忆单词。
@@ -40,8 +37,6 @@ This is an [example link](http://example.com/ "With a Title").
 [1]: https://dict.eudic.net/ting "每日英语听力 - 欧路词典"
 [2]: https://dict.eudic.net/ "《欧路词典》在线版"
 [3]: https://www.eudic.net/v4/en/app/eudic "《欧路词典》英语翻译软件官方主页"
-
-</details>
 
 ## 自动链接
 
@@ -54,9 +49,7 @@ Markdown 支持以比较简短的自动链接形式来处理网址和电子邮�
 <address@example.com>
 ```
 
-<details> <summary>显示效果：</summary>
+显示效果：
 
 <http://example.com/><br>
 <address@example.com>
-
-</details>

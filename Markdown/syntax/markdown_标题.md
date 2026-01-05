@@ -1,7 +1,11 @@
 ---
-title: 'Markdown 标题'
-date: "2024-04-13"
-last_mod: ""
+title: Markdown 标题
+date: 2024-04-13
+last mod: values
+cssclasses:
+tags:
+  - markdown
+aliases:
 ---
 
 # Markdown 标题
@@ -21,7 +25,7 @@ Markdown 支持两种标题的语法。
 ###### 这是 H6
 ```
 
-<details><summary>效果：</summary>
+效果展示：
 
 # 这是 H1
 
@@ -34,8 +38,6 @@ Markdown 支持两种标题的语法。
 ##### 这是 H5
 
 ###### 这是 H6
-
-</details>
 
 与 html 标签 `h1~6` 等同效果
 

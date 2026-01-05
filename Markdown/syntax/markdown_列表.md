@@ -1,4 +1,3 @@
-# Markdown 列表
 
 Markdown 支持 **有序列表** 和 **无序列表**。<br>
 
@@ -12,13 +11,11 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 +   Blue
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 - Green （比较推荐）
 - Red  （比较好用）
 - Blue
-
-</details>
 
 无序列表标记符前每增加 2 个空格或是 4 个空格，增加一个层级：
 
@@ -28,13 +25,11 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
       - 行动比语言更响亮。
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 - 伟大始于渺小。
     - 说和做是迥然不同的两回事。
         - 行动比语言更响亮。
-
-</details>
 
 ## 有序列表
 
@@ -46,13 +41,11 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 3. Third paragraph
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 1. First paragraph
 2. Second paragraph
 3. Third paragraph
-
-</details>
 
 在列表标记上使用的数字并不会影响输出的 HTML 结果，这意味着，你可以 Use lazy numbering for long lists：
 
@@ -64,15 +57,13 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 1.  Baz.
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 1. Foo.
 1. Bar.
     1. Foofoo.
     1. Barbar.
 1. Baz.
-
-</details>
 
 有序列表标记符前每增加一个 Tab。
 
@@ -90,15 +81,13 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 - Saying and doing are two different things. Actions speak louder than words. 
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 - Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
   
     From small beginnings comes great things. (列表项目中的段落)
 
 - Saying and doing are two different things. Actions speak louder than words.
-
-</details>
 
 有序列表：
 
@@ -110,15 +99,13 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 2. Saying and doing are two different things. Actions speak louder than words. 
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 1. Every man is his own worst enemy. Wisdom in the mind is better than money in the hand.
 
     From small beginnings comes great things. (列表项目中的段落)
 
 2. Saying and doing are two different things. Actions speak louder than words.
-
-</details>
 
 ## 列表项目内引用
 
@@ -136,7 +123,7 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
     > inside a list item.
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 - A list item with a blockquote:
 
@@ -147,8 +134,6 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 
     > This is a blockquote
     > inside a list item.
-
-</details>
 
 ## 列表项目内代码块
 
@@ -164,7 +149,7 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
         我是代码区块，我上方有一空行，前方有8个空格。
 ```
 
-<details> <summary>呈现效果如下：</summary>
+显示效果：
 
 - 一列表项包含一个代码块：
 
@@ -173,8 +158,6 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 1. 一列表项包含一个代码块：
 
         我是代码区块，我上方有一空行，前方有8个空格。
-
-</details>
 
 ## 有序列表异常
 

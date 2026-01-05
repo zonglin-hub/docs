@@ -1,4 +1,3 @@
-# Markdown 特殊符号
 
 特殊字符是相对于传统或常用的符号外，使用频率较少字符且难以直接输入的符号。比如数学符号；单位符号；[制表符]等。
 
@@ -36,25 +35,3 @@ HTML 符号也都可以用到 Markdown 中。比如：
 | ↓    | down arrow            | `&darr;`  | `&#8595;` |
 | ↔    | left right arrow      | `&harr;`  | `&#8596;` |
 | ↵    | carriage return arrow | `&crarr;` | `&#8629;` |
-
-:warning: 警告
-
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-- Examples:
-    - :white_check_mark:
-    - :white_check_mark:  
-    - :x:
