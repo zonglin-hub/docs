@@ -1,4 +1,3 @@
-# git 中文文件名乱码
 
 <pre>
 $ git status
@@ -16,7 +15,7 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-liuzonglin@LAPTOP-CGO0UV3J MINGW64 /d/.github/.doc/Maven (master)
+zonglin@LAPTOP-CGO0UV3J MINGW64 /d/.github/.doc/Maven (master)
 </pre>
 
 ```sh

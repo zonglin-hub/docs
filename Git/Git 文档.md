@@ -1,4 +1,3 @@
-# Git
 
 分布式版本控制系统
 
@@ -20,7 +19,7 @@ git config --global user.email <user_email>     # 设置用户邮箱
 </pre>
 
 <pre>
-$ open C:\Users\liuzonglin\.gitconfig
+$ open C:\Users\zonglin\.gitconfig
 [user]
         name = user_name
         email = user_email
@@ -70,7 +69,7 @@ $ cat .git/config # 每个git库都会有一个配置信息文件
         symlinks = false
         ignorecase = true
 [remote "origin"]
-        url = https://gitee.com/liuzonglin1/df.git
+        url = https://gitee.com/zonglin1/df.git
         fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "main"]
         remote = origin
