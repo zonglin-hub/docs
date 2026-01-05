@@ -8,7 +8,7 @@ FROM table_name
 WHERE field1 LIKE condition1 [AND [OR]] filed2 = 'somevalue'
 ```
 
-**参数**
+__参数__
 
 - 你可以在 WHERE 子句中指定任何条件。
 - 你可以在 WHERE 子句中使用LIKE子句。
@@ -29,7 +29,7 @@ FROM tables
 [WHERE conditions];
 ```
 
-**参数**
+__参数__
 
 - expression1, expression2, ... expression_n: 要检索的列。
 - tables: 要检索的数据表。
@@ -44,7 +44,7 @@ SELECT field1, field2,...fieldN FROM table_name1, table_name2...
 ORDER BY field1 [ASC [DESC][默认 ASC]], [field2...] [ASC [DESC][默认 ASC]]
 ```
 
-**参数**
+__参数__
 
 - 你可以使用任何字段来作为排序的条件，从而返回排序后的查询结果。
 - 你可以设定多个字段来排序。

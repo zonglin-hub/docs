@@ -1,4 +1,3 @@
-# Could not register serviceworkers
 
 __问题描述：__
 
@@ -8,7 +7,7 @@ vscode 加载 web 视图，报错:“Error: Could not register serviceworkers: I
 
 __解决办法：__
 
-1. 关闭vscode
+1. 关闭 vscode
 
 2. 按WIN + R，输入cmd，打开终端，然后输入命令
 
@@ -16,4 +15,4 @@ __解决办法：__
     code --no-sandbox
     ```
 
-3. 会重启vscode，就可以正常使用了。
+3. 会重启 vscode，就可以正常使用了。

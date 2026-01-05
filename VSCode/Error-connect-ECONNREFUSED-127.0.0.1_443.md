@@ -1,4 +1,3 @@
-# Error: connect ECONNREFUSED 127.0.0.1:443
 
 ```text
 Installing platform package from https://github.com/vadimcn/codelldb/releases/download/v1.10.0/codelldb-x86_64-linux.vsix

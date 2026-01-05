@@ -1,8 +1,6 @@
-# NoSQL
+NoSQL全称是Not Only SQL（不仅仅是SQL）它是一种非关系型数据库，相比传统SQL关系型数据库
 
-## NoSQL简介
-
-NoSQL全称是Not Only SQL（不仅仅是SQL）它是一种非关系型数据库，相比传统SQL关系型数据库，它：
+---
 
 * 不保证关系数据的ACID特性
 * 并不遵循SQL标准

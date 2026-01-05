@@ -1,4 +1,3 @@
-# Elasticsearch 常用指令
 
 ```bash
 root@root:~# curl "http://127.0.0.1:9200"

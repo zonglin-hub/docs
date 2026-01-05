@@ -1,21 +1,4 @@
-# Visual Studio Code
 
-[VSCode 常用配置](./settings.json)
-
-[LeetCode 测试代码片段](./rust.json)
-
-## Visual Studio Code 安装中文插件后，重启不生效问题解决
-
-一、问题描述：
-
-安装插件后，重启IDE，中文并没有如期出现
-
-二、解决：
-
-在 Visual Studio Code 中，按住 <kbd>Ctrl + Shift + PP</kbd>，在出现的输入框中，
-输入 `Configure Display Language`，在弹出的语言中，选中 `zh-cn`，软件提示重启。点击重启按钮后，中文生效了。
-
-## 扩展
 
 ### 公共插件
 
@@ -46,6 +29,8 @@
 - Path Intellisense
 
     Visual Studio Code 插件，自动完成文件名
+
+---
 
 ### markdown 模块插件
 
@@ -81,6 +66,8 @@
 
     VSCode 的 Markdown 检查和样式检查
 
+---
+
 ### Rust 摸板插件
 
 - Cargo
@@ -88,6 +75,9 @@
 - crates
 - Even Better TOML
 - rust-analyzer
+
+
+---
 
 ### 扩展 yew
 

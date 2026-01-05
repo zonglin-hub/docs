@@ -1,3 +1,8 @@
+# Elasticsearch 集群搭建
+
+elasticsearch.yml
+
+```yml
 # 集群使用描述性名称:
 cluster.name: bigdata
 
@@ -32,3 +37,8 @@ transport.tcp.compress: true
 indices.fielddata.cache.size: 10%
 path.repo: ["/usr/local/las/data/backup/es"]
 indices.query.bool.max_clause_count: 10240
+```
+
+## 参考文档
+
+- [Linux搭建es集群详细教程（最终版）](https://blog.csdn.net/qq_50227688/article/details/115379121)

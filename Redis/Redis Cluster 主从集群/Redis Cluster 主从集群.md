@@ -76,6 +76,6 @@ sentinel monitor myredis 127.0.0.1 6379 1
 redis-sentinel /usr/local/config/sentinel.conf
 ```
 
-> 完整的哨兵模式配置文件 [sentinel.conf](./sentinel.conf)
+> 完整的哨兵模式配置文件 [sentinel.conf](sentinel.conf)
 
 ‍
