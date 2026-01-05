@@ -1,0 +1,5 @@
+[book]
+title = "Rust 生命周期"
+authors = ["zonglin"]
+language = "zh-CN"
+src = "src"
