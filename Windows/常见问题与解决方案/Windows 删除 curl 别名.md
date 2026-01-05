@@ -42,7 +42,7 @@ Caused by:
   Python downloader failed, trying with curl.
 
   --- stderr
-  thread 'main' panicked at 'assertion failed: status.success()', C:\Users\liuzonglin\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\v8-0.73.0\build.rs:431:3
+  thread 'main' panicked at 'assertion failed: status.success()', C:\Users\zonglin\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\v8-0.73.0\build.rs:431:3
   note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 D:/github/deno_core_live>  
 ```
@@ -81,10 +81,10 @@ notepad $PROFILE
 - 运行以下命令：
 
   ```powershell
-  PS C:\Users\liuzonglin\Desktop> New-Item -ItemType File -Path $PROFILE -Force
+  PS C:\Users\zonglin\Desktop> New-Item -ItemType File -Path $PROFILE -Force
 
 
-      目录: C:\Users\liuzonglin\Documents\WindowsPowerShell
+      目录: C:\Users\zonglin\Documents\WindowsPowerShell
 
 
   Mode                 LastWriteTime         Length Name

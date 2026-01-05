@@ -1,6 +1,6 @@
-# Windows 创建一个 符号链接（.symlink） 类型的文件的命令是什么
+# Windows 创建一个 符号链接 `.symlink` 类型的文件的命令是什么
 
-在 Windows 操作系统中，创建符号链接（.symlink）可以使用 `mklink` 命令。
+在 Windows 操作系统中，创建符号链接 `.symlink` 可以使用 `mklink` 命令。
 符号链接是一种指向其他文件或目录的特殊类型的文件，类似于Linux系统中的软链接。
 `mklink` 命令可以在命令提示符 `cmd` 或 `PowerShell` 中执行。
 以下是使用 `mklink` 命令创建不同类型符号链接的示例：

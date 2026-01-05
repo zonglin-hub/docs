@@ -1,6 +1,6 @@
 # Windows 常用指令
 
-<kbd>win</kbd> + <kbd>+R</kbd>
+<kbd>win</kbd> + <kbd>R</kbd>
 
 ```sh
 # file : 文件所在的绝对路径

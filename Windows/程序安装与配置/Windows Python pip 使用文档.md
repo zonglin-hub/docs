@@ -13,12 +13,12 @@ pip（Python Package Manager）是 Python 的包管理工具，用于查找、�
 
 - 使用 pip 的使用主要通过命令行进行。以下是一些常用的 pip 命令及其用法：
 
-    - **pip install：** 用于安装第三方库。格式为：`pip install <包名>`。例如，要安装 NumPy 库，只需输入`pip install numpy`。
-    - **pip uninstall：** 用于卸载已经安装的包。格式为：`pip uninstall <包名>`。例如，要卸载 NumPy 库，只需输入`pip uninstall numpy`。
-    - **pip list：** 列出已安装的所有包。
-    - **pip freeze：** 查看已安装包的详细信息，包括版本、安装路径等。
-    - **pip show：** 查看指定包的详细信息。格式为：`pip show <包名>`。例如，要查看 NumPy 库的详细信息，只需输入`pip show numpy`。
-    - **pip search：** 搜索指定包。格式为：`pip search <关键字>`。例如，要搜索 NumPy 库，只需输入`pip search numpy`。
+    - __pip install：__ 用于安装第三方库。格式为：`pip install <包名>`。例如，要安装 NumPy 库，只需输入`pip install numpy`。
+    - __pip uninstall：__ 用于卸载已经安装的包。格式为：`pip uninstall <包名>`。例如，要卸载 NumPy 库，只需输入`pip uninstall numpy`。
+    - __pip list：__ 列出已安装的所有包。
+    - __pip freeze：__ 查看已安装包的详细信息，包括版本、安装路径等。
+    - __pip show：__ 查看指定包的详细信息。格式为：`pip show <包名>`。例如，要查看 NumPy 库的详细信息，只需输入`pip show numpy`。
+    - __pip search：__ 搜索指定包。格式为：`pip search <关键字>`。例如，要搜索 NumPy 库，只需输入`pip search numpy`。
 
 ## 高级使用
 

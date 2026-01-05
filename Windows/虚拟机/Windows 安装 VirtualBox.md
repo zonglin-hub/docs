@@ -1,26 +1,22 @@
-# Windows 安装 VirtualBox
+## 安装 VirtualBox
 
-**参考**
+__参考__
 
 - <http://www.javashuo.com/article/p-xnxjpcal-bm.html>
 - <https://www.vagrantup.com/docs/vagrantfile>
 
 ---
 
-- Windows 安装 VirtualBox（Vagrant是管理虚拟机的工具，依赖于VirtualBox）
+### Windows 安装 VirtualBox（Vagrant是管理虚拟机的工具，依赖于VirtualBox）
 
 VirtualBox 官网：<https://www.virtualbox.org/>
 
-- 安装 vagrant
-  
-Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。
-它使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。
+Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。
 
 vagrant 官网：<https://www.vagrantup.com/>
-
 vagrant 官方镜像仓库：<https://app.vagrantup.com/boxes/search>
 
-- vagrant 常用指令：
+vagrant 常用指令：
 
 ```sh
 vagrant init       # 初始化
@@ -45,7 +41,7 @@ vagrant box remove  # 从box列表移除
 vagrant package --output local-centos.box # 将虚拟机打包为一个.box的文件
 ```
 
-- VagrantFile
+VagrantFile
 
 ```sh
 Vagrant.configure("2") do |config|

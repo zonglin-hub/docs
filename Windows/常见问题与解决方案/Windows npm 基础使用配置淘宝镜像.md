@@ -18,7 +18,7 @@
     npm install
     ```
 
-    **注意**
+    __注意__
 
     - 大家如果 npm install 安装依赖出现 chromedriver 之类问题，先在项目里运行下面命令
         `npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver` 然后再运行 `npm install`

@@ -11,7 +11,7 @@
     Get-ChildItem Env:
     ```
 
-    查看输出中是否有 `APPDATA` 这一项，并且其值应该是 `C:\Users\liuzonglin\AppData\Roaming`。
+    查看输出中是否有 `APPDATA` 这一项，并且其值应该是 `C:\Users\zonglin\AppData\Roaming`。
 
 2. 如果 `APPDATA` 环境变量存在，尝试直接使用它来改变目录：
 
