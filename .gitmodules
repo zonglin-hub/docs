@@ -1,6 +1,7 @@
-[submodule "Config/wezterm-config"]
-	path = Config/wezterm-config
-	url = https://github.com/zonglin-hub/wezterm-config.git
-[submodule "Config/nushell-config"]
-	path = Config/nushell-config
-	url = https://github.com/zonglin-hub/nushell-config.git
+# [submodule "Config/wezterm-config"]
+# 	path = Config/wezterm-config
+# 	url = https://github.com/zonglin-hub/wezterm-config.git
+# [submodule "Config/nushell-config"]
+# 	path = Config/nushell-config
+# 	url = https://github.com/zonglin-hub/nushell-config.git
+
