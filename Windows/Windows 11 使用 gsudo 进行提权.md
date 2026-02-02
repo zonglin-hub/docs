@@ -10,18 +10,18 @@
 1. __安装 `gsudo`__  
    在 PowerShell 中运行：
 
-   ```powershell
-   winget install gsudo
-   ```
+```powershell
+winget install gsudo
+```
 
    （或通过 Chocolatey：`choco install gsudo`）
 
 2. __使用 `gsudo` 提权__  
    直接在任何命令前添加 `gsudo`，例如：  
 
-   ```powershell
-   gsudo winget source remove winget
-   ```
+```powershell
+gsudo winget source remove winget
+```
 
    - 特点：支持直接提权，无需新开窗口，且兼容 PowerShell 和 CMD。
 

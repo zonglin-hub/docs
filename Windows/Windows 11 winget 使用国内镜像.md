@@ -7,21 +7,21 @@
   1. 以管理员身份打开命令提示符。
   2. 移除默认源：
 
-     ```bash
-     winget source remove winget
-     ```
+```bash
+winget source remove winget
+```
 
   3. 添加中科大镜像源：
 
-     ```bash
-     winget source add winget https://mirrors.ustc.edu.cn/winget-source
-     ```
+ ```bash
+ winget source add winget https://mirrors.ustc.edu.cn/winget-source
+ ```
 
   4. 验证配置：
 
-     ```bash
-     winget source list
-     ```
+ ```bash
+ winget source list
+ ```
 
 - __特点__：镜像源同步了开源软件包，但微软官方商店的应用程序可能仍需通过官方源下载。目前中科大是国内唯一公开的 `winget` 镜像源。
 

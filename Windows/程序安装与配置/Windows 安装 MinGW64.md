@@ -10,26 +10,26 @@
   
   解压指定目录并设置环境变量，参照以下内容。
 
-    - 并于系统变量 `Path` 中编辑环境变量，指定 `mingw64\bin` 目录。
+- 并于系统变量 `Path` 中编辑环境变量，指定 `mingw64\bin` 目录。
 
-      ```text
-      D:\program\mingw64\bin
-      ```
+```text
+D:\program\mingw64\bin
+```
 
-    - 使用 `gcc -v` 测试 gcc 环境是否正常。
+- 使用 `gcc -v` 测试 gcc 环境是否正常。
 
-        ```text
-        PS C:\Windows\System32> gcc -v
-        Using built-in specs.
-        COLLECT_GCC=D:\program\mingw64\bin\gcc.exe
-        COLLECT_LTO_WRAPPER=D:/program/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../../../src/gcc-14.2.0/configure --host=x86_64-w64-mingw32 ……
-        Thread model: win32
-        Supported LTO compression algorithms: zlib
-        gcc version 14.2.0 (x86_64-win32-seh-rev0, Built by MinGW-Builds project)
-        PS C:\Windows\System32>
-        ```
+```text
+PS C:\Windows\System32> gcc -v
+Using built-in specs.
+COLLECT_GCC=D:\program\mingw64\bin\gcc.exe
+COLLECT_LTO_WRAPPER=D:/program/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-14.2.0/configure --host=x86_64-w64-mingw32 ……
+Thread model: win32
+Supported LTO compression algorithms: zlib
+gcc version 14.2.0 (x86_64-win32-seh-rev0, Built by MinGW-Builds project)
+PS C:\Windows\System32>
+```
 
 - 使用 MinGW64 自带的 make
 
