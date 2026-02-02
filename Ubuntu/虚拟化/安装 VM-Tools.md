@@ -1,4 +1,4 @@
-### 安装 VMware Tools
+### 安装 VM-Tools
 
 **推荐使用开源工具 `open-vm-tools`**（官方推荐且更简单）
 
