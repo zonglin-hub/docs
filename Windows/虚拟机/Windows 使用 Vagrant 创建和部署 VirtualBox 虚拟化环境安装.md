@@ -1,8 +1,12 @@
-## 安装 VirtualBox
+# Windows 使用 Vagrant 创建和部署 VirtualBox 虚拟化环境安装
+
+![Vagrant](./imgs/v2-369041a81ab8c348e7ee7f352a387744_1440w.png)
+
+
+## 安装 VirtualBox 
 
 __参考__
 
-- <http://www.javashuo.com/article/p-xnxjpcal-bm.html>
 - <https://www.vagrantup.com/docs/vagrantfile>
 
 ---
