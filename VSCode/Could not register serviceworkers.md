@@ -11,8 +11,8 @@ __解决办法：__
 
 2. 按WIN + R，输入cmd，打开终端，然后输入命令
 
-    ```shell
-    code --no-sandbox
-    ```
+```shell
+code --no-sandbox
+```
 
 3. 会重启 vscode，就可以正常使用了。

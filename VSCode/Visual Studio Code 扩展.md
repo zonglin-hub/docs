@@ -72,7 +72,7 @@
 
 - Cargo
 - CodeLLDB
-- crates
+- Dependi
 - Even Better TOML
 - rust-analyzer
 
@@ -83,3 +83,9 @@
 
 - HTML CSS Support
 - rust-yew
+
+### Shell
+- shellman
+- shellcheck
+- shell-format
+- Code Runner
