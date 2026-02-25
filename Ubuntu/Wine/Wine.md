@@ -216,7 +216,7 @@ sudo rm /usr/share/keyrings/winehq.gpg
 
 **「Wine 设置」中出现中文乱码和方框怎么解决？**
 
-![解决「Wine 设置」中文乱码](https://img.sysgeek.cn/img/2024/01/ubuntu-wine-p13.jpg)
+![解决「Wine 设置」中文乱码](./imgs/ubuntu-wine-p13.avif)
 
 解决「Wine 设置」中文乱码
 
