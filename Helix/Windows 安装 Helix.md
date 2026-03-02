@@ -4,10 +4,19 @@
 
 我的操作系统是 Windows11。
 
-使用 `winget` 安装 Helix
-
+> 使用 `winget` 安装 Helix
 ```powershell
 winget install Helix.Helix
+```
+
+> 使用 `flatpak` 安装 Helix
+```bash
+flatpak install flathub com.helix_editor.Helix
+```
+
+> 使用 `snap` 安装 Helix
+```bash
+sudo snap install helix
 ```
 
 Helix 自带 `rust-analyzer`，无需手动安装。但如果本地安装了 Rust 环境，以你安装的 `rust-analyzer` 为准
