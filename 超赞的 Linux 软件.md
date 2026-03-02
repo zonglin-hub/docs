@@ -152,6 +152,10 @@
 
 ### 文件共享
 
+### 屏幕共享
+
+- [[Scrcpy]] [Github](https://github.com/Genymobile/scrcpy) - 显示并控制你的 Android 设备
+
 ### 终端
 
 - [alacritty](https://alacritty.org/) [Github](https://github.com/alacritty/alacritty) - 跨平台、OpenGL 终端模拟器。
