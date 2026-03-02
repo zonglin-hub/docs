@@ -57,8 +57,10 @@ sudo apt install libfuse2
 
 # 安装完整 FUSE 工具集
 sudo apt install fuse
-```
 
+# Ubuntu 24.04 版本使用
+sudo apt install libfuse2t64 
+```
 
 ### 总结
 **libfuse2t64** 是一个基础系统库，为许多现代 Linux 应用提供文件系统支持。虽然不是日常直接使用的工具，但它是一些常用应用（特别是 AppImage 格式应用）正常运行的必要依赖。

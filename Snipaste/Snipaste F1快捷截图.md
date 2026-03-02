@@ -8,11 +8,13 @@
 > 参考：https://jishuzhan.net/article/1925725199803207681
 
 推荐阅读：[如何在 Ubuntu 23.04 中启用 AppImage 支持](https://www.sysgeek.cn/ubuntu-23-04-appimage/)
+
 ### Snipaste F1快捷截图
 
 打开[官网](https://www.snipaste.com/)下载Linux版本AppImage，然后找个目录存放在，拟定目录下，此时双击打不开的，终端执行 `./Snipaste.AppImage`也无法运行，需要安装以下依赖:
 
 ```bash
+# Ubuntu 24.04 版本使用
 sudo apt install libfuse2t64 
 ```
 
