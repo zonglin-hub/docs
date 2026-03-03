@@ -1,5 +1,3 @@
-
-
 ### 公共插件
 
 - Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
@@ -26,9 +24,9 @@
 
     Visual Studio Code 的 Material Design 图标
 
-- Path Intellisense
+<!-- - Path Intellisense
 
-    Visual Studio Code 插件，自动完成文件名
+    Visual Studio Code 插件，自动完成文件名 -->
 
 ---
 
@@ -75,7 +73,7 @@
 - Dependi
 - Even Better TOML
 - rust-analyzer
-
+- Tauri
 
 ---
 
@@ -85,6 +83,7 @@
 - rust-yew
 
 ### Shell
+
 - shellman
 - shellcheck
 - shell-format
