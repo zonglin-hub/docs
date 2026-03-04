@@ -86,7 +86,13 @@
 
 ## 应用
 
+### 网络加速
+
+- [Watt Toolkit](https://steampp.net/) [Github](https://github.com/BeyondDimension/SteamTools) - 🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。
+
 ### 音频
+
+- [Amberol](https://apps.gnome.org/zh-CN/Amberol/) [Flathub](https://flathub.org/en/apps/io.bassi.Amberol) [Gitlab](https://gitlab.gnome.org/World/amberol) - Amberol 是一个没有宏伟妄想的音乐播放器。如果您只想播放您的本地系统上可用的音乐，那么 Amberol 就是您正在寻找的音乐播放器。
 
 ### 聊天客户端
 
@@ -97,7 +103,6 @@
 ### 系统监控器
 
 - [mission-center](https://portable-linux-apps.github.io/apps/mission-center.html) [Github](https://github.com/Slimbook-Team/mission-center) [Flathub](https://flathub.org/en/apps/io.missioncenter.MissionCenter) - 使用 Mission Center 监控您的CPU、内存、磁盘、网络和GPU使用情况。
-
 - [Resources](https://apps.gnome.org/zh-CN/Resources/) [Github](https://github.com/nokyan/resources) [Flathub](https://flathub.org/zh-Hans/apps/net.nokyan.Resources) - Resources 允许您检查系统资源的利用率，并控制正在运行的过程和应用程序。它设计得非常用户友好，通过使用GNOME 的 libadwaita，在现代桌面上感觉非常自然。
 
 ### 桌面个性化
@@ -122,7 +127,11 @@
 
 ### 互联网
 
-- [Chrome](https://www.google.com/chrome/browser/desktop/index.html) - 一款流行的浏览器，有着无数插件和应用。
+- [Chrome](https://www.google.com/chrome/browser/desktop/index.html) [Flathub](https://flathub.org/zh-Hans/apps/com.google.Chrome)- 一款流行的浏览器，有着无数插件和应用。
+- [Chromium](https://www.chromium.org/chromium-projects/) [Github](https://github.com/chromium/chromium) [Flathub](https://flathub.org/zh-Hans/apps/org.chromium.Chromium) - Chromium 是一个开源浏览器项目，旨在构建一种更安全、更快速、更稳定的网页体验方式。
+- [Brave](https://brave.com/) [Github](https://github.com/brave/brave-browser) [Flathub](https://flathub.org/zh-Hans/apps/com.brave.Browser) - Brave 致力于通过为用户提供更安全、更快速、更好的浏览体验来修复网络，同时通过一个基于注意力的奖励生态系统，扩大对内容创作者的支持。
+- [Firefox](https://www.firefox.com/zh-CN/) [Github](https://github.com/mozilla-firefox/firefox) [Flathub](https://flathub.org/zh-Hans/apps/org.mozilla.firefox) - 快速、私密且安全的网页浏览器
+
 
 ### 办公
 
@@ -132,9 +141,7 @@
 #### 办公套件
 
 - [LibreOffice](https://www.libreoffice.org/) - Linux 上的最佳办公套件。
-
 - [WPS office](http://wps-community.org/) - Linux 上的最佳办公套件之一。
-
 - WPS 365 [Flathub](http://flathub.org/zh-Hans/apps/cn.wps.wps_365) - 新一代WPS 365是金山办公旗下的一站式数字化办公平台,不仅提供wps正版套件,在线文档,企业云盘等内容创作与管理工具，还提供音视频会议,金山协作IM等协同办公软件,助力企业数字化转型
 
 
@@ -152,6 +159,8 @@
 
 ### 文件共享
 
+- [LocalSend](https://localsend.org/zh-CN) [Github](https://github.com/localsend/localsend) - 无需云端即可分享文件。  快速、私密、离线。
+
 ### 屏幕共享
 
 - [[Scrcpy]] [Github](https://github.com/Genymobile/scrcpy) - 显示并控制你的 Android 设备
@@ -159,6 +168,7 @@
 ### 终端
 
 - [alacritty](https://alacritty.org/) [Github](https://github.com/alacritty/alacritty) - 跨平台、OpenGL 终端模拟器。
+- ptyxis [Gitlab](https://gitlab.gnome.org/chergert/ptyxis) [Flathub](https://flathub.org/en/apps/app.devsuite.Ptyxis)- 一个为容器时代构建的现代终端模拟器。通过智能检测和美观、响应式的GNOME界面，无缝地在您的宿主系统和本地容器（如Podman、Toolbox和Distrobox）之间导航。
 
 ### 实用工具
 
@@ -169,11 +179,8 @@
 ## 命令行工具
 
 - dust [Github](https://github.com/bootandy/dust) - Rust 中更直观的 du 版本
-
 - bottom [Github](https://github.com/ClementTsang/bottom) - 又一个跨平台的图形进程/系统监控器。
-
 - [starship](https://starship.rs/) [Github](https://github.com/starship/starship) - 关于 ☄🌌️ 适用于任何 shell 的最小化、极速且无限可定制的提示符！
-
 - fd [Github](https://github.com/sharkdp/fd) - 一个简单、快速且用户友好的  'find' 替代方案
 
 
