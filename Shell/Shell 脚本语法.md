@@ -1,8 +1,8 @@
 参考文档
 ===
 
-- <https://shellscript.readthedocs.io/zh_CN/latest/index.html>
-- <https://www.shellcheck.net/wiki/>
+- [shell脚本编程知识点梳理](https://shellscript.readthedocs.io/zh_CN/latest/index.html)
+- [ShellCheck Wiki Sitemap](https://www.shellcheck.net/wiki/)
 
 ```bash
 #!/bin/bash
