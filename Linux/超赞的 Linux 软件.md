@@ -299,11 +299,11 @@
 - [Linux Kernel](https://www.reddit.com/r/kernel/)
 - [Linux Gaming](https://www.reddit.com/r/linux_gaming/)
 
-## 学习 Linux
+## Linux 学习资源导航 🎉
 
-- [学习 Linux 命令](http://linuxcommand.org/)
+- [学习 Linux 命令](http://linuxcommand.org/) - 学习 Linux 命令行。编写 Shell 脚本。
 - [GNU/Linux 命令行工具总结](http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/book1.htm)
-- [学习 Linux](https://linuxjourney.com/)
+- [学习 Linux](https://linuxjourney.com/)  - 免费学习 Linux 教程与课程
 - [Linux 课程](https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0)
 - [Linus 口袋指南](http://www.opencore.eesc.usp.br/bruno/livros/Linux_Pocket_Guide.pdf)
 - [Linux Bash 命令行 - Tek Linux](https://www.youtube.com/watch?v=ltjPIpilqow)
