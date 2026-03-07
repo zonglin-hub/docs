@@ -182,7 +182,7 @@
 - bottom [Github](https://github.com/ClementTsang/bottom) - 又一个跨平台的图形进程/系统监控器。
 - [starship](https://starship.rs/) [Github](https://github.com/starship/starship) - 关于 ☄🌌️ 适用于任何 shell 的最小化、极速且无限可定制的提示符！
 - fd [Github](https://github.com/sharkdp/fd) - 一个简单、快速且用户友好的  'find' 替代方案
-
+- [zoxide](https://zoxide.org/zh/) [Github](https://github.com/ajeetdsouza/zoxide) - zoxide 是一个智能的目录跳转工具，使用 Rust 编写，性能卓越。支持模糊搜索、学习你的使用习惯，让终端导航变得轻松高效。
 
 ## 桌面环境
 
