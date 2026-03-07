@@ -1,15 +1,16 @@
 
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
+> [!NOTE]  注意
+> 突出用户即使快速浏览时也应注意的信息。  
 
-> [!TIP]
-> Optional information to help a user be more successful.
+> [!TIP] 提示
+> 可选信息，帮助用户获得更好的成功。
 
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
+> [!IMPORTANT]  重要
+> 用户成功所必需的关键信息。  
 
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
+> [!WARNING] 警告
+> 由于潜在风险，需要用户立即关注的重要内容。
 
-> [!CAUTION]
-> Negative potential consequences of an action.
+> [!CAUTION] 小心
+> 行为可能带来的负面后果。
+
