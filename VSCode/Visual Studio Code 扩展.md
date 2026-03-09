@@ -24,6 +24,11 @@
 
     Visual Studio Code 的 Material Design 图标
 
+- Rewrap Revived
+
+    主要的 Rewrap 命令是：Rewrap Comment / Text，默认绑定于 Alt+Q。光标进入评论
+    块，点击它即可将内容重新包裹到 指定包裹列 。
+
 <!-- - Path Intellisense
 
     Visual Studio Code 插件，自动完成文件名 -->
