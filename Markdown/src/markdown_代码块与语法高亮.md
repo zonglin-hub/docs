@@ -57,7 +57,8 @@ print("Hello, World!");
 
 ## 代码区块中的内容
 
-代码区块中，一般的 Markdown 语法不会被转换，像是 * 便只是星号，这表示你可以很容易地以 Markdown 语法撰写 Markdown 语法相关的文件。
+代码区块中，一般的 Markdown 语法不会被转换，像是 * 便只是星号，这表示你可以很容
+易地以 Markdown 语法撰写 Markdown 语法相关的文件。
 
 比如下面展示 Markdown 常用语法：
 

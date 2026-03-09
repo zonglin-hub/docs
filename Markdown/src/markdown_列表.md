@@ -47,7 +47,8 @@ Markdown 支持 **有序列表** 和 **无序列表**。<br>
 2. Second paragraph
 3. Third paragraph
 
-在列表标记上使用的数字并不会影响输出的 HTML 结果，这意味着，你可以 Use lazy numbering for long lists：
+在列表标记上使用的数字并不会影响输出的 HTML 结果，这意味着，你可以 Use lazy
+numbering for long lists：
 
 ```markdown
 1.  Foo.
