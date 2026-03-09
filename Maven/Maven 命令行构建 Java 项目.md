@@ -21,12 +21,17 @@
   参数说明：
 
   - -DgroupId=com.project：组 ID
-
-  - -DartifactId=example：项目名称，maven会根据这个名称在当前目录下新建一个名为该名称的目录用于建立项目
-
-  - -DarchetypeArtifactId：项目原型，使用哪种原型来创建项目的初始结构,在这里，我们先使用maven-archetype-quickstart创建一个简单的 Java 应用
-
-  - -DinteractiveMode=false ：是否已交互模式进行，如果是false的话就会采用默认设置建立项目
+    - ./mvnw clean package -Dmaven.test.skip=true   # 跳过单测打包
+    - ./mvnw clean install -Dmaven.test.skip=true   # 跳过单测打包，并把打好的包上传到本地仓库
+    - ./mvnw clean install -Dmaven.test.skip=true   # 跳过单测打包，并把打好的包上传到本地仓库
+    - ./mvnw clean deploy -Dmaven.test.skip=true   # 跳过单测打包，并把打好的包上传到远程仓库
+    - ./mvnw -v        # 查看版本
+  - -DartifactId=example：项目名称，maven会根据这个名称在当前目录下新建一个名为
+    该名称的目录用于建立项目
+  - -DarchetypeArtifactId：项目原型，使用哪种原型来创建项目的初始结构,在这里，我
+    们先使用maven-archetype-quickstart创建一个简单的 Java 应用
+  - -DinteractiveMode=false ：是否已交互模式进行，如果是false的话就会采用默认设
+    置建立项目
 
 - `mvn archetype:generate`​ 操作案例：
 
@@ -65,6 +70,10 @@
   Define value for property 'groupId': com.atguigu.maven # 设置组 ID
   Define value for property 'artifactId': pro01-maven-java # 设置项目名称
   Define value for property 'version' 1.0-SNAPSHOT: : # 直接回车，使用默认值。
+  ./mvnw clean package -Dmaven.test.skip=true   # 跳过单测打包
+  ./mvnw clean install -Dmaven.test.skip=true   # 跳过单测打包，并把打好的包上传到本地仓库
+  ./mvnw clean deploy -Dmaven.test.skip=true   # 跳过单测打包，并把打好的包上传到远程仓库
+  ./mvnw -v        # 查看版本
   Define value for property 'package' com.atguigu.maven: : # 直接回车，使用默认值。
   Confirm properties configuration:
   groupId: com.atguigu.maven
