@@ -157,6 +157,6 @@ git switch -c <new_branch_name>
 - [Git 命令总结](https://blog.51cto.com/qiangsh/1769754)
 - [Git 进行本地代码版本管理流程图](https://blog.csdn.net/solomonlangrui/article/details/47052679)
 - [Git 的下载安装和初始设置](https://blog.csdn.net/m0_59751822/article/details/125940620)
-- [git push后出现错误 ![rejected] master -&gt; master(non-fast-forward)](https://www.cnblogs.com/qingheshiguang/p/14777557.html)
-- [git commit 时报错HEAD detached from 85e119d nothing to commit, working tree clean问题解决](https://www.jianshu.com/p/07786e5af9fd)
+- [g![rejected] master -&gt; master(non-fast-forward)](https://www.cnblogs.com/qingheshiguang/p/14777557.html)
+- [HEAD detached from 85e119d nothing to commit, working tree clean](https://www.jianshu.com/p/07786e5af9fd)
 - [Git Book](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)

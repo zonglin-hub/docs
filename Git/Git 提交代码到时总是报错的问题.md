@@ -9,9 +9,10 @@ remote: Please see https://docs.github.com/get-started/getting-started-with-git/
 fatal: 'https://github.com/zonglin-hub/docs.git/' 鉴权失败
 ```
 
-GitHub 在 2021 年 8 月 13 日的时候修改了认证方式，不能使用账户登录的方式去 push 代码等等操作，
-而是使用生成仓库的个人密钥去 push 代码等操作。所以如果使用的是 gitee 的话，通过账户密码登录的方式是可以正常提交的，
-而如果是使用 GitHub 的话，那么在最后一步的 git push 时是会报错的。
+GitHub 在 2021 年 8 月 13 日的时候修改了认证方式，不能使用账户登录的方式去 push
+代码等等操作，而是使用生成仓库的个人密钥去 push 代码等操作。所以如果使用的是
+gitee 的话，通过账户密码登录的方式是可以正常提交的，而如果是使用 GitHub 的话，那
+么在最后一步的 git push 时是会报错的。
 
 - 生成密钥步骤如下：
 
@@ -37,8 +38,9 @@ GitHub 在 2021 年 8 月 13 日的时候修改了认证方式，不能使用账
         > [!NOTE]
         > 一定要点击复制并保存到你的记事本中，因为刷新页面以后就看不到，如果想再用只能删除重新生成
 
-最后再使用 `git push` 进行同步就完成了，`git push` 后会让你输出你 GitHub 上的用户名和密码来进行验证你的身份，
-用户名就写你 GitHub 上的名字就好了，密码就填我们步骤一最后生成的密匙，然后就完成了。
+最后再使用 `git push` 进行同步就完成了，`git push` 后会让你输出你 GitHub 上的用
+户名和密码来进行验证你的身份，用户名就写你 GitHub 上的名字就好了，密码就填我们步
+骤一最后生成的密匙，然后就完成了。
 
 [tokens (classic)]: https://github.com/settings/tokens
 

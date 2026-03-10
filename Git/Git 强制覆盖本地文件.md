@@ -19,4 +19,6 @@ git reset --hard origin/<branch_name>
 ```
 
 > [!NOTE] 说明
-"git fetch" 从远程下载最新的，而不尝试合并或 "rebase" 任何东西。然后 "git reset" 将主分支重置为您刚刚获取的内容。 "--hard" 选项更改工作树中的所有文件以匹配 "origin/main" 中的文件。
+"git fetch" 从远程下载最新的，而不尝试合并或 "rebase" 任何东西。然后 "git reset"
+将主分支重置为您刚刚获取的内容。 "--hard" 选项更改工作树中的所有文件以匹配
+"origin/main" 中的文件。

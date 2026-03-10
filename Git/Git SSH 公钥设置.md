@@ -1,6 +1,7 @@
 [SSH 公钥设置](https://help.gitee.com/base/account/SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE)
 
-每次 Git 提交都需要输入密码通常是因为使用了 **HTTPS 协议**克隆仓库，而非 SSH 协议。以下是解决方案：
+每次 Git 提交都需要输入密码通常是因为使用了 **HTTPS 协议**克隆仓库，而非 SSH 协
+议。以下是解决方案：
 
 ---
 
@@ -67,7 +68,9 @@
 如果启用了 **双重认证 (2FA)**，必须使用令牌替代密码：
 
 1. **生成令牌**：
-   - 进入 GitHub → **Settings → Developer Settings → Personal Access Tokens**，生成一个令牌（勾选 `repo` 权限）。
+
+   - 进入 GitHub → **Settings → Developer Settings → Personal Access Tokens**，
+     生成一个令牌（勾选 `repo` 权限）。
 
 2. **提交时使用令牌**：
    - 输入密码时，替换为生成的令牌。
