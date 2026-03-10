@@ -1,0 +1,84 @@
+#!/bin/sh
+
+# this script attempts to use commonly used *cat* command to preview 
+# - plain text
+# - markdown
+# - image
+# - video
+# without using other commands or leaving your cozy terminal for good.
+# within the proper tool:
+# bat               -> plain text
+# glow              -> marktdown
+# chafa             -> image
+# ffmpegthumbnailer -> video
+
+
+
+FILE_LEN=$#
+FILE="$@"
+FILE_ONE=$1
+DEPENDENCIES="bat glow chafa ffmpegthumbnailer"
+
+dependencies_check() {
+    for i in $(echo "$DEPENDENCIES");do
+        command -v $i >/dev/null || {
+            echo "command: $i not found!"
+            return 1
+        }
+    done
+}
+
+preview_onefile() {
+    [ -f "$FILE" ] || exit 0
+
+    case "$FILE" in
+        *.md|*.markdown)
+            glow $FILE
+            exit 0
+            ;;
+    esac
+
+    FILE_TYPE=$(file --brief --mime-type -- "$FILE")
+    case "$FILE_TYPE" in
+        image/*)
+            chafa --format sixels "$FILE"
+            ;;
+        video/*)
+            ffmpegthumbnailer -i "$FILE" -o - -c jpeg -s 0 2>/dev/null |chafa -f sixel -
+            ;;
+        *)
+            #bat --theme auto --theme-light=OneHalfLight --theme-dark=zenburn -pp "$FILE"
+            bat -pp "$FILE"
+            ;;
+    esac
+}
+
+
+preview_multifile() {
+    # only check the first one of multiple files for efficiency.
+    FILE_TYPE=$(file --brief --mime-type -- "$FILE_ONE")
+    case "$FILE_TYPE" in
+        image/*)
+            chafa --label on --grid auto --format sixels $FILE
+            ;;
+        video/*)
+            for i in $FILE;do
+                echo $i
+                ffmpegthumbnailer -i $i -o - -c jpeg -s 800 2>/dev/null |chafa -f sixel -
+            done
+            ;;
+    esac
+}
+
+
+main() {
+    dependencies_check || exit 1
+    [ $FILE_LEN -eq 0 ] && exit 1
+    [ $FILE_LEN -eq 1 ] && {
+        preview_onefile
+    } || {
+        preview_multifile
+    }
+}
+
+main
