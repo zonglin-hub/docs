@@ -10,7 +10,9 @@
 
 ## 彻底移除 Snap
 
-在 Ubuntu 系统中，默认捆绑了 Snap 容器化软件包管理器。甚至像 Firefox、Thunderbird 和「应用商店」这样的核心应用也只提供 Snap 包。然而，并不是所有用户都喜欢 Snap。
+在 Ubuntu 系统中，默认捆绑了 Snap 容器化软件包管理器。甚至像
+Firefox、Thunderbird 和「应用商店」这样的核心应用也只提供 Snap 包。然而，并不是
+所有用户都喜欢 Snap。
 
 ### 为什么从 Ubuntu 中移除 Snap
 
@@ -109,4 +111,5 @@ ls /var/lib/snapd/desktop/applications/
 
 删除相关的 `.desktop` 文件以清理残留图标。
 
-至此，你已经彻底从 Ubuntu 中卸载了 Snap。如果你还要继续使用 Firefox 和 Thunderbird，可以手动添加 mozillateam/ppa 再重新安装。
+至此，你已经彻底从 Ubuntu 中卸载了 Snap。如果你还要继续使用 Firefox 和
+Thunderbird，可以手动添加 mozillateam/ppa 再重新安装。

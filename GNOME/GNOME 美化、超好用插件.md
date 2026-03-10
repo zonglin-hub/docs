@@ -92,7 +92,8 @@ URL：https://extensions.gnome.org/extension/7/removable-drive-menu/
 
 在 Gnome Tweak 工具中，我无法更改 Shell 主题：
 
-悬停在感叹号上会显示以下工具提示：`未启用Shell用户主题扩展`。我正在使用Ubuntu 14.10，并已安装gnome-shell-extensions。
+悬停在感叹号上会显示以下工具提示：`未启用Shell用户主题扩展`。我正在使用Ubuntu
+14.10，并已安装gnome-shell-extensions。
 
 
 你是真的在使用Gnome Shell，还是只是用Unity桌面的Ubuntu？ - xangua
