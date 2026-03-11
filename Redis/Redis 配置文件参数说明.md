@@ -75,4 +75,5 @@ appendfsync everysec
 
 ## redis AOF
 
-开启`appendonly yes`当 `appendonly.aof` 文件存在问题导致 redis 数据无法加载可以使用`redis-check-aof --fix appendonly.aof`恢复文件
+开启`appendonly yes`当 `appendonly.aof` 文件存在问题导致 redis 数据无法加载可以
+使用`redis-check-aof --fix appendonly.aof`恢复文件
