@@ -1,5 +1,7 @@
 # Windows 设置 Starship
 
+[Starship](https://starship.rs/zh-CN/)
+
 参考文档：
 
 - [Starship 集成 Windows Terminal 使用指南](https://zhuanlan.zhihu.com/p/467581369)
@@ -8,6 +10,12 @@
 
 ```powershell
 if (!(Test-Path -Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force }
+```
+
+在 `~/.bashrc` 的最后，添加以下内容：
+
+```bash
+eval "$(starship init bash)"
 ```
 
 注：命令作用是判断下不存在$PROFILE文件，就创建。
