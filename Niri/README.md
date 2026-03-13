@@ -12,4 +12,4 @@ waybar：高度可自定义的 Wayland 状态栏
 swaybg：Wayland 的桌面壁纸管理工具
 xwayland-satellite：用于运行 x11 应用的 Wayland 桥接工具
 gdm：登录管理器
-mako：通知管理器
+[mako：通知管理器](https://github.com/emersion/mako)
