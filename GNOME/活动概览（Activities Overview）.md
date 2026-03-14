@@ -36,3 +36,15 @@
 	`/var/lib/snapd/desktop/applications/` 目录。 
 	- Flatpak 应用：应用程序的快捷
 	方式存储在与 `/var/lib/flatpak/exports/share/applications/` 目录。
+
+### 手动创建桌面快捷方式
+
+如果需要为某个插件或工具创建桌面快捷方式，可以按照以下步骤操作：
+
+1. 找到应用的`.desktop`文件，通常位于`/usr/share/applications`目录。
+2. 将该文件复制到桌面。
+3. 双击运行`.desktop`文件，并根据提示完成设置。
+
+    ```bash
+    cp /usr/share/applications/wechat.desktop /home/zonglin/桌面/wechat.desktop
+    ```

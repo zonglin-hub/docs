@@ -1,3 +1,22 @@
+__推荐扩展__：
+
+| 扩展名称 (Extension Name)                               | 主要功能简介
+| :------------------------------------------------------ | :---------------------------------------- |
+| __Dash to Panel__                                       | 将桌面活动概述和Dock合并为一个可高度自定义的面板
+| __Compiz Alike Magic Lamp Effect__                      | 为窗口最小化等操作提供类似 Compiz 的魔灯动画效果
+| __Blur my Shell__                                       | 为顶部栏、概述等界面添加毛玻璃模糊效果
+| __Dash to Dock__                                        | 提供一个可自定义的 Dock 栏
+| __gTile__                                               | 窗口平铺管理扩展
+| __Auto Move Windows__                                   | 当应用程序创建窗口时，将它们移动到特定的工作区
+| __GNOME Pomodoro__                                      | 番茄工作法计时器
+| __AppIndicator and KStatusNotifierItem Support__        | 这个可以在 _Top Bar（顶栏）_ 显示后台应用图标
+| __Coverflow Alt-Tab__                                   | 替代 Alt-Tab 功能，以封面流形式循环切换窗口
+| __Clipboard Indicator__                                 | 剪贴板管理器
+| __Burn My Windows__                                     | 分解你的窗户
+| __Lock Keys__                                           | 数字键，大小写切换提示
+| __TopHat__                                              | 可以在顶栏显示系统监控
+| __Removable Drive Menu__                                | 用于访问和卸载可移动设备的状态菜单
+
 
 ### 扩展：Auto Move Windows
 描述：当应用程序创建窗口时，将它们移动到特定的工作区。
