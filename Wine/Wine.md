@@ -4,14 +4,21 @@
 修改时间: 2025-12-29
 标签:
 ---
-![[wine9.avif]]
+![](./imgs/wine9.avif)
 # 安装和使用 Wine 运行 Windows 应用
 
-Wine（也就是 [WineHQ](https://www.winehq.org/)）是一款 Windows 兼容层，能让你在类 Unix 操作系统（如 Linux）上直接运行 Windows 应用程序，而无需安装双系统或借助虚拟机。
+Wine（也就是 [WineHQ](https://www.winehq.org/)）是一款 Windows 兼容层，能让你在
+类 Unix 操作系统（如 Linux）上直接运行 Windows 应用程序，而无需安装双系统或借助
+虚拟机。
 
-[Wine 10.x](https://www.sysgeek.cn/wine-10/) 是它的最新版本，带来了诸多改进。例如，支持高 DPI 缩放和 [Vulkan 视频解码器](https://www.sysgeek.cn/vulkan-vs-directx-12/)，提升线程优先级并引入动态 Wow64 模式，加入 Wayland 剪贴板支持，以及增强了对 [ARM64](https://www.sysgeek.cn/aarch64/) 的兼容性等。
+[Wine 10.x](https://www.sysgeek.cn/wine-10/) 是它的最新版本，带来了诸多改进。例
+如，支持高 DPI 缩放和 [Vulkan 视频解码
+器](https://www.sysgeek.cn/vulkan-vs-directx-12/)，提升线程优先级并引入动态
+Wow64 模式，加入 Wayland 剪贴板支持，以及增强了对
+ [ARM64](https://www.sysgeek.cn/aarch64/) 的兼容性等。
 
-接下来，本文将详细介绍如何通过 [WineHQ 官方仓库](https://wiki.winehq.org/Ubuntu)，在 Ubuntu 上安装、配置和使用 Wine 10.x。
+接下来，本文将详细介绍如何通过 [WineHQ 官方仓
+库](https://wiki.winehq.org/Ubuntu)，在 Ubuntu 上安装、配置和使用 Wine 10.x。
 
 以下步骤适用于 Ubuntu 20.04、22.04、24.04 LTS 和 Ubuntu 24.10 版本。
 
@@ -49,7 +56,8 @@ sudo dpkg --add-architecture i386 # 在 Ubuntu 上启用 32 位支持
 
 ### 1.2 添加 WineHQ 官方仓库
 
-> 清华大学开源软件镜像站 [Wine builds 软件仓库](https://mirrors-i.tuna.tsinghua.edu.cn/help/wine-builds/)
+> 清华大学开源软件镜像站 [Wine builds 软件仓
+> 库](https://mirrors-i.tuna.tsinghua.edu.cn/help/wine-builds/)
 
 1. 首先，导入 WineHQ 的 GPG 密钥：
 
@@ -77,7 +85,8 @@ sudo apt update
 
 2. 根据你的需求，选择安装不同版本的 Wine 10：
 
-稳定版`winehq-stable`的小版本更新最慢，推荐安装预发布版`winehq-staging`或开发版`winehq-devel`。
+稳定版 `winehq-stable` 的小版本更新最慢，推荐安装预发布版 `winehq-staging` 或开
+发版 `winehq-devel`。
 
 - **预发布版**：功能和稳定性介于稳定版和开发版之间。
 
@@ -105,7 +114,8 @@ wine --version
 
 ### 2.1 配置 Wine 环境
 
-1. 成功安装 Wine 后，通过以下命令开始设置 Wine 的运行环境，包括安装 wine-mono 组件以支持 .NET 应用：
+1. 成功安装 Wine 后，通过以下命令开始设置 Wine 的运行环境，包括安装 wine-mono 组
+   件以支持 .NET 应用：
 
 ```bash
 winecfg
@@ -113,17 +123,19 @@ winecfg
 
 2. 根据提示安装 Mono 及相关依赖。
 
-![[Snipaste_2025-12-27_22-48-36.png]]
+![](./imgs/Snipaste_2025-12-27_22-48-36.png)
 
 ### 2.2 配置 Wine 设置
 
-1. 配置完成后，会自动弹出「Wine 设置」对话框。你可以选择要模拟的 Windows 版本，默认是「Windows 10」，也可以根据需要自行更改。
+1. 配置完成后，会自动弹出「Wine 设置」对话框。你可以选择要模拟的 Windows 版本，
+   默认是「Windows 10」，也可以根据需要自行更改。
 
 2. 整「音效」、「显示」等设置，完成后点击「确定」关闭对话框。
 
 ### 2.3 安装 Winetricks（优化 Wine 使用体验）
 
-Winetricks 是一个辅助脚本，可以帮助你轻松安装和管理 Windows 应用程序和库，从而优化 Wine 的使用体验。
+Winetricks 是一个辅助脚本，可以帮助你轻松安装和管理 Windows 应用程序和库，从而优
+化 Wine 的使用体验。
 
 1. 在「终端」中运行以下命令安装 winetricks：
 
@@ -144,7 +156,8 @@ winetricks d3dx9 d3dx10 # 安装 DirectX 提升兼容性和游戏性能
 
 ## 第 3 步：使用 Wine 运行 Windows 应用程序
 
-要运行 Windows 的二进制文件，请右键点击文件并选择「打开方式」，然后选择 Wine。以下是使用 Wine 在 Ubuntu 中安装和运行 Notepad++ 的示例：
+要运行 Windows 的二进制文件，请右键点击文件并选择「打开方式」，然后选择 Wine。以
+下是使用 Wine 在 Ubuntu 中安装和运行 Notepad++ 的示例：
 
 1. [下载 Noetpad ++](https://notepad-plus-plus.org/downloads/) 安装文件。
 
@@ -159,17 +172,20 @@ winetricks d3dx9 d3dx10 # 安装 DirectX 提升兼容性和游戏性能
 
 ### 管理 Wine 前缀（应用程序环境）
 
-Wine 使用前缀（Prefix）来隔离不同的应用程序环境。默认情况下，主前缀路径为`~/.wine`。如果需要创建一个新的自定义环境，可以使用以下命令：
+Wine 使用前缀（Prefix）来隔离不同的应用程序环境。默认情况下，主前缀路径为
+`~/.wine`。如果需要创建一个新的自定义环境，可以使用以下命令：
 
 ```bash
 WINEPREFIX=~/.custom_wine_prefix winecfg
 ```
 
-将`~/.custom_wine_prefix`替换为要使用的目录。执行命令后，会创建一个新的 Wine 环境，并自动打开「Wine 配置」对话框。
+将`~/.custom_wine_prefix`替换为要使用的目录。执行命令后，会创建一个新的 Wine 环
+境，并自动打开「Wine 配置」对话框。
 
 ### 配置 32 位应用支持
 
-Wine 默认支持 64 位 Windows 应用。如果要运行 32 位应用程序，可以通过以下命令设置一个新的 32 位环境：
+Wine 默认支持 64 位 Windows 应用。如果要运行 32 位应用程序，可以通过以下命令设置
+一个新的 32 位环境：
 
 ```bash
 WINEARCH=win32 WINEPREFIX=~/.wine32 winecfg
@@ -187,7 +203,9 @@ WINEPREFIX=/home/billyfu/wine_prefix LC_ALL=zh_CN.UTF-8 winecfg
 
 ### 浏览 Wine 应用程序数据库
 
-Wine 应用程序数据库 (AppDB) 提供了各种应用程序的兼容性信息和优化配置建议。你可以访问 [Wine AppDB](https://appdb.winehq.org/) 了解更多详细信息，以及其他用户分享的经验。
+Wine 应用程序数据库 (AppDB) 提供了各种应用程序的兼容性信息和优化配置建议。你可以
+访问 [Wine AppDB](https://appdb.winehq.org/) 了解更多详细信息，以及其他用户分享
+的经验。
 
 ## 从 Ubuntu 中移除 Wine
 
