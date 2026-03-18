@@ -1,4 +1,14 @@
-## Debian12 使用 x-cmd 安装 Rust
+---
+标题: 使用 x-cmd 安装 Rust
+创建时间: 2026-03-18
+修改时间: 2026-03-18
+标签:
+  - Debian12
+  - x-cmd
+  - Rust
+---
+
+## 使用 x-cmd 安装 Rust
 
 ```sh
 zonglin@debian:~$ eval "$(curl https://get.x-cmd.com)" # 采用 curl 安装 x-cmd
@@ -54,6 +64,7 @@ Current installation options:
 3) Cancel installation
 >1
 
+  |
 info: profile set to 'default'
 info: default host triple is x86_64-unknown-linux-gnu
 info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
@@ -117,12 +128,12 @@ error: linker `cc` not found
 error: could not compile `leet_code` (bin "hash_map") due to 1 previous error
 ```
 
-你遇到的错误是因为系统缺少C语言编译器（`cc`或`gcc`）。
-Rust在编译某些项目时需要链接C库，因此需要安装基础的C编译工具链。以下是解决方法：
+你遇到的错误是因为系统缺少C语言编译器（`cc`或`gcc`）。 Rust在编译某些项目时需要
+链接C库，因此需要安装基础的C编译工具链。以下是解决方法：
 
 ---
 
-### **1. 安装编译工具链**
+### 1. 安装编译工具链
 
 在Debian/Ubuntu系统上，运行以下命令安装基础开发工具包（包含`gcc`、`make`等）：
 
@@ -133,7 +144,7 @@ sudo apt install build-essential
 
 ---
 
-### **2. 验证安装**
+### 2. 验证安装
 
 安装完成后，检查`gcc`是否可用：
 
@@ -149,7 +160,7 @@ gcc (Debian 10.2.1-6) 10.2.1 20210110
 
 ---
 
-### **3. 重新编译Rust项目**
+### 3. 重新编译Rust项目
 
 返回项目目录，再次尝试编译：
 
@@ -159,11 +170,11 @@ cargo build
 
 ---
 
-### **其他可能的问题**
+### 其他可能的问题
 
 如果仍然报错，可以检查：
 
-1. **PATH环境变量**：确保`/usr/bin`在PATH中：
+1. **PATH环境变量**：确保 `/usr/bin` 在PATH中：
 
    ```bash
    echo $PATH
@@ -177,6 +188,7 @@ cargo build
 
 ---
 
-### **总结**
+### 总结
 
-99%的情况下，安装 `build-essential` 即可解决问题。如果还有疑问，可以贴出完整错误日志。
+99%的情况下，安装 `build-essential` 即可解决问题。如果还有疑问，可以贴出完整错误
+日志。
