@@ -1,6 +1,8 @@
 # systemd-analyze
 
-**systemd-analyze** 是一个 Linux 系统自带的工具，用于分析系统启动性能。它可以显示系统启动过程中的性能统计数据、获取 systemd 系统管理器的状态与跟踪信息、校验单元文件的正确性。
+**systemd-analyze** 是一个 Linux 系统自带的工具，用于分析系统启动性能。它可以显
+示系统启动过程中的性能统计数据、获取 systemd 系统管理器的状态与跟踪信息、校验单
+元文件的正确性。
 
 使用 systemd-analyze 命令可以生成服务启动时间的SVG图表
 
@@ -16,7 +18,8 @@ boot.svg
 
 ---
 
-你的 `systemd-analyze plot` 输出（保存为 `boot.svg`）显示了系统启动的详细时间线。我来帮你解读一下这个启动性能报告：
+你的 `systemd-analyze plot` 输出（保存为 `boot.svg`）显示了系统启动的详细时间
+线。我来帮你解读一下这个启动性能报告：
 
 ---
 
@@ -40,7 +43,8 @@ graphical.target reached after 7.677s in userspace.
 
 ### 📈 解读 SVG 图表
 
-这个 SVG 是一个时间线图，横轴是时间（单位：秒），纵轴是各个 systemd 单元（服务、挂载点、设备等）。
+这个 SVG 是一个时间线图，横轴是时间（单位：秒），纵轴是各个 systemd 单元（服务、
+挂载点、设备等）。
 
 - **颜色含义**：
   - `firmware`：灰色
@@ -105,4 +109,5 @@ xdg-open boot.svg
 
 ---
 
-如果你希望我帮你分析具体是哪个服务拖慢了启动，或者如何优化，我可以帮你进一步解读 `systemd-analyze blame` 或 `critical-chain` 的输出。
+如果你希望我帮你分析具体是哪个服务拖慢了启动，或者如何优化，我可以帮你进一步解读
+`systemd-analyze blame` 或 `critical-chain` 的输出。
