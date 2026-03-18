@@ -2,9 +2,11 @@
 
 1. __命令提示符历史记录__：
 
-   - 当你在命令提示符（cmd.exe）中输入命令时，它们会被保存在一个历史记录中。你可以通过按上下箭头键来遍历之前输入的命令。
+   - 当你在命令提示符（cmd.exe）中输入命令时，它们会被保存在一个历史记录中。你可
+     以通过按上下箭头键来遍历之前输入的命令。
    - 这个历史记录通常保存在用户目录下的一个文件中，例如 \
-   `C:\Users\YourUsername\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`（对于 PowerShell）。
+   `C:\Users\YourUsername\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`（对
+   于 PowerShell）。
 
 2. __批处理文件（.bat 或 .cmd）__：
 
@@ -14,7 +16,8 @@
 3. __脚本文件__：
 
    - 对于 PowerShell，你可以创建一个 `.ps1` 文件，在其中写入 PowerShell 命令。
-   - 类似地，对于其他脚本语言，如 Python、Perl 或 Bash（通过 Windows Subsystem for Linux），你可以创建相应的脚本文件来保存命令。
+   - 类似地，对于其他脚本语言，如 Python、Perl 或 Bash（通过 Windows Subsystem
+     for Linux），你可以创建相应的脚本文件来保存命令。
 
 4. __日志文件__：
 
@@ -32,6 +35,7 @@
 
 6. __任务计划程序__：
 
-   - 如果你想要定期执行命令，可以使用 Windows 的任务计划程序来创建一个任务，该任务可以运行批处理文件或脚本文件。
+   - 如果你想要定期执行命令，可以使用 Windows 的任务计划程序来创建一个任务，该任
+     务可以运行批处理文件或脚本文件。
 
 请根据你的具体需求选择合适的方法来记录或保存执行的 Shell 命令。

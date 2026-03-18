@@ -7,8 +7,9 @@
 
 ## nvm 是什么?
 
-*<u>node.js version management</u>*，顾名思义是一个 nodejs 的版本管理工具。
-为了解决 node 各种版本存在不兼容现象，nvm 是让你在同一台机器上安装和切换不同版本的 node 的工具，通过它可以安装和切换不同版本的 nodejs。
+*<u>node.js version management</u>*，顾名思义是一个 nodejs 的版本管理工具。为了
+解决 node 各种版本存在不兼容现象，nvm 是让你在同一台机器上安装和切换不同版本的
+node 的工具，通过它可以安装和切换不同版本的 nodejs。
 
 ## Windows 下载安装 nvm
 
