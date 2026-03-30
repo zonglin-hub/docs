@@ -8,15 +8,23 @@ public static void main(String[] args) {
 }
 ```
 
-利用多线程，我们的程序可以更加合理地使用 `CPU` 多核心资源，在同一时间完成更多的工作。
+利用多线程，我们的程序可以更加合理地使用 `CPU` 多核心资源，在同一时间完成更多的
+工作。
 
-但是，如果我们的程序频繁地创建线程，由于线程的创建和销毁也需要占用系统资源，因此这样会降低我们整个程序的性能，那么怎么做，才能更高效地使用多线程呢？
+但是，如果我们的程序频繁地创建线程，由于线程的创建和销毁也需要占用系统资源，因此
+这样会降低我们整个程序的性能，那么怎么做，才能更高效地使用多线程呢？
 
-我们其实可以将已创建的线程复用，利用池化技术，就像数据库连接池一样，我们也可以创建很多个线程，然后反复地使用这些线程，而不对它们进行销毁。
+我们其实可以将已创建的线程复用，利用池化技术，就像数据库连接池一样，我们也可以创
+建很多个线程，然后反复地使用这些线程，而不对它们进行销毁。
 
-虽然听起来这个想法比较新颖，但是实际上线程池早已利用到各个地方，比如我们的 `Tomcat` 服务器，要在同一时间接受和处理大量的请求，那么就必须要在短时间内创建大量的线程，结束后又进行销毁，这显然会导致很大的开销，因此这种情况下使用线程池显然是更好的解决方案。
+虽然听起来这个想法比较新颖，但是实际上线程池早已利用到各个地方，比如我们的
+`Tomcat` 服务器，要在同一时间接受和处理大量的请求，那么就必须要在短时间内创建大
+量的线程，结束后又进行销毁，这显然会导致很大的开销，因此这种情况下使用线程池显然
+是更好的解决方案。
 
-由于线程池可以反复利用已有线程执行多线程操作，所以它一般是有容量限制的，当所有的线程都处于工作状态时，那么新的多线程请求会被阻塞，直到有一个线程空闲出来为止，实际上这里就会用到我们之前讲解的阻塞队列。
+由于线程池可以反复利用已有线程执行多线程操作，所以它一般是有容量限制的，当所有的
+线程都处于工作状态时，那么新的多线程请求会被阻塞，直到有一个线程空闲出来为止，实
+际上这里就会用到我们之前讲解的阻塞队列。
 
 所以我们可以暂时得到下面一个样子：
 
@@ -26,11 +34,13 @@ public static void main(String[] args) {
 
 * corePoolSize（核心线程池大小）
 
-  我们每向线程池提交一个多线程任务时，都会创建一个新的核心线程，无论是否存在其他空闲线程，直到到达核心线程池大小为止，之后会尝试复用线程资源。
+  我们每向线程池提交一个多线程任务时，都会创建一个新的核心线程，无论是否存在其他
+  空闲线程，直到到达核心线程池大小为止，之后会尝试复用线程资源。
 
 * maximumPoolSize（最大线程池大小）
 
-  当目前线程池中所有的线程都处于运行状态，并且等待队列已满，那么就会直接尝试继续创建新的非核心线程运行，但是不能超过最大线程池大小。
+  当目前线程池中所有的线程都处于运行状态，并且等待队列已满，那么就会直接尝试继续
+  创建新的非核心线程运行，但是不能超过最大线程池大小。
 
 * keepAliveTime（线程最大空闲时间）
 
@@ -40,7 +50,8 @@ public static void main(String[] args) {
 
 * workQueue（线程等待队列）
 
-  当线程池中核心线程数已满时，就会将任务暂时存到等待队列中，直到有线程资源可用为止，这里可以使用我们上一章学到的阻塞队列。
+  当线程池中核心线程数已满时，就会将任务暂时存到等待队列中，直到有线程资源可用为
+  止，这里可以使用我们上一章学到的阻塞队列。
 
 * threadFactory（线程创建工厂）
 
@@ -48,7 +59,8 @@ public static void main(String[] args) {
 
 * handler（拒绝策略）
 
-  当等待队列和线程池都没有空间了，真的不能再来新的任务时，来了个新的多线程任务，那么只能拒绝了，这时就会根据当前设定的拒绝策略进行处理。
+  当等待队列和线程池都没有空间了，真的不能再来新的任务时，来了个新的多线程任务，
+  那么只能拒绝了，这时就会根据当前设定的拒绝策略进行处理。
 
 最为重要的就是线程池大小的限定了，合理地分配大小会使得线程池的执行效率事半功倍：
 
@@ -56,11 +68,16 @@ public static void main(String[] args) {
 
   * CPU 密集型：
 
-    主要是执行计算任务，响应时间很快，CPU一直在运行，这种任务CPU的利用率很高，那么线程数应该是根据 CPU 核心数来决定，CPU 核心数 = 最大同时执行线程数，以 i5-9400F 处理器为例，CPU 核心数为 6，那么最多就能同时执行 6 个线程。
+    主要是执行计算任务，响应时间很快，CPU一直在运行，这种任务CPU的利用率很高，那
+    么线程数应该是根据 CPU 核心数来决定，CPU 核心数 = 最大同时执行线程数，以
+    i5-9400F 处理器为例，CPU 核心数为 6，那么最多就能同时执行 6 个线程。
 
   * IO 密集型：
 
-    主要是进行 IO 操作，因为执行 IO 操作的时间比较较长，比如从硬盘读取数据之类的，CPU 就得等着 IO 操作，很容易出现空闲状态，导致 CPU 的利用率不高，这种情况下可以适当增加线程池的大小，让更多的线程可以一起进行 IO 操作，一般可以配置为 CPU 核心数的 2 倍。
+    主要是进行 IO 操作，因为执行 IO 操作的时间比较较长，比如从硬盘读取数据之类
+    的，CPU 就得等着 IO 操作，很容易出现空闲状态，导致 CPU 的利用率不高，这种情
+    况下可以适当增加线程池的大小，让更多的线程可以一起进行 IO 操作，一般可以配置
+    为 CPU 核心数的 2 倍。
 
 ```java
 public ThreadPoolExecutor(int corePoolSize,
@@ -88,11 +105,17 @@ public ThreadPoolExecutor(int corePoolSize,
 }
 ```
 
-这里我们手动创建一个核心容量为 2，最大容量为 4，等待队列长度为 2，空闲时间为 3 秒的线程池，现在我们向其中执行 6 个任务，每个任务都会进行 1 秒钟休眠，那么当线程池中 2 个核心线程都被占用时，还有 4 个线程就只能进入到等待队列中了，但是等待队列中只有 2 个容量，这时紧接着的 2 个任务，线程池将直接尝试创建线程，由于不大于最大容量，因此可以成功创建。最后所有线程完成之后，在等待 5 秒后，超过了线程池的最大空闲时间，`非核心线程`被回收了，所以线程池中只有 2 个线程存在。
+这里我们手动创建一个核心容量为 2，最大容量为 4，等待队列长度为 2，空闲时间为 3
+秒的线程池，现在我们向其中执行 6 个任务，每个任务都会进行 1 秒钟休眠，那么当线程
+池中 2 个核心线程都被占用时，还有 4 个线程就只能进入到等待队列中了，但是等待队列
+中只有 2 个容量，这时紧接着的 2 个任务，线程池将直接尝试创建线程，由于不大于最大
+容量，因此可以成功创建。最后所有线程完成之后，在等待 5 秒后，超过了线程池的最大
+空闲时间，`非核心线程`被回收了，所以线程池中只有 2 个线程存在。
 
 `executor.shutdownNow()`
 
-使用完线程池记得关闭，不然程序不会结束，它会取消所有等待中的任务以及试图中断正在执行的任务，关闭后，无法再提交任务，一律拒绝
+使用完线程池记得关闭，不然程序不会结束，它会取消所有等待中的任务以及试图中断正在
+执行的任务，关闭后，无法再提交任务，一律拒绝
 
 `executor.shutdown()` 同样可以关闭，但是会执行完等待队列中的任务再关闭
 
@@ -122,7 +145,9 @@ public static void main(String[] args) throws InterruptedException {
 
 那么要是等待队列设定为没有容量的 SynchronousQueue 呢，这个时候会发生什么？
 
-下面我们可以看到，前4个任务都可以正常执行，但是到第五个任务时，直接抛出了异常，这其实就是因为等待队列的容量为0，相当于没有容量，那么这个时候，就只能拒绝任务了，拒绝的操作会根据拒绝策略决定。
+下面我们可以看到，前4个任务都可以正常执行，但是到第五个任务时，直接抛出了异常，
+这其实就是因为等待队列的容量为0，相当于没有容量，那么这个时候，就只能拒绝任务
+了，拒绝的操作会根据拒绝策略决定。
 
 ```java
 pool-1-thread-1 开始执行！（0
@@ -139,7 +164,8 @@ Exception in thread "main" java.util.concurrent.RejectedExecutionException: Task
 以下是线程池的拒绝策略：
 
 * AbortPolicy(默认)：像上面一样，直接抛异常。
-* CallerRunsPolicy：直接让提交任务的线程运行这个任务，比如在主线程向线程池提交了任务，那么就直接由主线程执行。
+* CallerRunsPolicy：直接让提交任务的线程运行这个任务，比如在主线程向线程池提交了
+  任务，那么就直接由主线程执行。
 * DiscardOldestPolicy：丢弃队列中最近的一个任务，替换为当前任务。
 * DiscardPolicy：什么也不用做。
 
@@ -220,7 +246,9 @@ pool-1-thread-3 已结束！（2
 
 这是为什么呢？我们来看看这个拒绝策略的源码：
 
-这里我们可以看到，它会先对等待队列进行出队操作，但是由于 SynchronousQueue 压根没容量，所有这个操作毫无意义，然后就会递归执行 `execute` 方法，而进入之后，又发现没有容量不能插入，于是又重复上面的操作，这样就会无限的递归下去，最后就爆栈了。
+这里我们可以看到，它会先对等待队列进行出队操作，但是由于 SynchronousQueue 压根没
+容量，所有这个操作毫无意义，然后就会递归执行 `execute` 方法，而进入之后，又发现
+没有容量不能插入，于是又重复上面的操作，这样就会无限的递归下去，最后就爆栈了。
 
 ```java
 public static class DiscardOldestPolicy implements RejectedExecutionHandler {
@@ -248,7 +276,9 @@ public static void main(String[] args) throws InterruptedException {
 
 接着我们来看线程创建工厂，我们可以自己决定如何创建新的线程：
 
-这里传入的 Runnable 对象就是我们提交的任务，可以看到需要我们返回一个 Thread 对象，其实就是线程池创建线程的过程，而如何创建这个对象，以及它的一些属性，就都由我们来决定。
+这里传入的 Runnable 对象就是我们提交的任务，可以看到需要我们返回一个 Thread 对
+象，其实就是线程池创建线程的过程，而如何创建这个对象，以及它的一些属性，就都由我
+们来决定。
 
 ```java
 public static void main(String[] args) throws InterruptedException {
@@ -268,7 +298,8 @@ public static void main(String[] args) throws InterruptedException {
 }
 ```
 
-各位有没有想过这样一个情况，如果我们的任务在运行过程中出现异常了，那么是不是会导致线程池中的线程被销毁呢？
+各位有没有想过这样一个情况，如果我们的任务在运行过程中出现异常了，那么是不是会导
+致线程池中的线程被销毁呢？
 
 可以看到，出现异常之后，再次提交新的任务，执行的线程是一个新的线程了。
 
@@ -286,7 +317,8 @@ public static void main(String[] args) throws InterruptedException {
 }
 ```
 
-除了我们自己创建线程池之外，官方也提供了很多的线程池定义，我们可以使用`Executors`工具类来快速创建线程池：
+除了我们自己创建线程池之外，官方也提供了很多的线程池定义，我们可以使用
+`Executors`工具类来快速创建线程池：
 
 ```java
 public static void main(String[] args) throws InterruptedException {
@@ -296,7 +328,8 @@ public static void main(String[] args) throws InterruptedException {
 
 可以看到它的内部实现为：
 
-这里直接将最大线程和核心线程数量设定为一样的，并且等待时间为0，因为压根不需要，并且采用的是一个无界的 LinkedBlockingQueue 作为等待队列。
+这里直接将最大线程和核心线程数量设定为一样的，并且等待时间为0，因为压根不需要，
+并且采用的是一个无界的 LinkedBlockingQueue 作为等待队列。
 
 ```java
 public static ExecutorService newFixedThreadPool(int nThreads) {
@@ -325,7 +358,8 @@ public static ExecutorService newSingleThreadExecutor() {
 }
 ```
 
-可以看到这里并不是直接创建的一个 `ThreadPoolExecutor` 对象，而是套了一层 `FinalizableDelegatedExecutorService` ，那么这个又是什么东西呢？
+可以看到这里并不是直接创建的一个 `ThreadPoolExecutor` 对象，而是套了一层
+`FinalizableDelegatedExecutorService` ，那么这个又是什么东西呢？
 
 在GC时，会执行 `finalize()` 方法，此方法中会关闭掉线程池，释放资源
 
@@ -352,7 +386,8 @@ static class DelegatedExecutorService extends AbstractExecutorService {
 
 所以，下面两种写法的区别在于：
 
-前者实际上是被代理了，我们没办法直接修改前者的相关属性，显然使用前者创建只有一个线程的线程池更加专业和安全（可以防止属性被修改）一些。
+前者实际上是被代理了，我们没办法直接修改前者的相关属性，显然使用前者创建只有一个
+线程的线程池更加专业和安全（可以防止属性被修改）一些。
 
 ```java
 public static void main(String[] args) throws InterruptedException {
@@ -371,7 +406,9 @@ public static void main(String[] args) throws InterruptedException {
 
 我们来看看 `newCachedThreadPool()` 的实现：
 
-可以看到，核心线程数为0，那么也就是说所有的线程都是`非核心线程`，也就是说线程空闲时间超过1秒钟，一律销毁。但是它的最大容量是`Integer.MAX_VALUE`，也就是说，它可以无限制地增长下去，所以这玩意一定要慎用。
+可以看到，核心线程数为0，那么也就是说所有的线程都是`非核心线程`，也就是说线程空
+闲时间超过1秒钟，一律销毁。但是它的最大容量是`Integer.MAX_VALUE`，也就是说，它可
+以无限制地增长下去，所以这玩意一定要慎用。
 
 ```java
 public static ExecutorService newCachedThreadPool() {
@@ -383,9 +420,11 @@ public static ExecutorService newCachedThreadPool() {
 
 ### 执行带返回值的任务
 
-一个多线程任务不仅仅可以是 void 无返回值任务，比如我们现在需要执行一个任务，但是我们需要在任务执行之后得到一个结果，这个时候怎么办呢？
+一个多线程任务不仅仅可以是 void 无返回值任务，比如我们现在需要执行一个任务，但是
+我们需要在任务执行之后得到一个结果，这个时候怎么办呢？
 
-这里我们就可以使用到 Future了，它可以返回任务的计算结果，我们可以通过它来获取任务的结果以及任务当前是否完成：
+这里我们就可以使用到 Future了，它可以返回任务的计算结果，我们可以通过它来获取任
+务的结果以及任务当前是否完成：
 
 ```java
 public static void main(String[] args) throws InterruptedException, ExecutionException {
@@ -455,9 +494,14 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 
 ### 执行定时任务
 
-既然线程池这么强大，那么线程池能不能执行定时任务呢？我们之前如果需要执行一个定时任务，那么肯定会用到 `Timer和TimerTask` ，但是它只会创建一个线程处理我们的定时任务，无法实现多线程调度，并且它无法处理异常情况一旦抛出未捕获异常那么会直接终止，显然我们需要一个更加强大的定时器。
+既然线程池这么强大，那么线程池能不能执行定时任务呢？我们之前如果需要执行一个定时
+任务，那么肯定会用到 `Timer和TimerTask` ，但是它只会创建一个线程处理我们的定时任
+务，无法实现多线程调度，并且它无法处理异常情况一旦抛出未捕获异常那么会直接终止，
+显然我们需要一个更加强大的定时器。
 
-JDK5之后，我们可以使用 `ScheduledThreadPoolExecutor` 来提交定时任务，它继承自 `ThreadPoolExecutor` ，并且所有的构造方法都必须要求最大线程池容量为 `Integer.MAX_VALUE` ，并且都是采用的 `DelayedWorkQueue` 作为等待队列。
+JDK5之后，我们可以使用 `ScheduledThreadPoolExecutor` 来提交定时任务，它继承自
+`ThreadPoolExecutor` ，并且所有的构造方法都必须要求最大线程池容量为
+`Integer.MAX_VALUE` ，并且都是采用的 `DelayedWorkQueue` 作为等待队列。
 
 ```java
 public ScheduledThreadPoolExecutor(int corePoolSize) {
@@ -477,7 +521,8 @@ public ScheduledThreadPoolExecutor(int corePoolSize, ThreadFactory threadFactory
 }
 ```
 
-我们来测试一下它的方法，这个方法可以提交一个延时任务，只有到达指定时间之后才会开始：
+我们来测试一下它的方法，这个方法可以提交一个延时任务，只有到达指定时间之后才会开
+始：
 
 ```java
 public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -489,7 +534,8 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 
 我们也可以像之前一样，传入一个 `Callable` 对象，用于接收返回值：
 
-可以看到`schedule`方法返回了一个 `ScheduledFuture` 对象，和 `Future` 一样，它也支持返回值的获取、包括对任务的取消同时还支持获取剩余等待时间。
+可以看到`schedule`方法返回了一个 `ScheduledFuture` 对象，和 `Future` 一样，它也
+支持返回值的获取、包括对任务的取消同时还支持获取剩余等待时间。
 
 ```java
 public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -671,7 +717,8 @@ private boolean addWorker(Runnable firstTask, boolean core) {
 }
 ```
 
-接着我们来看 `Worker` 类是如何实现的，它继承自 `AbstractQueuedSynchronizer`，时隔两章，居然再次遇到AQS，那也就是说，它本身就是一把锁：
+接着我们来看 `Worker` 类是如何实现的，它继承自 `AbstractQueuedSynchronizer`，时
+隔两章，居然再次遇到AQS，那也就是说，它本身就是一把锁：
 
 ```java
 private final class Worker
@@ -753,7 +800,8 @@ final void runWorker(Worker w) {
 
 那么它是怎么从阻塞队列里面获取任务的呢：
 
-虽然我们的源码解读越来越深，但是只要各位的思路不断，依然是可以继续往下看的。到此，有关`execute()`方法的源码解读，就先到这里。
+虽然我们的源码解读越来越深，但是只要各位的思路不断，依然是可以继续往下看的。到
+此，有关`execute()`方法的源码解读，就先到这里。
 
 ```java
 private Runnable getTask() {
@@ -931,4 +979,5 @@ final void tryTerminate() {
 }
 ```
 
-OK，有关线程池的实现原理，我们就暂时先介绍到这里，关于更高级的定时任务线程池，这里就不做讲解了。
+OK，有关线程池的实现原理，我们就暂时先介绍到这里，关于更高级的定时任务线程池，这
+里就不做讲解了。

@@ -5,17 +5,18 @@
 
 ---
 
-SSL（安全套接层）：SSL（Secure Sockets Layer，安全套接层）是旧的标准安全技术，用于在服务器和客户端之间创建加密的网络链路，确保传递的所有数据都是私密且安全的。
+SSL（安全套接层）：SSL（Secure Sockets Layer，安全套接层）是旧的标准安全技术，用
+于在服务器和客户端之间创建加密的网络链路，确保传递的所有数据都是私密且安全的。
 SSL 的当前版本是 Netscape 于 1996 年发布的 3.0 版本，已被 TLS 协议取代。
 
-TLS：传输层安全性协议 (Transport Layer Security，缩写作 TLS)
-它的前身是安全套接层 (Secure Sockets Layer，缩写作 SSL)，是一个被应用程序用来在网络中安全通信的 protocol（通讯协议）
-防止电子邮件、网页、消息以及其他协议被篡改或是窃听。
+TLS：传输层安全性协议 (Transport Layer Security，缩写作 TLS)它的前身是安全套接层
+(Secure Sockets Layer，缩写作 SSL)，是一个被应用程序用来在网络中安全通信的
+protocol（通讯协议）防止电子邮件、网页、消息以及其他协议被篡改或是窃听。
 
 #### 反馈问题
 
 现在最新版的谷歌，Edge浏览器不支持1.2以下
-![image](https://img2022.cnblogs.com/blog/2402369/202202/2402369-20220215190900202-2014380958.png)
+![image](./imgs/2402369-20220215190900202-2014380958.png)
 
 #### 项目部署 tomcat 修改问题修改方法
 

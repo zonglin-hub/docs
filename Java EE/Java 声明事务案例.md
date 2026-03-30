@@ -152,13 +152,15 @@ public class TxByAnnotationTest {
 
 用户余额为50，而图书价格为80
 
-购买图书之后，用户的余额为-30，数据库中余额字段设置了无符号，因此无法将-30插入到余额字段此时执行sql语句会抛出 SQLException
+购买图书之后，用户的余额为-30，数据库中余额字段设置了无符号，因此无法将-30插入到
+余额字段此时执行sql语句会抛出 SQLException
 
 **观察结果**
 
 因为没有添加事务，图书的库存更新了，但是用户的余额没有更新
 
-显然这样的结果是错误的，购买图书是一个完整的功能，更新库存和更新余额要么都成功要么都失败
+显然这样的结果是错误的，购买图书是一个完整的功能，更新库存和更新余额要么都成功要
+么都失败
 
 ‍
 
@@ -207,7 +209,8 @@ public class TxByAnnotationTest {
 
 **添加事务注解**
 
-因为service层表示业务逻辑层，一个方法表示一个完成的功能，因此处理事务一般在service层处理
+因为service层表示业务逻辑层，一个方法表示一个完成的功能，因此处理事务一般在
+service层处理
 
 **在BookServiceImpl的buybook()添加注解**​**`@Transactional`**​
 
@@ -292,13 +295,15 @@ public class TxByAllAnnotationTest {
 
 ## @[Transactional](https://translate.volcengine.com/?category=&home_language=zh&source_language=detect&target_language=zh&text=Transactional) 注解标识的位置
 
-* ​`@Transactional`​ 标识在方法上，则只会影响该方法；标识的类上，则会影响类中所有的方法
+* ​`@Transactional`​ 标识在方法上，则只会影响该方法；标识的类上，则会影响类中所
+  有的方法
 
 ‍
 
 ### 事务属性：readOnly（只读）
 
-对一个查询操作来说，如果我们把它设置成只读，就能够明确告诉数据库，这个操作不涉及写操作。这样数据库就能够针对查询操作来进行优化。
+对一个查询操作来说，如果我们把它设置成只读，就能够明确告诉数据库，这个操作不涉及
+写操作。这样数据库就能够针对查询操作来进行优化。
 
 **使用方式**
 
@@ -319,7 +324,8 @@ public void buyBook(Integer bookId, Integer userId) {
 
 对增删改操作设置只读会抛出下面异常：
 
-​`Caused by: java.sql.SQLException: Connection is read-only. Queries leading to data modification are not allowed`​
+​`Caused by: java.sql.SQLException: Connection is read-only. Queries leading to
+data modification are not allowed`​
 
 ‍
 
@@ -327,7 +333,10 @@ public void buyBook(Integer bookId, Integer userId) {
 
 ### 事务属性：timeout（超时）
 
-事务在执行过程中，有可能因为遇到某些问题，导致程序卡住，从而长时间占用数据库资源。而长时间占用资源，大概率是因为程序运行出现了问题（可能是 Java 程序或 MySQL 数据库或网络连接等等）。此时这个很可能出问题的程序应该被回滚，撤销它已做的操作，事务结束，把资源让出来，让其他正常程序可以执行。
+事务在执行过程中，有可能因为遇到某些问题，导致程序卡住，从而长时间占用数据库资
+源。而长时间占用资源，大概率是因为程序运行出现了问题（可能是 Java 程序或 MySQL
+数据库或网络连接等等）。此时这个很可能出问题的程序应该被回滚，撤销它已做的操作，
+事务结束，把资源让出来，让其他正常程序可以执行。
 
 概括来说就是一句话：超时回滚，释放资源。
 
@@ -356,7 +365,8 @@ public void buyBook(Integer bookId, Integer userId) {
 
 执行过程中抛出异常：
 
-​`org.springframework.transaction.`​**`TransactionTimedOutException`**​`: Transaction timed out: deadline was Fri Jun 04 16:25:39 CST 2022`​
+​`org.springframework.transaction.`​**`TransactionTimedOutException`**​`:
+Transaction timed out: deadline was Fri Jun 04 16:25:39 CST 2022`​
 
 ‍
 
@@ -395,7 +405,9 @@ public void buyBook(Integer bookId, Integer userId) {
 
 **观察结果**
 
-虽然购买图书功能中出现了数学运算异常（ArithmeticException），但是我们<u>设置的回滚策略是，当出现 ​</u>​<u>`ArithmeticException`</u>​<u>​ 异常不发生回滚，因此购买图书的操作正常执行</u>
+虽然购买图书功能中出现了数学运算异常（ArithmeticException），但是我们<u>设置的回
+滚策略是，当出现 ​</u>​<u>`ArithmeticException`</u>​<u>​ 异常不发生回滚，因此购
+买图书的操作正常执行</u>
 
 ‍
 
@@ -456,9 +468,16 @@ public void checkout(Integer[] bookIds, Integer userId){
 
 修改 BookServiceImpl 中 buyBook() 上，注解 @Transactional 的 propagation 属性
 
-​`@Transactional(propagation = Propagation.REQUIRED)`​，默认情况，表示如果当前线程上有已经开启的事务可用，那么就在这个事务中运行。经过观察，购买图书的方法 buyBook() 在 checkout() 中被调用，checkout() 上有事务注解，因此在此事务中执行。所购买的两本图书的价格为 8 0和 50，而用户的余额为 100，因此在购买第二本图书时余额不足失败，导致整个 checkout() 回滚，即只要有一本书买不了，就都买不了
+​`@Transactional(propagation = Propagation.REQUIRED)`​，默认情况，表示如果当前线
+程上有已经开启的事务可用，那么就在这个事务中运行。经过观察，购买图书的方法
+buyBook() 在 checkout() 中被调用，checkout() 上有事务注解，因此在此事务中执行。
+所购买的两本图书的价格为 8 0和 50，而用户的余额为 100，因此在购买第二本图书时余
+额不足失败，导致整个 checkout() 回滚，即只要有一本书买不了，就都买不了
 
-​`@Transactional(propagation = Propagation.REQUIRES_NEW)`​，表示不管当前线程上是否有已经开启的事务，都要开启新事务。同样的场景，每次购买图书都是在 buyBook() 的事务中执行，因此第一本图书购买成功，事务结束，第二本图书购买失败，只在第二次的 buyBook() 中回滚，购买第一本图书不受影响，即能买几本就买几本。
+​`@Transactional(propagation = Propagation.REQUIRES_NEW)`​，表示不管当前线程上是
+否有已经开启的事务，都要开启新事务。同样的场景，每次购买图书都是在 buyBook() 的
+事务中执行，因此第一本图书购买成功，事务结束，第二本图书购买失败，只在第二次的
+buyBook() 中回滚，购买第一本图书不受影响，即能买几本就买几本。
 
 ‍
 

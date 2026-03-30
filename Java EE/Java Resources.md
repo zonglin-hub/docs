@@ -4,11 +4,15 @@
 
 ### 8.1、Spring Resources概述
 
-Java的标准 `java.net.URL`​ 类和各种URL前缀的标准处理程序无法满足所有对 low-level 资源的访问，比如：没有标准化的 URL 实现可用于访问需要从类路径或相对于 ServletContext 获取的资源。并且缺少某些Spring所需要的功能，例如检测某资源是否存在等。**而Spring 的 Resource 声明了访问 low-level 资源的能力。**
+Java的标准 `java.net.URL`​ 类和各种URL前缀的标准处理程序无法满足所有对 low-level
+资源的访问，比如：没有标准化的 URL 实现可用于访问需要从类路径或相对于
+ServletContext 获取的资源。并且缺少某些Spring所需要的功能，例如检测某资源是否存
+在等。**而Spring 的 Resource 声明了访问 low-level 资源的能力。**
 
 ### 8.2、Resource接口
 
-Spring 的 `Resource`​ 接口位于 `org.springframework.core.io`​ 中。 旨在成为一个更强大的接口，用于抽象对低级资源的访问。以下显示了 Resource 接口定义的方法
+Spring 的 `Resource`​ 接口位于 `org.springframework.core.io`​ 中。 旨在成为一个
+更强大的接口，用于抽象对低级资源的访问。以下显示了 Resource 接口定义的方法
 
 ```java
 public interface Resource extends InputStreamSource {
@@ -28,7 +32,8 @@ public interface Resource extends InputStreamSource {
 }
 ```
 
-Resource接口继承了 InputStreamSource 接口，提供了很多InputStreamSource所没有的方法。InputStreamSource 接口，只有一个方法：
+Resource接口继承了 InputStreamSource 接口，提供了很多InputStreamSource所没有的方
+法。InputStreamSource 接口，只有一个方法：
 
 ```java
 public interface InputStreamSource {
@@ -38,10 +43,14 @@ public interface InputStreamSource {
 
 **其中一些重要的方法：**
 
-* `getInputStream()`: 找到并打开资源，返回一个InputStream以从资源中读取。预计每次调用都会返回一个新的InputStream()，调用者有责任关闭每个流
+* `getInputStream()`: 找到并打开资源，返回一个InputStream以从资源中读取。预计每
+  次调用都会返回一个新的InputStream()，调用者有责任关闭每个流
 * `exists()`: 返回一个布尔值，表明某个资源是否以物理形式存在
-* `isOpen()`: 返回一个布尔值，指示此资源是否具有开放流的句柄。如果为true，InputStream就不能够多次读取，只能够读取一次并且及时关闭以避免内存泄漏。对于所有常规资源实现，返回false，但是InputStreamResource除外。
-* `getDescription()`: 返回资源的描述，用来输出错误的日志。这通常是完全限定的文件名或资源的实际URL。
+* `isOpen()`: 返回一个布尔值，指示此资源是否具有开放流的句柄。如果为
+  true，InputStream就不能够多次读取，只能够读取一次并且及时关闭以避免内存泄漏。
+  对于所有常规资源实现，返回false，但是InputStreamResource除外。
+* `getDescription()`: 返回资源的描述，用来输出错误的日志。这通常是完全限定的文件
+  名或资源的实际URL。
 
 **其他方法：**
 
@@ -56,7 +65,10 @@ public interface InputStreamSource {
 
 ### 8.3、Resource的实现类
 
-Resource 接口是 Spring 资源访问策略的抽象，它本身并不提供任何资源访问实现，具体的资源访问由该接口的实现类完成——每个实现类代表一种资源访问策略。Resource一般包括这些实现类：UrlResource、ClassPathResource、FileSystemResource、ServletContextResource、InputStreamResource、ByteArrayResource
+Resource 接口是 Spring 资源访问策略的抽象，它本身并不提供任何资源访问实现，具体
+的资源访问由该接口的实现类完成——每个实现类代表一种资源访问策略。Resource一般包括
+这些实现
+类：UrlResource、ClassPathResource、FileSystemResource、ServletContextResource、InputStreamResource、ByteArrayResource
 
 #### 8.3.1、UrlResource 访问网络资源
 
@@ -119,7 +131,9 @@ public static void main(String[] args) {
 
 #### 8.3.2、ClassPathResource 访问类路径下资源
 
-ClassPathResource 用来访问类加载路径下的资源，相对于其他的 Resource 实现类，其主要优势是方便访问类加载路径里的资源，尤其对于 Web 应用，ClassPathResource 可自动搜索位于 classes 下的资源文件，无须使用绝对路径访问。
+ClassPathResource 用来访问类加载路径下的资源，相对于其他的 Resource 实现类，其主
+要优势是方便访问类加载路径里的资源，尤其对于 Web 应用，ClassPathResource 可自动
+搜索位于 classes 下的资源文件，无须使用绝对路径访问。
 
 **实验：在类路径下创建文件atguigu.txt，使用ClassPathResource 访问**
 
@@ -152,11 +166,16 @@ public class ClassPathResourceDemo {
 }
 ```
 
-ClassPathResource实例可使用ClassPathResource构造器显式地创建，但更多的时候它都是隐式地创建的。当执行Spring的某个方法时，该方法接受一个代表资源路径的字符串参数，当Spring识别该字符串参数中包含classpath:前缀后，系统会自动创建ClassPathResource对象。
+ClassPathResource实例可使用ClassPathResource构造器显式地创建，但更多的时候它都是
+隐式地创建的。当执行Spring的某个方法时，该方法接受一个代表资源路径的字符串参数，
+当Spring识别该字符串参数中包含classpath:前缀后，系统会自动创建ClassPathResource
+对象。
 
 #### 8.3.3、FileSystemResource 访问文件系统资源
 
-Spring 提供的 FileSystemResource 类用于访问文件系统资源，使用 FileSystemResource 来访问文件系统资源并没有太大的优势，因为 Java 提供的 File 类也可用于访问文件系统资源。
+Spring 提供的 FileSystemResource 类用于访问文件系统资源，使用 FileSystemResource
+来访问文件系统资源并没有太大的优势，因为 Java 提供的 File 类也可用于访问文件系统
+资源。
 
 **实验：使用FileSystemResource 访问文件系统资源**
 
@@ -192,19 +211,29 @@ public class FileSystemResourceDemo {
 }
 ```
 
-FileSystemResource实例可使用FileSystemResource构造器显示地创建，但更多的时候它都是隐式创建。执行Spring的某个方法时，该方法接受一个代表资源路径的字符串参数，当Spring识别该字符串参数中包含file:前缀后，系统将会自动创建FileSystemResource对象。
+FileSystemResource实例可使用FileSystemResource构造器显示地创建，但更多的时候它都
+是隐式创建。执行Spring的某个方法时，该方法接受一个代表资源路径的字符串参数，当
+Spring识别该字符串参数中包含file:前缀后，系统将会自动创建FileSystemResource对
+象。
 
 #### 8.3.4、ServletContextResource
 
-这是ServletContext资源的Resource实现，它解释相关Web应用程序根目录中的相对路径。它始终支持流(stream)访问和URL访问，但只有在扩展Web应用程序存档且资源实际位于文件系统上时才允许java.io.File访问。无论它是在文件系统上扩展还是直接从JAR或其他地方（如数据库）访问，实际上都依赖于Servlet容器。
+这是ServletContext资源的Resource实现，它解释相关Web应用程序根目录中的相对路径。
+它始终支持流(stream)访问和URL访问，但只有在扩展Web应用程序存档且资源实际位于文件
+系统上时才允许java.io.File访问。无论它是在文件系统上扩展还是直接从JAR或其他地方
+（如数据库）访问，实际上都依赖于Servlet容器。
 
 #### 8.3.5、InputStreamResource
 
-InputStreamResource 是给定的输入流(InputStream)的Resource实现。它的使用场景在没有特定的资源实现的时候使用(感觉和@Component 的适用场景很相似)。与其他Resource实现相比，这是已打开资源的描述符。 因此，它的isOpen()方法返回true。如果需要将资源描述符保留在某处或者需要多次读取流，请不要使用它。
+InputStreamResource 是给定的输入流(InputStream)的Resource实现。它的使用场景在没
+有特定的资源实现的时候使用(感觉和@Component 的适用场景很相似)。与其他Resource实
+现相比，这是已打开资源的描述符。 因此，它的isOpen()方法返回true。如果需要将资源
+描述符保留在某处或者需要多次读取流，请不要使用它。
 
 #### 8.3.6、ByteArrayResource
 
-字节数组的Resource实现类。通过给定的数组创建了一个ByteArrayInputStream。它对于从任何给定的字节数组加载内容非常有用，而无需求助于单次使用的InputStreamResource。
+字节数组的Resource实现类。通过给定的数组创建了一个ByteArrayInputStream。它对于从
+任何给定的字节数组加载内容非常有用，而无需求助于单次使用的InputStreamResource。
 
 ### 8.4、Resource类图
 
@@ -222,7 +251,9 @@ Spring 提供如下两个标志性接口：
 
 在ResourceLoader接口里有如下方法：
 
-（1）**Resource getResource（String location）** ： 该接口仅有这个方法，用于返回一个Resource实例。ApplicationContext实现类都实现ResourceLoader接口，因此ApplicationContext可直接获取Resource实例。
+（1）**Resource getResource（String location）** ： 该接口仅有这个方法，用于返回
+一个Resource实例。ApplicationContext实现类都实现ResourceLoader接口，因此
+ApplicationContext可直接获取Resource实例。
 
 #### 8.5.2、使用演示
 
@@ -269,11 +300,18 @@ public class Demo2 {
 
 #### 8.5.3、ResourceLoader 总结
 
-Spring将采用和ApplicationContext相同的策略来访问资源。也就是说，如果ApplicationContext是FileSystemXmlApplicationContext，res就是FileSystemResource实例；如果ApplicationContext是ClassPathXmlApplicationContext，res就是ClassPathResource实例
+Spring将采用和ApplicationContext相同的策略来访问资源。也就是说，如果
+ApplicationContext是FileSystemXmlApplicationContext，res就是FileSystemResource实
+例；如果ApplicationContext是ClassPathXmlApplicationContext，res就是
+ClassPathResource实例
 
-当Spring应用需要进行资源访问时，实际上并不需要直接使用Resource实现类，而是调用ResourceLoader实例的getResource()方法来获得资源，ReosurceLoader将会负责选择Reosurce实现类，也就是确定具体的资源访问策略，从而将应用程序和具体的资源访问策略分离开来
+当Spring应用需要进行资源访问时，实际上并不需要直接使用Resource实现类，而是调用
+ResourceLoader实例的getResource()方法来获得资源，ReosurceLoader将会负责选择
+Reosurce实现类，也就是确定具体的资源访问策略，从而将应用程序和具体的资源访问策略
+分离开来
 
-另外，使用ApplicationContext访问资源时，可通过不同前缀指定强制使用指定的ClassPathResource、FileSystemResource等实现类
+另外，使用ApplicationContext访问资源时，可通过不同前缀指定强制使用指定的
+ClassPathResource、FileSystemResource等实现类
 
 ```java
 Resource res = ctx.getResource("calsspath:bean.xml");
@@ -283,9 +321,13 @@ Resource res = ctx.getResource("http://localhost:8080/beans.xml");
 
 ### 8.6、ResourceLoaderAware 接口
 
-ResourceLoaderAware接口实现类的实例将获得一个ResourceLoader的引用，ResourceLoaderAware接口也提供了一个setResourceLoader()方法，该方法将由Spring容器负责调用，Spring容器会将一个ResourceLoader对象作为该方法的参数传入。
+ResourceLoaderAware接口实现类的实例将获得一个ResourceLoader的引
+用，ResourceLoaderAware接口也提供了一个setResourceLoader()方法，该方法将由Spring
+容器负责调用，Spring容器会将一个ResourceLoader对象作为该方法的参数传入。
 
-如果把实现ResourceLoaderAware接口的Bean类部署在Spring容器中，Spring容器会将自身当成ResourceLoader作为setResourceLoader()方法的参数传入。由于ApplicationContext的实现类都实现了ResourceLoader接口，Spring容器自身完全可作为ResorceLoader使用。
+如果把实现ResourceLoaderAware接口的Bean类部署在Spring容器中，Spring容器会将自身
+当成ResourceLoader作为setResourceLoader()方法的参数传入。由于ApplicationContext
+的实现类都实现了ResourceLoader接口，Spring容器自身完全可作为ResorceLoader使用。
 
 **实验：演示ResourceLoaderAware使用**
 
@@ -357,14 +399,22 @@ public class Demo3 {
 
 ### 8.7、使用Resource 作为属性
 
-前面介绍了 Spring 提供的资源访问策略，但这些依赖访问策略要么需要使用 Resource 实现类，要么需要使用 ApplicationContext 来获取资源。实际上，当应用程序中的 Bean 实例需要访问资源时，Spring 有更好的解决方法：直接利用依赖注入。从这个意义上来看，Spring 框架不仅充分利用了策略模式来简化资源访问，而且还将策略模式和 IoC 进行充分地结合，最大程度地简化了 Spring 资源访问。
+前面介绍了 Spring 提供的资源访问策略，但这些依赖访问策略要么需要使用 Resource 实
+现类，要么需要使用 ApplicationContext 来获取资源。实际上，当应用程序中的 Bean 实
+例需要访问资源时，Spring 有更好的解决方法：直接利用依赖注入。从这个意义上来
+看，Spring 框架不仅充分利用了策略模式来简化资源访问，而且还将策略模式和 IoC 进行
+充分地结合，最大程度地简化了 Spring 资源访问。
 
 归纳起来，**如果 Bean 实例需要访问资源，有如下两种解决方案：**
 
 * **代码中获取 Resource 实例。**
 * **使用依赖注入。**
 
-对于第一种方式，当程序获取 Resource 实例时，总需要提供 Resource 所在的位置，不管通过 FileSystemResource 创建实例，还是通过 ClassPathResource 创建实例，或者通过 ApplicationContext 的 getResource() 方法获取实例，都需要提供资源位置。这意味着：资源所在的物理位置将被耦合到代码中，如果资源位置发生改变，则必须改写程序。因此，通常建议采用第二种方法，让 Spring 为 Bean 实例**依赖注入**资源。
+对于第一种方式，当程序获取 Resource 实例时，总需要提供 Resource 所在的位置，不管
+通过 FileSystemResource 创建实例，还是通过 ClassPathResource 创建实例，或者通过
+ApplicationContext 的 getResource() 方法获取实例，都需要提供资源位置。这意味着：
+资源所在的物理位置将被耦合到代码中，如果资源位置发生改变，则必须改写程序。因此，
+通常建议采用第二种方法，让 Spring 为 Bean 实例**依赖注入**资源。
 
 **实验：让Spring为Bean实例依赖注入资源**
 
@@ -432,7 +482,10 @@ public class Demo4 {
 
 #### 8.8.1、概述
 
-不管以怎样的方式创建ApplicationContext实例，都需要为ApplicationContext指定配置文件，Spring允许使用一份或多分XML配置文件。当程序创建ApplicationContext实例时，通常也是以Resource的方式来访问配置文件的，所以ApplicationContext完全支持ClassPathResource、FileSystemResource、ServletContextResource等资源访问方式。
+不管以怎样的方式创建ApplicationContext实例，都需要为ApplicationContext指定配置文
+件，Spring允许使用一份或多分XML配置文件。当程序创建ApplicationContext实例时，通
+常也是以Resource的方式来访问配置文件的，所以ApplicationContext完全支持
+ClassPathResource、FileSystemResource、ServletContextResource等资源访问方式。
 
 **ApplicationContext确定资源访问策略通常有两种方法：**
 
@@ -485,7 +538,9 @@ public class Demo1 {
 
 **实验二：classpath通配符使用**
 
-classpath *:前缀提供了加载多个XML配置文件的能力，当使用classpath*:前缀来指定XML配置文件时，系统将搜索类加载路径，找到所有与文件名匹配的文件，分别加载文件中的配置定义，最后合并成一个ApplicationContext。
+classpath *:前缀提供了加载多个XML配置文件的能力，当使用classpath*:前缀来指定XML
+配置文件时，系统将搜索类加载路径，找到所有与文件名匹配的文件，分别加载文件中的配
+置定义，最后合并成一个ApplicationContext。
 
 ```java
 ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:bean.xml");
@@ -498,7 +553,9 @@ System.out.println(ctx);
 
 **注意 ：**
 
-classpath *: 前缀仅对ApplicationContext有效。实际情况是，创建ApplicationContext时，分别访问多个配置文件(通过ClassLoader的getResource方法实现)。因此，classpath* :前缀不可用于Resource。
+classpath *: 前缀仅对ApplicationContext有效。实际情况是，创建ApplicationContext
+时，分别访问多个配置文件(通过ClassLoader的getResource方法实现)。因此，classpath*
+:前缀不可用于Resource。
 
 **使用三：通配符其他使用**
 

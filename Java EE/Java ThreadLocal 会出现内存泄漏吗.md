@@ -6,7 +6,9 @@
 
 ---
 
-ThreadLocal 里面使用了一个存在弱引用的 Map, 当释放掉 ThreadLocal 的强引用以后，Map里面的 value 却没有被回收，而这块 value 永远不会被访问到了。所以存在着内存泄露，**最好的做法是将调用 ThreadLocal 的 remove() 方法.**
+ThreadLocal 里面使用了一个存在弱引用的 Map, 当释放掉 ThreadLocal 的强引用以
+后，Map里面的 value 却没有被回收，而这块 value 永远不会被访问到了。所以存在着内
+存泄露，**最好的做法是将调用 ThreadLocal 的 remove() 方法.**
 
 在 ThreadLocal 的生命周期中，都存在这些引用看下图：
 
@@ -30,7 +32,10 @@ static class ThreadLocalMap {
 
 ## ThreadLocal 内存泄漏的原因
 
-从上图中可以看出，ThreadLocalMap 使用 ThreadLocal 的弱引用作为 key，如果一个 ThreadLocal 不存在外部**强引用**时，Key(ThreadLocal) 势必会被 GC 回收，这样就会导致 ThreadLocalMap 中 key 为 null， 而 value 还存在着强引用，只有 Thread 线程退出以后, value 的强引用链条才会断掉。
+从上图中可以看出，ThreadLocalMap 使用 ThreadLocal 的弱引用作为 key，如果一个
+ThreadLocal 不存在外部**强引用**时，Key(ThreadLocal) 势必会被 GC 回收，这样就会
+导致 ThreadLocalMap 中 key 为 null， 而 value 还存在着强引用，只有 Thread 线程退
+出以后, value 的强引用链条才会断掉。
 
 但如果当前线程再迟迟不结束的话，这些key为null的Entry的value就会一直存在一条强引用链：
 
@@ -42,11 +47,16 @@ static class ThreadLocalMap {
 
 ## key 使用强引用
 
-当 ThreadLocalMap 的 key 为强引用回收 ThreadLocal 时，因为 ThreadLocalMap 还持有 ThreadLocal 的强引用，如果没有手动删除，ThreadLocal 不会被回收，导致 Entry 内存泄漏。
+当 ThreadLocalMap 的 key 为强引用回收 ThreadLocal 时，因为 ThreadLocalMap 还持有
+ThreadLocal 的强引用，如果没有手动删除，ThreadLocal 不会被回收，导致 Entry 内存
+泄漏。
 
 ## key 使用弱引用
 
-当 ThreadLocalMap 的 key 为弱引用回收 ThreadLocal 时，由于 ThreadLocalMap 持有 ThreadLocal 的弱引用，即使没有手动删除，ThreadLocal 也会被回收。当 key 为 null，在下一次 ThreadLocalMap 调用 set()、get()，remove() 方法的时候会被清除 value 值。
+当 ThreadLocalMap 的 key 为弱引用回收 ThreadLocal 时，由于 ThreadLocalMap 持有
+ThreadLocal 的弱引用，即使没有手动删除，ThreadLocal 也会被回收。当 key 为 null，
+在下一次 ThreadLocalMap 调用 set()、get()，remove() 方法的时候会被清除 value
+值。
 
 ```java
         /**
@@ -110,18 +120,31 @@ static class ThreadLocalMap {
 
 ## 总结
 
-- 由于 Thread 中包含变量 ThreadLocalMap，因此 ThreadLocalMap 与 Thread 的生命周期是一样长，如果都没有手动删除对应 key，都会导致内存泄漏。
-- 但是使用**弱引用**可以多一层保障：弱引用 ThreadLocal 不会内存泄漏，对应的 value 在下一次 ThreadLocalMap 调用 set()，get()，remove() 的时候会被清除。
-- 因此，ThreadLocal 内存泄漏的根源是：由于 ThreadLocalMap 的生命周期跟 Thread 一样长，如果没有手动删除对应 key 就会导致内存泄漏，而不是因为弱引用。
+- 由于 Thread 中包含变量 ThreadLocalMap，因此 ThreadLocalMap 与 Thread 的生命周
+  期是一样长，如果都没有手动删除对应 key，都会导致内存泄漏。
+- 但是使用**弱引用**可以多一层保障：弱引用 ThreadLocal 不会内存泄漏，对应的
+  value 在下一次 ThreadLocalMap 调用 set()，get()，remove() 的时候会被清除。
+- 因此，ThreadLocal 内存泄漏的根源是：由于 ThreadLocalMap 的生命周期跟 Thread 一
+  样长，如果没有手动删除对应 key 就会导致内存泄漏，而不是因为弱引用。
 
 ## ThreadLocal正确的使用方法
 
 - 每次使用完 ThreadLocal 都调用它的 remove() 方法清除数据
-- 将 ThreadLocal 变量定义成 private static，这样就一直存在 ThreadLocal 的强引用，也就能保证任何时候都能通过 ThreadLocal 的弱引用访问到 Entry 的 value 值，进而清除掉 。
+- 将 ThreadLocal 变量定义成 private static，这样就一直存在 ThreadLocal 的强引
+  用，也就能保证任何时候都能通过 ThreadLocal 的弱引用访问到 Entry 的 value 值，
+  进而清除掉 。
 
-**Java 的4种引用类型，主要是在垃圾回收时java虚拟机会根据不同的引用类型采取不同的措施。**
+**Java 的4种引用类型，主要是在垃圾回收时java虚拟机会根据不同的引用类型采取不同的
+措施。**
 
-- **强引用：** java默认的引用类型，例如 `Object a = new Object();`​ 其中 a 为强引用，new Object() 为一个具体的对象。一个对象从根路径能找到强引用指向它，JVM 虚拟机就不会回收。
-- **软引用(SoftReference)：** 进行**年轻代的垃圾回收**不会触发 SoftReference 所指向对象的回收；但如果触发 Full GC，那 SoftReference 所指向的对象将被回收。**备注：是除了软引用之外没有其他强引用引用的情况下**。
-- **弱引用(WeakReference)：** 如果对象除了有弱引用指向它后没有其他强引用关联它，**当进行年轻代垃圾回收时，该引用指向的对象就会被垃圾回收器回收。**
-- **虚引用(PhantomeReference)：** 该引用指向的对象，无法对垃圾收集器收集对象时产生任何影响，但在执行垃圾回收后垃圾收集器会通过注册在 PhantomeReference 上的队列来通知应用程序对象被回收。
+- **强引用：** java默认的引用类型，例如 `Object a = new Object();`​ 其中 a 为强
+  引用，new Object() 为一个具体的对象。一个对象从根路径能找到强引用指向它，JVM
+  虚拟机就不会回收。
+- **软引用(SoftReference)：** 进行**年轻代的垃圾回收**不会触发 SoftReference 所
+  指向对象的回收；但如果触发 Full GC，那 SoftReference 所指向的对象将被回收。**
+  备注：是除了软引用之外没有其他强引用引用的情况下**。
+- **弱引用(WeakReference)：** 如果对象除了有弱引用指向它后没有其他强引用关联
+  它，**当进行年轻代垃圾回收时，该引用指向的对象就会被垃圾回收器回收。**
+- **虚引用(PhantomeReference)：** 该引用指向的对象，无法对垃圾收集器收集对象时产
+  生任何影响，但在执行垃圾回收后垃圾收集器会通过注册在 PhantomeReference 上的队
+  列来通知应用程序对象被回收。

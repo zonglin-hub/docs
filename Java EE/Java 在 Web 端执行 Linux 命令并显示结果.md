@@ -1,19 +1,25 @@
 # 在 Web 端执行 Linux 命令并显示结果
 
-本文将介绍如何在 Web 端输入 Linux 命令，通过 WebSocket 发送到服务器后台执行，再将命令的反馈信息返回到前端显示。本文使用的技术栈是 Java 和 Spring Boot。
+本文将介绍如何在 Web 端输入 Linux 命令，通过 WebSocket 发送到服务器后台执行，再
+将命令的反馈信息返回到前端显示。本文使用的技术栈是 Java 和 Spring Boot。
 
 ## WebSocket
 
-WebSocket 是 HTML5 中新增的协议，使浏览器和服务器之间可以进行实时、双向的通信。与 HTTP 协议不同的是，WebSocket 在建立连接后，双方可以随时向对方发送数据，而不需要等待对方请求。这使得 WebSocket 在实时、高并发场景下表现更加优秀。
+WebSocket 是 HTML5 中新增的协议，使浏览器和服务器之间可以进行实时、双向的通信。
+与 HTTP 协议不同的是，WebSocket 在建立连接后，双方可以随时向对方发送数据，而不需
+要等待对方请求。这使得 WebSocket 在实时、高并发场景下表现更加优秀。
 
 ## SSHJ
 
-SSHJ 是一个用于操作 SSH 协议的 Java 库。它可以连接到远程 SSH 服务器，并执行命令、上传下载文件等操作。
+SSHJ 是一个用于操作 SSH 协议的 Java 库。它可以连接到远程 SSH 服务器，并执行命
+令、上传下载文件等操作。
 
 ## 实现步骤
 
 1. 创建一个 Spring Boot 项目，并添加 WebSocket 和 SSHJ 依赖。
-2. 创建一个 WebSocket 处理器，用于处理连接建立、接收消息和发送消息等事件。在处理器中使用 SSHJ 连接到远程 SSH 服务器，并执行来自前端的命令。执行完成后，将结果发送给前端。
+2. 创建一个 WebSocket 处理器，用于处理连接建立、接收消息和发送消息等事件。在处理
+   器中使用 SSHJ 连接到远程 SSH 服务器，并执行来自前端的命令。执行完成后，将结果
+   发送给前端。
 3. 配置 WebSocket 端点，在端点中注册 WebSocket 处理器。
 4. 在前端页面中使用 JavaScript 创建 WebSocket 连接，发送命令并接收结果。
 
@@ -120,7 +126,8 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
 ### 前端页面
 
-在前端页面中，使用 JavaScript 创建 WebSocket 连接，并发送命令和接收结果。以下是一个示例代码：
+在前端页面中，使用 JavaScript 创建 WebSocket 连接，并发送命令和接收结果。以下是
+一个示例代码：
 
 ```html
 <!DOCTYPE html>
@@ -167,5 +174,6 @@ mvn spring-boot:run
 
 在浏览器中访问应用地址，输入命令并点击发送按钮，即可执行命令并在页面上显示结果。
 
-总结
-本文介绍了如何在 Web 端输入 Linux 命令，通过 WebSocket 发送到服务器后台执行，再将命令的反馈信息返回到前端显示。本文使用的技术栈是 Java 和 Spring Boot，具体实现过程中还需要考虑安全性等问题。
+总结本文介绍了如何在 Web 端输入 Linux 命令，通过 WebSocket 发送到服务器后台执
+行，再将命令的反馈信息返回到前端显示。本文使用的技术栈是 Java 和 Spring Boot，具
+体实现过程中还需要考虑安全性等问题。

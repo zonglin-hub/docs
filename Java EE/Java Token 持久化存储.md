@@ -1,6 +1,8 @@
 ## Token持久化存储
 
-我们之前使用SpringSecurity时，remember-me的Token是支持持久化存储的，而我们当时是存储在数据库中，那么Token信息能否存储在缓存中呢，当然也是可以的，我们可以手动实现一个：
+我们之前使用SpringSecurity时，remember-me的Token是支持持久化存储的，而我们当时是
+存储在数据库中，那么Token信息能否存储在缓存中呢，当然也是可以的，我们可以手动实
+现一个：
 
 ```java
 //实现PersistentTokenRepository接口
