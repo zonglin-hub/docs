@@ -8,6 +8,8 @@
 
 ![Flatpak](https://img.sysgeek.cn/img/logo/flatpak-1.jpg)
 
+## 简介
+
 Linux 世界有三种通用的打包格式，可以在任何 [Linux 发行
 版](https://www.sysgeek.cn/tag/linux-distro/)中运行 Snap、Flatpak 和 AppImage。
 虽然 Ubuntu 默认预装了 Snap，但由于其源代码不开放，大多数发行版和开发者偏向「避
@@ -25,7 +27,7 @@ Linux 世界有三种通用的打包格式，可以在任何 [Linux 发行
     ```
 
 
-## 安装 Flatpak 「软件中心」
+### 安装 Flatpak 「软件中心」
 
 有一个专门的插件可为 GNOME 软件中心添加 Flatpak 支持，以便于图形化方式安装软件
 包。
@@ -47,16 +49,19 @@ sudo apt install gnome-software-plugin-flatpak # flatpak 软件包的「软件�
 
 ## 添加 Flathub 软件仓库
 
-在 Ubuntu 中安装好 Flatpak 后，如果直接尝试安装软件包，将会提示 `No remote refs
-found similar to ‘flathub’` 错误。这是因为尚未添加 Flatpak 软件源，它不知道从哪
-儿获取应用程序。
+Flatpak 安装后，如果直接尝试安装软件包，将会提示 `No remote refs found similar
+to ‘flathub’` 错误。这是因为尚未添加 Flatpak 软件源，它不知道从哪儿获取应用程
+序。
 
 1. Flatpak 有一个名为 `Flathub` 的中央仓库，可以在其中找到并下载许多 Flatpak 应
    用程序。要添加 `Flathub` 中央仓库，请在「终端」中运行如下命令：
 
 ```bash
-sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
+> [!NOTE]
+> 解释：--user 指定为当前用户，flathub为仓库名称，这样我们就给当前用户新增了一个
+> 叫做flathub的仓> 库。flatpak支持配置多个仓库，一般配置一个“flathub”即可
 
 2. （可选）如果访问速度比较慢，可以使用 Flathub 国内镜像
 
@@ -65,10 +70,32 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 
 如果已经添加了 flathub 的话，就用 remote-modify 修改：
 
-```bash
-sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
-```
+- __上海交大镜像__
 
+  ```bash
+  flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+  ```
+
+- __中科大镜像__
+
+  ```bash
+  flatpak remote-modify flathub --url=https://mirrors.ustc.edu.cn/flathub
+  ```
+
+- __恢复官方源__
+
+  ```bash
+  flatpak remote-modify flathub --url=https://dl.flathub.org/repo
+  ```
+查看flatpak仓库的详细信息
+
+```bash
+flatpak remotes --show-details
+```
+> [!NOTE]
+另一种方式：你可以直接编辑flatpak仓库配置文件：使用文本编辑器打开
+~/.local/share/flatpak/repo/config（当前用户配置）或者
+/var/lib/flatpak/repo/config （系统全局配置）修改里面的软件仓库地址即可。
 
 如果没有的话，就使用 remote-add 添加：
 
@@ -91,14 +118,7 @@ error: Failed to install com.spotify.Client: Could not connect: 网络不可达
 
 遇到这个情况，要么挂代理，要么等一段时间，等上交镜像把这个包缓存下来之后，再尝试。
 
-如果需要换回官方源的话：
-
-```shell
-sudo flatpak remote-modify flathub --url=https://flathub.org/repo
-```
-
-
-3. 安装并配置 Flatpak 后，请重新启动 Ubuntu 系统，以便让安装好的 Flatpak 应用程
+1. 安装并配置 Flatpak 后，请重新启动 Ubuntu 系统，以便让安装好的 Flatpak 应用程
    序能够在系统菜单中显示。
 
 ## 在 Ubuntu 中使用 Flatpak
@@ -109,7 +129,7 @@ sudo flatpak remote-modify flathub --url=https://flathub.org/repo
 
 您可以使用 [Flathub 网站](https://flathub.org/zh-Hans)搜索软件包，如果知道应用程
 序名称，可以使用以下命令：
-
+存可以释放磁盘空间同时不影响Flatpak应用程序正
 ```
 flatpak search <package-name>
 ```
@@ -285,3 +305,20 @@ flatpak list
 ```bash
 flatpak info <应用程序 ID>
 ```
+
+## 推荐应用
+
+- 微信  
+    `flatpak install flathub com.tencent.WeChat`
+- 开源笔记软件：Joplin  
+    `flatpak install flathub net.cozic.joplin_desktop`
+- 思维导图软件：Minder 支持导出xmind格式  
+    `flatpak install flathub com.github.phase1geo.minder`
+- Markdown编辑器：Apostrophe  
+    `flatpak install flathub org.gnome.gitlab.somas.Apostrophe`
+- AppImage管理工具：GearLever  
+    `flatpak install flathub it.mijorus.gearlever`
+- Flatpak权限管理工具：Flatseal  
+    `flatpak install flathub com.github.tchx84.Flatseal`
+- Flatpak残留清理器：Flatsweep  
+    `flatpak install flathub io.github.giantpinkrobots.flatsweep`
