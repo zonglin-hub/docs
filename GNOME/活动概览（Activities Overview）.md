@@ -19,7 +19,7 @@
 到一个统一的界面中，提升用户的操作效率。如需进一步了解GNOME的快捷键或功能，可参
 考相关文档或搜索来源。
 
-### 快捷方式（.desktop文件）主要存储在以下目录
+### `.desktop` 文件主要存储在以下目录
 
 在GNOME桌面环境中，“活动概览”（Activities Overview）中显示的应用程序，其快捷方式
 （.desktop文件）主要存储在以下目录中：
@@ -36,15 +36,3 @@
 	`/var/lib/snapd/desktop/applications/` 目录。 
 	- Flatpak 应用：应用程序的快捷
 	方式存储在与 `/var/lib/flatpak/exports/share/applications/` 目录。
-
-### 手动创建桌面快捷方式
-
-如果需要为某个插件或工具创建桌面快捷方式，可以按照以下步骤操作：
-
-1. 找到应用的`.desktop`文件，通常位于`/usr/share/applications`目录。
-2. 将该文件复制到桌面。
-3. 双击运行`.desktop`文件，并根据提示完成设置。
-
-    ```bash
-    cp /usr/share/applications/wechat.desktop /home/zonglin/桌面/wechat.desktop
-    ```
