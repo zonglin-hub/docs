@@ -135,4 +135,25 @@ Ubuntu 默认使用 IBus，需要将其切换到 Fcitx5，并正确设置环境�
 * **候选词乱码**：通常是因为缺少合适的中文字体。可以安装 `fonts-noto-cjk` 或
   `fonts-wqy-zenhei` 来解决。
 
-完成以上步骤后，你就可以在 Ubuntu 26.06 上使用 Fcitx5 + Rime 输入法了。
+## Gnome Shell 扩展
+
+### 安装扩展管理器和对应的插件
+
+```
+sudo apt update
+sudo apt install gnome-shell-extension-manager
+```
+
+安装完成后打开，搜索`Input Method Panel`并安装，完成后如图所示：
+
+![input-method-panel.png](./imgs/2745422641.png "input-method-panel.png")
+
+### 系统设置
+
+在`语言支持`中，将键盘输入法系统选为fcitx5，实现默认。
+
+![fcitx.png](./imgs/2828111130.png "fcitx.png")
+
+再次开机后将看到图示，如果不存在，可以手动点击选择启用即可。
+
+![input.png](./imgs/3111810318.png "input.png")
