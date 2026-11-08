@@ -218,6 +218,10 @@
   的现代终端模拟器。通过智能检测和美观、响应式的GNOME界面，无缝地在您的宿主系统
   和本地容器（如Podman、Toolbox和Distrobox）之间导航。
 
+- ELYTerminal [Github](https://github.com/ELY-Open-Source/ELYTerminal) 一个适用
+  于macOS、Windows和Linux的终端，基于Rust语言，使用GPUI和Ely组件构建。会话位于左
+  侧，终端居中，右侧为Git或文件。每个设置在设置窗口中都有相应的控制项。
+
 ### 实用工具
 
 ### 视频
