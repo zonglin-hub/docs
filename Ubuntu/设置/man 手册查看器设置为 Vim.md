@@ -43,11 +43,11 @@ export MANPAGER="vim -R -c 'set ft=man' -"
 
 ### 注意事项
 
-1. **插件依赖**：确保已安装完整版 Vim（非 `vi` 或 `vim-tiny`），通常自带 `man.vim` 插件。
-2. **键盘导航**：
+1. __插件依赖__：确保已安装完整版 Vim（非 `vi` 或 `vim-tiny`），通常自带 `man.vim` 插件。
+2. __键盘导航__：
    - 用 Vim 的 `/` 搜索内容（如 `/OPTIONS`）。
    - 用 `Ctrl+D`/`Ctrl+U` 或 `j`/`k` 翻页。
    - 输入 `:q` 退出。
-3. **恢复默认**：删除配置中的 `MANPAGER` 行，`man` 将恢复使用 `less`。
+3. __恢复默认__：删除配置中的 `MANPAGER` 行，`man` 将恢复使用 `less`。
 
 通过以上步骤，即可在 Vim 中高效查看 `man` 手册，享受语法高亮和强大的搜索功能。
