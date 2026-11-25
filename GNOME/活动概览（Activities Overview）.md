@@ -1,12 +1,21 @@
-## 活动概览”（Activities Overview）中显示的应用程序
+---
+标题: 活动概览（Activities Overview）中显示的应用程序路径说明
+创建时间: 2026-11-25
+修改时间: 2026-11-25
+标签:
+  - Gnome
+---
 
+
+活动概览（Activities Overview）中显示的应用程序
+---
 
 在GNOME桌面环境中，按两下Win键（或Super键）所显示的“所有应用”界面，通常被称为“活
 动概览”（Activities Overview）。
 
 ### 功能说明：
 
-- **活动概览**是GNOME Shell的核心交互界面，它集中展示了当前打开的窗口、虚拟桌面
+- __活动概览__ 是GNOME Shell的核心交互界面，它集中展示了当前打开的窗口、虚拟桌面
   以及系统中安装的所有应用程序。
 - 用户可以通过点击屏幕左上角的“活动”按钮，或按一次Win键（Super键）进入该界面，而
   按两次Win键则通常用于快速触发或切换至该视图。
@@ -24,15 +33,9 @@
 在GNOME桌面环境中，“活动概览”（Activities Overview）中显示的应用程序，其快捷方式
 （.desktop文件）主要存储在以下目录中：
 
-1. 系统级应用程序目录：`/usr/share/applications/` 该目录存放了系统中所有用户可用
-   的应用程序快捷方式。每个应用程序的启动信息以.desktop文件的形式存储，例如
-   `firefox.desktop` 或 `gedit.desktop`。这些文件定义了应用程序的名称、图标、启
-   动命令等信息。
-2. 用户级应用程序目录：`~/.local/share/applications/` 该目录用于存放当前用户自定
-   义的应用程序快捷方式。用户可以在此目录下创建或修改.desktop文件，这些快捷方式
-   仅对当前用户生效，不会影响其他用户。
-3. 其他可能的目录：  
-	- Snap 应用：应用程序的快捷方式存储在与
-	`/var/lib/snapd/desktop/applications/` 目录。 
-	- Flatpak 应用：应用程序的快捷
-	方式存储在与 `/var/lib/flatpak/exports/share/applications/` 目录。
+| 类别 | 目录路径 | 作用说明 | 生效范围/备注 | 示例 |
+|---|---|---|---|---|
+| 系统级应用程序目录 | `/usr/share/applications/` | 存放系统中所有用户可用的应用程序快捷方式； | 对所有用户生效 | `firefox.desktop`、`gedit.desktop` |
+| 用户级应用程序目录 | `~/.local/share/applications/` | 存放当前用户自定义的应用程序快捷方式； | 仅对当前用户生效 | 用户自定义的 `.desktop` 文件 |
+| Snap 应用快捷方式目录 | `/var/lib/snapd/desktop/applications/` | 存放 Snap 应用的应用程序快捷方式 | 由 Snap 管理 | Snap 应用的 `.desktop` 文件 |
+| Flatpak 应用快捷方式目录 | `/var/lib/flatpak/exports/share/applications/` | 存放 Flatpak 应用的应用程序快捷方式 | 由 Flatpak 管理 | Flatpak 应用的 `.desktop` 文件 |

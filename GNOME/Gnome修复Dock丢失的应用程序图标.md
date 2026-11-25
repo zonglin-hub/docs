@@ -1,7 +1,7 @@
 ---
 标题: 修复Dock/面板中丢失的应用程序图标
 创建时间: 2026-01-05
-修改时间: 2026-01-05
+修改时间: 2026-11-25
 标签:
   - Ubuntu24.04
   - Gnome
@@ -27,22 +27,22 @@
 如果您将应用程序固定到 Dock，然后启动它，则会有 2 个图标。一个正确显示应用程序图
 标，另一个显示齿轮图标，表示找不到图标文件。 
 
-![alt text](./imgs/unknown-icon.png)
+<img alt="unknown-icon" height="60" src="./imgs/unknown-icon.png">
 
 这是因为应用程序创建的窗口与用于启动应用程序的快捷方式没有关联。在 Ubuntu 22.04
 及更早版本中，您将在 Dock 上看到重复的应用程序图标。然而，在 Ubuntu 24.04 中，它
 又退回到可执行图标（齿轮图标）。
 
 
-在这种情况下，用户可以在`.desktop`配置文件中添加**StartupWMClass**字符串，并将该
+在这种情况下，用户可以在`.desktop`配置文件中添加 __StartupWMClass__ 字符串，并将该
 值设置为打开的窗口的类名。
 
 ### 找出应用程序窗口的类名
 
-首先，您需要启动应用程序窗口。然后，按 **Alt + F2** 启动 **“Run a Command”** 对
-话框。当对话框打开时，输入 **lg** 并按 Enter 键。
+首先，您需要启动应用程序窗口。然后，按 __Alt + F2__ 启动 __“Run a Command”__ 对
+话框。当对话框打开时，输入 __lg__ 并按 Enter 键。
 
-在该窗口中，单击**Windows**按钮，然后找出目标应用程序窗口的类名称。就我而言，它
+在该窗口中，单击 __Windows__ 按钮，然后找出目标应用程序窗口的类名称。就我而言，它
 们是：
 
 
@@ -51,7 +51,7 @@
 - VirtualBox：**Virtualbox 机器**
 ```
 
-![](./imgs/noble-lg.webp)
+<img alt="lg" height="60" src="./imgs/noble-lg.webp">
 
 ### 添加`StartupWMClass`字符串
 
