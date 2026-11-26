@@ -10,20 +10,16 @@
 # Github官方APP安装
 
 - [Github 官方APP安装 - 知乎](https://zhuanlan.zhihu.com/p/269463891)
+- [Github官方APP安装 - gitclone](https://gitclone.com/docs/feature/github_app)
 
-Github官方客户端的介绍
-见：[https://github.com/mobile](https://github.com/mobile)，安装方式为 `Google
-Play` 和 `Apple` 商店，对于苹果系统来说，使用苹果商店没有问题，但对于国内Android
- 用户，访问 `Google Play` 不太容易，安装使用也有很多问题。本文详细介绍一种不使用
-`Google Play` 安装使用 Github APP 的方法。
+Github的官方`APP`从<https://github.com/mobile>安装，提供了`Google Play`和苹果
+商店的链接，由于`Google Play`不容易访问，所以建议安卓用户按以下步骤下载安装。
 
 ## 1、安装
 
-从以下链接下载 APK 直接安
-装：[https://gitclone.com/docs/feature/github_app](https://gitclone.com/docs/feature/github_app)
-,也可以从[https://gitclone.com](https://gitclone.com) 首页找到下载链接。需要注意
-的是，有些手机装最新版的APP会闪退或干脆装不上去，所以在这个链接地址里，有两个版
-本供选择。
+从以下链接下载 APK 直接安装：<https://gitclone.com/docs/feature/github_app> ,也
+可以从<https://gitclone.com>首页找到下载链接。需要注意的是，有些手机装最新版的
+APP会闪退或干脆装不上去，所以在这个链接地址里，有两个版本供选择。
 
 - [APKZ 应用商城](https://www.apkz.com/zh_cn.html)
 
@@ -44,5 +40,5 @@ Play` 和 `Apple` 商店，对于苹果系统来说，使用苹果商店没有�
 
 ## 4、其他问题
 
-Github APP 要调用[https://api.github.com/](https://api.github.com/)接口，很多情
-况下手机与这个网址是不通的，会报网络错误。
+Github APP 要调用<https://api.github.com/>接口，很多情况下手机与这个网址是不通
+的，会报网络错误。
