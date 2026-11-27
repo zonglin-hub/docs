@@ -1,3 +1,12 @@
+---
+标题: Ubuntu 安装 fcitx5
+创建时间: 2026-02-18
+修改时间: 2026-11-27
+标签:
+  - Ubuntu
+  - Fcitx5
+---
+
 
 参考参考：
 
@@ -47,8 +56,8 @@ mv zhwiki-20220416.dict ~/.local/share/fcitx5/pinyin/dictionaries/
 
 ```shell
 export XMODIFIERS=@im=fcitx
-export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
+# export GTK_IM_MODULE=fcitx
 ```
 
 > [!NOTE]
@@ -68,31 +77,32 @@ gnome-tweaks` 此条命令进行安装。并在 Tweaks 中将 Fcitx 5 添加到�
 
 ### 1. __检查快捷键设置__：
 
-   频繁的输入法切换可能是由于快捷键设置冲突。检查您的输入法快捷键设置，确保它们没有与其他应用程序或系统快捷键冲突。
+频繁的输入法切换可能是由于快捷键设置冲突。检查您的输入法快捷键设置，确保它们没有
+与其他应用程序或系统快捷键冲突。
 
 ### 2. __禁用不必要的输入法__：
 
-   如果您安装了多个输入法，尝试只保留一个中文输入法，以减少切换可能引起的问题。
+如果您安装了多个输入法，尝试只保留一个中文输入法，以减少切换可能引起的问题。
 
 ### 3. __重置输入法配置__：
 
-   删除 `fcitx5` 或 `ibus` 的配置文件，让输入法框架重新生成默认配置。
+删除 `fcitx5` 或 `ibus` 的配置文件，让输入法框架重新生成默认配置。
 
-     ```shell
-     rm -rf ~/.config/fcitx5
-     rm -rf ~/.config/ibus
-     ```
+```shell
+rm -rf ~/.config/fcitx5
+rm -rf ~/.config/ibus
+```
 
-   重启计算机或重新启动 `fcitx5` 或 `ibus` 服务。
+重启计算机或重新启动 `fcitx5` 或 `ibus` 服务。
 
 ### 4. __检查输入法进程__：
 
 有时候输入法进程可能没有正确启动或卡住。使用以下命令检查输入法进程并杀死它们：
 
- ```shell
- ps -ef | grep fcitx
- killall fcitx5
- ```
+```shell
+ps -ef | grep fcitx
+killall fcitx5
+```
 
 然后重新启动输入法。
 
